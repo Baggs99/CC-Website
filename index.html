@@ -29,31 +29,7 @@
     />
   </head>
   <body class="bg-ivory-50 text-navy-900 antialiased">
-    <div id="root">
-      <!-- Replaced immediately when React mounts; if this stays visible, the JS bundle failed to load -->
-      <div
-        id="static-boot-fallback"
-        style="
-          max-width: 36rem;
-          margin: 4rem auto;
-          padding: 0 1.5rem;
-          font-family: Inter, system-ui, sans-serif;
-          color: #0a1a2f;
-          line-height: 1.6;
-        "
-      >
-        <p style="font-weight: 600; margin-bottom: 0.75rem">
-          Loading Yale SOM Consulting Club...
-        </p>
-        <p style="font-size: 0.9rem; opacity: 0.85">
-          If this message does not disappear in a few seconds, the JavaScript
-          bundle did not load. Open DevTools, Network tab, and confirm
-          <code>/assets/*.js</code> returns 200 (not 404). On Render, set
-          Publish directory to <code>dist</code> and clear CDN or browser cache
-          after redeploys.
-        </p>
-      </div>
-    </div>
+    <div id="root" style="min-height: 100vh"></div>
     <noscript>
       <div
         style="
