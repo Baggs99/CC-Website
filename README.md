@@ -43,11 +43,13 @@ Node 18+ recommended.
     │   ├── leadership.ts
     │   ├── sponsors.ts
     │   ├── stats.ts
+    │   ├── siteImages.ts
     │   └── faq.ts
     └── components/
         ├── Navbar.tsx
         ├── Hero.tsx
         ├── Mission.tsx
+        ├── Community.tsx
         ├── Stats.tsx
         ├── Recruiting.tsx
         ├── Events.tsx           # programming timeline + calendar preview
@@ -71,7 +73,7 @@ those files and redeploy.
 | Top nav links                    | `src/data/nav.ts`           |
 | Recruiting resource cards        | `src/data/recruiting.ts`    |
 | Programming / events timeline    | `src/data/events.ts`        |
-| Leadership board                 | `src/data/leadership.ts`    |
+| Leadership roster               | `src/data/leadership.ts`    |
 | Sponsor list & tiers             | `src/data/sponsors.ts`      |
 | Stats strip                      | `src/data/stats.ts`         |
 | FAQ items                        | `src/data/faq.ts`           |
@@ -79,12 +81,12 @@ those files and redeploy.
 | Hero headline & meta strip       | `src/components/Hero.tsx`   |
 | Footer email / socials           | `src/components/Footer.tsx` |
 
-### Adding leadership headshots
+### Leadership headshots
 
-`Leadership.tsx` currently renders an initials placeholder for each board
-member. To add real headshots, drop the photo into `public/leadership/` and
-extend the `Leader` type in `src/data/leadership.ts` with `image: "/leadership/your-name.jpg"`,
-then render it inside the portrait `<div>` in `Leadership.tsx`.
+Add JPEG or WebP files under `public/leadership/`. In `src/data/leadership.ts`,
+set `photoFile` on each person to the filename only (e.g. `"holly-briffa.jpg"`).
+Titles are `"President"` or `"Executive committee"`; initials show until a photo
+is set.
 
 ### Adding sponsor logos
 
@@ -93,6 +95,18 @@ breaks. To use a real logo, place an SVG in `public/sponsors/` and extend
 `Sponsor` in `src/data/sponsors.ts` with `logo: "/sponsors/firm.svg"`,
 then render that image inside `SponsorLogoMark` in `Sponsors.tsx`. The
 grayscale-to-color hover is already wired up via Tailwind classes.
+
+## Photography
+
+Hero, mission, community, recruiting, and programming sections use photography
+stored under `public/images/` (served as `/images/...` in production). The hero
+image is a **high-resolution Wikimedia Commons** Evans Hall photograph (CC BY-SA
+3.0; attribution in **`IMAGE_SOURCES.md`**). Other shots were sourced from
+**official Yale School of Management** (`som.yale.edu`) CMS paths, including the featured story
+[*A Case for Success: Consulting Club Members Tackle Recruiting Season Together*](https://som.yale.edu/story/2024/case-success-consulting-club-members-tackle-recruiting-season-together).
+
+To re-optimize JPEGs after replacing files, run `npm run optimize-images`
+(requires `sharp`).
 
 ## Design system
 

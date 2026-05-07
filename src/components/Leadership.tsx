@@ -1,14 +1,25 @@
 import { motion } from "framer-motion";
 import { Linkedin } from "lucide-react";
+import type { Leader } from "@/data/leadership";
 import { leadership } from "@/data/leadership";
 import { Container } from "./ui/Container";
 import { SectionHeader } from "./ui/SectionHeader";
+
+function portraitSrc(photoFile?: string) {
+  if (!photoFile) return undefined;
+  return `/leadership/${photoFile}`;
+}
+
+const presidents = leadership.filter((l) => l.title === "President");
+const executiveCommittee = leadership.filter(
+  (l) => l.title === "Executive committee",
+);
 
 export function Leadership() {
   return (
     <section
       id="leadership"
-      className="relative bg-ivory-50 py-24 sm:py-32"
+      className="relative scroll-mt-24 bg-ivory-50 py-24 sm:py-32"
     >
       <Container>
         <SectionHeader
@@ -17,75 +28,132 @@ export function Leadership() {
           description="Our board is elected each year from second-year SOM students currently recruiting and working at top consulting firms."
         />
 
+        {/* Presidents — dedicated row */}
         <ul
           role="list"
-          className="mt-14 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4"
+          className="mx-auto mt-14 grid max-w-3xl grid-cols-1 gap-5 sm:grid-cols-2 sm:gap-6"
         >
-          {leadership.map((leader, i) => (
+          {presidents.map((leader, i) => (
             <motion.li
-              key={`${leader.role}-${i}`}
+              key={leader.name}
+              className="h-full"
               initial={{ opacity: 0, y: 18 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-60px" }}
               transition={{
                 duration: 0.6,
-                delay: (i % 4) * 0.05,
+                delay: i * 0.06,
                 ease: [0.16, 1, 0.3, 1],
               }}
-              className="group"
             >
-              <article className="card card-hover overflow-hidden">
-                {/* Portrait placeholder */}
-                <div className="relative aspect-[4/5] w-full overflow-hidden bg-navy-900">
-                  <div
-                    aria-hidden
-                    className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_rgba(61,94,137,0.55),_transparent_60%),linear-gradient(180deg,#0a1a2f,#10223d)]"
-                  />
-                  <div
-                    aria-hidden
-                    className="absolute inset-0 bg-grid-faint bg-[size:36px_36px] opacity-[0.25] mask-fade-b"
-                  />
-                  <div className="absolute inset-0 grid place-items-center">
-                    <span className="font-serif text-5xl font-medium text-ivory-50/85 transition-transform duration-700 ease-out-expo group-hover:scale-105">
-                      {leader.initials}
-                    </span>
-                  </div>
-                  <span className="absolute left-4 top-4 inline-flex items-center gap-1.5 rounded-full bg-ivory-50/10 px-2.5 py-1 text-[0.6rem] font-medium uppercase tracking-[0.18em] text-ivory-100 ring-1 ring-inset ring-ivory-50/15 backdrop-blur">
-                    <span className="h-1 w-1 rounded-full bg-gold-500" />
-                    Board
-                  </span>
-                </div>
+              <LeaderCard leader={leader} />
+            </motion.li>
+          ))}
+        </ul>
 
-                <div className="p-6">
-                  <h3 className="font-serif text-lg font-medium text-navy-900">
-                    {leader.name}
-                  </h3>
-                  <p className="mt-1 text-sm text-navy-700/80">
-                    {leader.role}
-                  </p>
-
-                  <a
-                    href={leader.linkedin}
-                    target="_blank"
-                    rel="noreferrer"
-                    aria-label={`${leader.name} on LinkedIn`}
-                    className="mt-5 inline-flex items-center gap-2 rounded-full border border-navy-900/15 px-3 py-1.5 text-xs font-medium text-navy-900 transition-all duration-300 hover:-translate-y-0.5 hover:border-navy-900/40 hover:bg-navy-900 hover:text-ivory-50"
-                  >
-                    <Linkedin size={13} strokeWidth={1.8} />
-                    LinkedIn
-                  </a>
-                </div>
-              </article>
+        {/* Executive committee — two rows of four on sm+ */}
+        <ul
+          role="list"
+          className="mx-auto mt-12 grid max-w-5xl grid-cols-2 gap-4 sm:mt-14 sm:grid-cols-4 sm:gap-5 sm:items-stretch"
+        >
+          {executiveCommittee.map((leader, i) => (
+            <motion.li
+              key={leader.name}
+              className="h-full"
+              initial={{ opacity: 0, y: 18 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-60px" }}
+              transition={{
+                duration: 0.6,
+                delay: (i % 4) * 0.04,
+                ease: [0.16, 1, 0.3, 1],
+              }}
+            >
+              <LeaderCard leader={leader} />
             </motion.li>
           ))}
         </ul>
 
         <p className="mt-12 max-w-2xl text-sm text-navy-700/75">
-          Headshots and full bios are kept up-to-date by the incoming board each
-          fall. Image placeholders make it easy for future leadership to swap
-          portraits without touching code.
+          Headshots go in{" "}
+          <code className="rounded bg-navy-900/[0.06] px-1.5 py-0.5 text-xs">
+            public/leadership/
+          </code>
+          ; set{" "}
+          <code className="rounded bg-navy-900/[0.06] px-1.5 py-0.5 text-xs">
+            photoFile
+          </code>{" "}
+          on each row in{" "}
+          <code className="rounded bg-navy-900/[0.06] px-1.5 py-0.5 text-xs">
+            src/data/leadership.ts
+          </code>
+          .
         </p>
       </Container>
     </section>
+  );
+}
+
+function LeaderCard({ leader }: { leader: Leader }) {
+  const src = portraitSrc(leader.photoFile);
+
+  return (
+    <article className="group card card-hover flex h-full flex-col overflow-hidden">
+      {/* Fixed portrait frame so every card aligns; crop is centered on faces */}
+      <div className="relative aspect-[4/5] w-full shrink-0 overflow-hidden bg-navy-900">
+        {src ? (
+          <img
+            src={src}
+            alt={leader.name}
+            className="h-full w-full object-cover object-[center_22%] transition duration-500 ease-out-expo group-hover:scale-[1.03]"
+            loading="lazy"
+            decoding="async"
+          />
+        ) : (
+          <>
+            <div
+              aria-hidden
+              className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_rgba(61,94,137,0.55),_transparent_60%),linear-gradient(180deg,#0a1a2f,#10223d)]"
+            />
+            <div
+              aria-hidden
+              className="absolute inset-0 bg-grid-faint bg-[size:36px_36px] opacity-[0.25] mask-fade-b"
+            />
+            <div className="absolute inset-0 grid place-items-center">
+              <span className="font-serif text-3xl font-medium text-ivory-50/85 transition-transform duration-700 ease-out-expo group-hover:scale-105 sm:text-4xl">
+                {leader.initials}
+              </span>
+            </div>
+          </>
+        )}
+        {/* Solid pill so label stays legible on light or busy backgrounds */}
+        <span className="absolute left-3 top-3 inline-flex items-center gap-1.5 rounded-full bg-navy-950/92 px-2.5 py-1 text-[0.58rem] font-semibold uppercase tracking-[0.14em] text-white shadow-md ring-1 ring-white/20 sm:left-3.5 sm:top-3.5 sm:text-[0.62rem]">
+          <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-gold-400" aria-hidden />
+          Board
+        </span>
+      </div>
+
+      <div className="flex flex-1 flex-col justify-between gap-4 px-4 pb-5 pt-4 sm:gap-5 sm:px-5 sm:pb-6 sm:pt-5">
+        <div className="min-w-0">
+          <h3 className="text-pretty font-serif text-[1.05rem] font-semibold leading-tight tracking-tight text-navy-900 sm:text-lg">
+            {leader.name}
+          </h3>
+          <p className="mt-2 text-[0.7rem] font-medium uppercase tracking-[0.12em] text-navy-600 sm:text-xs">
+            {leader.title}
+          </p>
+        </div>
+
+        <a
+          href={leader.linkedin}
+          target="_blank"
+          rel="noreferrer"
+          aria-label={`${leader.name} on LinkedIn`}
+          className="inline-flex w-fit items-center gap-2 rounded-full border border-navy-900/18 bg-navy-900/[0.03] px-3 py-1.5 text-xs font-medium text-navy-900 transition-all duration-300 hover:-translate-y-0.5 hover:border-navy-900/35 hover:bg-navy-900 hover:text-ivory-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-navy-500 sm:px-3.5 sm:py-2"
+        >
+          <Linkedin size={15} strokeWidth={1.85} className="shrink-0" />
+          LinkedIn
+        </a>
+      </div>
+    </article>
   );
 }

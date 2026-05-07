@@ -34,7 +34,10 @@ export function Events() {
           variant="dark"
         />
 
-        <ol className="relative mt-16 grid gap-px overflow-hidden rounded-2xl border border-ivory-50/10 bg-ivory-50/[0.04] sm:grid-cols-2 lg:grid-cols-3">
+        <ol
+          role="list"
+          className="relative mt-16 grid grid-cols-1 gap-7 sm:grid-cols-2 sm:gap-8 lg:grid-cols-3"
+        >
           {programEvents.map((event, i) => (
             <motion.li
               key={event.title}
@@ -46,41 +49,55 @@ export function Events() {
                 delay: (i % 3) * 0.05,
                 ease: [0.16, 1, 0.3, 1],
               }}
-              className="group relative bg-navy-950/60 p-7 transition-colors duration-500 hover:bg-navy-950/80 sm:p-8"
+              className="group relative overflow-hidden rounded-2xl border border-ivory-50/10 bg-navy-950/55 shadow-soft ring-1 ring-inset ring-ivory-50/[0.04] transition-all duration-500 hover:border-ivory-50/20 hover:shadow-elevated"
             >
-              <div className="flex items-center justify-between gap-4">
-                <span className="font-mono text-[0.7rem] font-medium tracking-[0.2em] text-ivory-200/40">
-                  {String(i + 1).padStart(2, "0")}
-                </span>
-                <span
-                  className={`inline-flex items-center rounded-full px-2.5 py-1 text-[0.65rem] font-medium uppercase tracking-[0.16em] ring-1 ring-inset ${tagStyles[event.tag]}`}
-                >
-                  {event.tag}
-                </span>
+              <div className="relative aspect-[16/10] overflow-hidden">
+                <img
+                  src={event.photo}
+                  alt={event.photoAlt}
+                  loading="lazy"
+                  decoding="async"
+                  className="h-full w-full object-cover transition duration-700 ease-out group-hover:scale-[1.03]"
+                />
+                <div
+                  aria-hidden
+                  className="absolute inset-0 bg-gradient-to-t from-navy-950 via-navy-950/45 to-transparent"
+                />
+                <div className="absolute bottom-4 left-4 right-4 flex items-end justify-between gap-3 sm:bottom-5 sm:left-5 sm:right-5">
+                  <span className="font-mono text-[0.65rem] font-medium tracking-[0.2em] text-ivory-200/80">
+                    {String(i + 1).padStart(2, "0")}
+                  </span>
+                  <span
+                    className={`inline-flex items-center rounded-full px-2.5 py-1 text-[0.6rem] font-medium uppercase tracking-[0.16em] ring-1 ring-inset backdrop-blur-sm ${tagStyles[event.tag]}`}
+                  >
+                    {event.tag}
+                  </span>
+                </div>
               </div>
 
-              <h3 className="mt-6 font-serif text-2xl font-medium text-ivory-50">
-                {event.title}
-              </h3>
+              <div className="p-7 sm:p-8">
+                <h3 className="font-serif text-2xl font-medium leading-tight text-ivory-50">
+                  {event.title}
+                </h3>
 
-              <div className="mt-2 flex items-center gap-2 text-xs font-medium uppercase tracking-[0.18em] text-gold-400">
-                <span className="h-px w-6 bg-gold-500/60" />
-                {event.window}
+                <div className="mt-3 flex items-center gap-2 text-xs font-medium uppercase tracking-[0.18em] text-gold-400">
+                  <span className="h-px w-6 bg-gold-500/60" />
+                  {event.window}
+                </div>
+
+                <p className="mt-5 text-sm leading-relaxed text-ivory-200/78 text-pretty">
+                  {event.description}
+                </p>
               </div>
-
-              <p className="mt-5 text-sm leading-relaxed text-ivory-200/75 text-pretty">
-                {event.description}
-              </p>
 
               <span
                 aria-hidden
-                className="absolute inset-x-7 bottom-0 h-px origin-left scale-x-0 bg-gradient-to-r from-gold-500/80 via-gold-400/50 to-transparent transition-transform duration-700 ease-out-expo group-hover:scale-x-100 sm:inset-x-8"
+                className="absolute inset-x-8 bottom-0 h-px origin-left scale-x-0 bg-gradient-to-r from-gold-500/80 via-gold-400/50 to-transparent transition-transform duration-700 ease-out-expo group-hover:scale-x-100"
               />
             </motion.li>
           ))}
         </ol>
 
-        {/* Calendar preview */}
         <CalendarPreview />
       </Container>
     </section>

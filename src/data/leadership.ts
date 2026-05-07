@@ -1,57 +1,90 @@
+/**
+ * Leadership roster — Yale SOM Consulting Club.
+ *
+ * Photos: add files under `public/leadership/` and set `photoFile` to the
+ * filename only (e.g. `"holly-briffa.jpg"` → `/leadership/holly-briffa.jpg`).
+ */
+
+export type LeaderTitle = "President" | "Executive committee";
+
 export type Leader = {
   name: string;
-  role: string;
+  title: LeaderTitle;
   initials: string;
   linkedin: string;
+  photoFile?: string;
 };
 
+/** Order: presidents first, then executive committee */
 export const leadership: Leader[] = [
   {
-    name: "Co-President",
-    role: "Strategy & Partnerships",
-    initials: "CP",
+    name: "Holly Briffa",
+    title: "President",
+    initials: "HB",
     linkedin: "#",
+    photoFile: "holly-briffa.jpg",
   },
   {
-    name: "Co-President",
-    role: "Programming & Membership",
-    initials: "CP",
+    name: "Richard Ulbricht",
+    title: "President",
+    initials: "RU",
     linkedin: "#",
+    photoFile: "richard-ulbricht.jpg",
   },
   {
-    name: "VP, Recruiting",
-    role: "Firm Relations & Timeline",
-    initials: "VR",
+    name: "Dan Baglini",
+    title: "Executive committee",
+    initials: "DB",
     linkedin: "#",
+    photoFile: "dan-baglini.jpg",
   },
   {
-    name: "VP, Casing",
-    role: "Case Curriculum & Mocks",
-    initials: "VC",
+    name: "Siddhant Malhotra",
+    title: "Executive committee",
+    initials: "SM",
     linkedin: "#",
+    photoFile: "siddhant-malhotra.jpg",
   },
   {
-    name: "VP, Behavioral",
-    role: "Fit Interview Coaching",
-    initials: "VB",
+    name: "Saif Pilpile",
+    title: "Executive committee",
+    initials: "SP",
     linkedin: "#",
+    photoFile: "saif-pilpile.jpg",
   },
   {
-    name: "VP, Community",
-    role: "Events & Mentorship",
-    initials: "VM",
+    name: "Jacob Coughlin",
+    title: "Executive committee",
+    initials: "JC",
     linkedin: "#",
+    photoFile: "jacob-coughlin.jpg",
   },
   {
-    name: "VP, Operations",
-    role: "Finance & Sponsorship",
-    initials: "VO",
+    name: "Jake Chang",
+    title: "Executive committee",
+    initials: "JK",
     linkedin: "#",
+    photoFile: "jake-chang.jpg",
   },
   {
-    name: "VP, Communications",
-    role: "Brand & Digital",
-    initials: "VC",
+    name: "Patrycja Pajdak",
+    title: "Executive committee",
+    initials: "PP",
     linkedin: "#",
+    photoFile: "patrycja-pajdak.jpg",
+  },
+  {
+    name: "Shashwat Bhattacharjee",
+    title: "Executive committee",
+    initials: "SB",
+    linkedin: "#",
+    photoFile: "shashwat-bhattacharjee.jpg",
+  },
+  {
+    name: "Camila Ortiz Silva",
+    title: "Executive committee",
+    initials: "COS",
+    linkedin: "#",
+    photoFile: "camila-ortiz-silva.jpg",
   },
 ];

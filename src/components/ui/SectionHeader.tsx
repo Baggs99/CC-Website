@@ -8,6 +8,8 @@ type SectionHeaderProps = {
   align?: "left" | "center";
   variant?: "light" | "dark";
   className?: string;
+  /** Sets `id` on the `<h2>` for `aria-labelledby` / in-page links */
+  headingId?: string;
 };
 
 export function SectionHeader({
@@ -17,6 +19,7 @@ export function SectionHeader({
   align = "left",
   variant = "light",
   className,
+  headingId,
 }: SectionHeaderProps) {
   const alignClass = align === "center" ? "items-center text-center mx-auto" : "items-start";
   const textColor = variant === "dark" ? "text-ivory-50" : "text-navy-900";
@@ -37,6 +40,7 @@ export function SectionHeader({
     >
       <span className={eyebrowClass}>{eyebrow}</span>
       <h2
+        {...(headingId ? { id: headingId } : {})}
         className={cn(
           "font-serif text-display-md font-medium text-balance",
           textColor,

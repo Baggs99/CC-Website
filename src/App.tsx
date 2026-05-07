@@ -1,6 +1,7 @@
 import { Navbar } from "./components/Navbar";
 import { Hero } from "./components/Hero";
 import { Mission } from "./components/Mission";
+import { Community } from "./components/Community";
 import { Stats } from "./components/Stats";
 import { Recruiting } from "./components/Recruiting";
 import { Events } from "./components/Events";
@@ -13,17 +14,11 @@ import { Footer } from "./components/Footer";
 export default function App() {
   return (
     <div className="relative min-h-screen bg-ivory-50 text-navy-900">
-      {/* Visible proof that the React bundle executed (remove after deploy is verified) */}
-      <p
-        className="pointer-events-none fixed bottom-3 left-3 z-[100] rounded-md bg-navy-950/90 px-2 py-1 font-sans text-[10px] font-medium uppercase tracking-wider text-ivory-100 shadow-soft"
-        aria-live="polite"
-      >
-        React loaded
-      </p>
       <Navbar />
       <main>
         <Hero />
         <Mission />
+        <Community />
         <Stats />
         <Recruiting />
         <Events />

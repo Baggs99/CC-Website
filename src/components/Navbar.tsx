@@ -31,8 +31,8 @@ export function Navbar() {
       className={cn(
         "fixed inset-x-0 top-0 z-50 transition-all duration-500 ease-out-expo",
         scrolled
-          ? "border-b border-navy-900/[0.07] bg-ivory-50/80 backdrop-blur-xl"
-          : "border-b border-transparent bg-transparent",
+          ? "border-b border-navy-900/[0.07] bg-ivory-50/90 backdrop-blur-xl"
+          : "border-b border-white/10 bg-gradient-to-b from-navy-950/90 via-navy-950/55 to-transparent backdrop-blur-md",
       )}
     >
       <Container className="flex h-16 items-center justify-between md:h-20">
@@ -51,10 +51,20 @@ export function Navbar() {
             <span className="absolute -right-1 -top-1 h-1.5 w-1.5 rounded-full bg-gold-500" />
           </span>
           <span className="hidden flex-col leading-tight sm:flex">
-            <span className="text-[0.65rem] font-medium uppercase tracking-[0.22em] text-navy-700/70">
+            <span
+              className={cn(
+                "text-[0.65rem] font-medium uppercase tracking-[0.22em]",
+                scrolled ? "text-navy-700/75" : "text-ivory-200/85",
+              )}
+            >
               Yale SOM
             </span>
-            <span className="font-serif text-[0.95rem] font-medium text-navy-900">
+            <span
+              className={cn(
+                "font-serif text-[0.95rem] font-medium",
+                scrolled ? "text-navy-900" : "text-ivory-50",
+              )}
+            >
               Consulting Club
             </span>
           </span>
@@ -65,7 +75,12 @@ export function Navbar() {
             <a
               key={link.href}
               href={link.href}
-              className="rounded-full px-4 py-2 text-sm font-medium text-navy-800/80 transition-colors hover:text-navy-900"
+              className={cn(
+                "rounded-full px-4 py-2 text-sm font-medium transition-colors",
+                scrolled
+                  ? "text-navy-800/85 hover:bg-navy-900/[0.06] hover:text-navy-900"
+                  : "text-ivory-100 drop-shadow-[0_1px_8px_rgba(5,14,28,0.85)] hover:bg-white/10 hover:text-white",
+              )}
             >
               {link.label}
             </a>
@@ -73,14 +88,26 @@ export function Navbar() {
         </nav>
 
         <div className="hidden md:block">
-          <a href="#join" className="btn-primary">
+          <a
+            href="#join"
+            className={
+              scrolled
+                ? "btn-primary"
+                : "btn-primary-light shadow-[0_4px_24px_rgba(5,14,28,0.35)]"
+            }
+          >
             Join the club
           </a>
         </div>
 
         <button
           type="button"
-          className="grid h-10 w-10 place-items-center rounded-full border border-navy-900/10 bg-white/60 text-navy-900 backdrop-blur md:hidden"
+          className={cn(
+            "grid h-10 w-10 place-items-center rounded-full border backdrop-blur md:hidden",
+            scrolled
+              ? "border-navy-900/10 bg-white/60 text-navy-900"
+              : "border-white/25 bg-navy-950/45 text-ivory-50 shadow-[0_2px_16px_rgba(5,14,28,0.5)]",
+          )}
           aria-label="Toggle navigation"
           aria-expanded={open}
           onClick={() => setOpen((v) => !v)}

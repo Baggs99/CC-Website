@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { SITE_IMAGES } from "@/data/siteImages";
 import { Container } from "./ui/Container";
 
 const missionPhrases = [
@@ -23,8 +24,36 @@ export function Mission() {
       />
 
       <Container>
-        <div className="grid gap-16 lg:grid-cols-12 lg:gap-20">
-          <div className="lg:col-span-4">
+        <div className="grid items-start gap-14 lg:grid-cols-12 lg:gap-16">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-80px" }}
+            transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+            className="lg:col-span-5"
+          >
+            <figure className="group relative overflow-hidden rounded-2xl shadow-elevated ring-1 ring-navy-900/[0.08]">
+              <div className="relative aspect-[4/5] min-h-[22rem] sm:min-h-[28rem]">
+                <img
+                  src={SITE_IMAGES.missionCampusLife.src}
+                  alt={SITE_IMAGES.missionCampusLife.alt}
+                  className="absolute inset-0 h-full w-full object-cover transition duration-700 ease-out group-hover:scale-[1.02]"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <div
+                  aria-hidden
+                  className="absolute inset-0 bg-gradient-to-t from-navy-950/35 via-transparent to-transparent"
+                />
+              </div>
+              <figcaption className="border-t border-navy-900/[0.08] bg-white px-5 py-4 text-xs leading-relaxed text-navy-700/80">
+                Student life at Evans Hall — the daily backdrop for how we work,
+                learn, and support one another.
+              </figcaption>
+            </figure>
+          </motion.div>
+
+          <div className="lg:col-span-7">
             <motion.span
               initial={{ opacity: 0, y: 12 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -43,15 +72,13 @@ export function Mission() {
             >
               A community built on rigor, generosity, and shared ambition.
             </motion.h2>
-          </div>
 
-          <div className="lg:col-span-8">
             <motion.figure
               initial={{ opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-80px" }}
               transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
-              className="relative"
+              className="relative mt-10"
             >
               <span
                 aria-hidden
@@ -83,7 +110,6 @@ export function Mission() {
               </figcaption>
             </motion.figure>
 
-            {/* Three pillar callouts */}
             <div className="mt-16 grid gap-6 border-t border-navy-900/10 pt-10 sm:grid-cols-3">
               {[
                 {
