@@ -43,7 +43,7 @@ export function Sponsors() {
             </p>
           </div>
           <a
-            href="#contact"
+            href="mailto:club-consulting@som.yale.edu?subject=Partnership%20inquiry"
             className="btn-primary flex min-h-[48px] w-full justify-center sm:w-auto sm:justify-center sm:self-start"
           >
             Partner with us
