@@ -86,7 +86,7 @@ function SocialLink({
     <a
       href={href}
       aria-label={label}
-      className="grid h-11 w-11 place-items-center rounded-full border border-ivory-50/15 text-ivory-100 transition-all duration-300 hover:-translate-y-0.5 hover:border-ivory-50/40 hover:bg-ivory-50/5 sm:h-10 sm:w-10"
+      className="inline-flex min-h-[44px] min-w-[44px] items-center justify-center text-ivory-100 transition-colors duration-300 hover:text-ivory-50"
     >
       {children}
     </a>
