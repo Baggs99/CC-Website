@@ -73,22 +73,6 @@ export function Leadership() {
             </motion.li>
           ))}
         </ul>
-
-        <p className="mt-10 max-w-2xl text-xs leading-relaxed text-navy-700/75 sm:mt-12 sm:text-sm">
-          Headshots go in{" "}
-          <code className="rounded bg-navy-900/[0.06] px-1.5 py-0.5 text-xs">
-            public/leadership/
-          </code>
-          ; set{" "}
-          <code className="rounded bg-navy-900/[0.06] px-1.5 py-0.5 text-xs">
-            photoFile
-          </code>{" "}
-          on each row in{" "}
-          <code className="rounded bg-navy-900/[0.06] px-1.5 py-0.5 text-xs">
-            src/data/leadership.ts
-          </code>
-          .
-        </p>
       </Container>
     </section>
   );
@@ -126,11 +110,6 @@ function LeaderCard({ leader }: { leader: Leader }) {
             </div>
           </>
         )}
-        {/* Solid pill so label stays legible on light or busy backgrounds */}
-        <span className="absolute left-3 top-3 inline-flex items-center gap-1.5 rounded-full bg-navy-950/92 px-2.5 py-1 text-[0.58rem] font-semibold uppercase tracking-[0.14em] text-white shadow-md ring-1 ring-white/20 sm:left-3.5 sm:top-3.5 sm:text-[0.62rem]">
-          <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-gold-400" aria-hidden />
-          Board
-        </span>
       </div>
 
       <div className="flex flex-1 flex-col justify-between gap-4 px-4 pb-5 pt-4 sm:gap-5 sm:px-5 sm:pb-6 sm:pt-5">
@@ -140,6 +119,12 @@ function LeaderCard({ leader }: { leader: Leader }) {
           </h3>
           <p className="mt-2 text-[0.7rem] font-medium uppercase tracking-[0.12em] text-navy-600 sm:text-xs">
             {leader.title}
+          </p>
+          <p className="mt-2 text-sm leading-snug text-navy-800 text-pretty">
+            {leader.employer}
+          </p>
+          <p className="mt-1 text-xs leading-snug text-navy-600/95 text-pretty">
+            {leader.city}
           </p>
         </div>
 

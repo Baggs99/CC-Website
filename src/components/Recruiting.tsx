@@ -27,51 +27,22 @@ export function Recruiting() {
       />
 
       <Container className="relative z-10">
-        <div className="grid gap-10 border-b border-navy-900/[0.08] pb-12 lg:grid-cols-12 lg:items-end lg:gap-12">
-          <div className="lg:col-span-7">
+        <div className="grid gap-10 lg:grid-cols-12 lg:items-start lg:gap-12">
+          <div className="flex flex-col gap-10 lg:col-span-7">
             <SectionHeader
               className="!max-w-none"
               eyebrow="Recruiting Resources"
               title="Everything you need, in one place."
-              description="Eight focused resources that mirror the real recruiting cycle, from your first framework drill to your final round. Built by students who just finished the process."
+              description="Case library plus the club calendar on Yale Groups: two anchors for prep and programming through the recruiting cycle. Built by students who just finished the process."
             />
-          </div>
-          <div className="lg:col-span-5">
-            <div className="overflow-hidden rounded-2xl ring-1 ring-navy-900/[0.1] shadow-soft">
-              <div className="relative aspect-[16/10] sm:aspect-[2/1]">
-                <img
-                  src={SITE_IMAGES.communityWhiteboard.src}
-                  alt={SITE_IMAGES.communityWhiteboard.alt}
-                  className="absolute inset-0 h-full w-full object-cover"
-                  loading="lazy"
-                  decoding="async"
-                />
-                <div
-                  aria-hidden
-                  className="absolute inset-0 bg-gradient-to-t from-navy-950/60 to-transparent"
-                />
-                <p className="absolute bottom-4 left-4 right-4 text-sm font-medium text-ivory-100 drop-shadow sm:bottom-5 sm:left-5">
-                  From Zhang Auditorium to team rooms: prep that matches how
-                  recruiting actually feels.
-                </p>
-              </div>
-            </div>
-            <a
-              href="#"
-              className="btn-secondary mt-6 inline-flex w-full justify-center sm:w-auto"
-            >
-              Member portal
-              <ArrowUpRight size={16} />
-            </a>
-          </div>
-        </div>
 
-        <ul
-          role="list"
-          className="mt-16 grid grid-cols-1 gap-7 sm:grid-cols-2 sm:gap-8 lg:grid-cols-4 lg:gap-7"
-        >
+            <ul
+              role="list"
+              className="grid grid-cols-1 gap-7 sm:grid-cols-2 sm:gap-8"
+            >
           {recruitingResources.map((res, i) => {
             const Icon = res.icon;
+            const external = res.href.startsWith("http");
             return (
               <motion.li
                 key={res.title}
@@ -87,6 +58,9 @@ export function Recruiting() {
               >
                 <a
                   href={res.href}
+                  {...(external
+                    ? { target: "_blank", rel: "noopener noreferrer" }
+                    : {})}
                   className="card card-hover relative flex h-full flex-col overflow-hidden border-navy-900/[0.07] bg-white/90 p-7 backdrop-blur-sm sm:p-8"
                 >
                   <span className="absolute right-6 top-6 text-[0.65rem] font-medium tracking-[0.2em] text-navy-900/25">
@@ -101,7 +75,7 @@ export function Recruiting() {
                     {res.title}
                   </h3>
 
-                  <p className="mt-3 flex-1 text-sm leading-relaxed text-navy-700/88 text-pretty">
+                  <p className="mt-3 flex-1 whitespace-pre-line text-sm leading-relaxed text-navy-700/88 text-pretty">
                     {res.description}
                   </p>
 
@@ -121,7 +95,31 @@ export function Recruiting() {
               </motion.li>
             );
           })}
-        </ul>
+            </ul>
+          </div>
+
+          <div className="lg:col-span-5 lg:pt-1">
+            <div className="overflow-hidden rounded-2xl ring-1 ring-navy-900/[0.1] shadow-soft">
+              <div className="relative aspect-[16/10] sm:aspect-[2/1]">
+                <img
+                  src={SITE_IMAGES.communityWhiteboard.src}
+                  alt={SITE_IMAGES.communityWhiteboard.alt}
+                  className="absolute inset-0 h-full w-full object-cover"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <div
+                  aria-hidden
+                  className="absolute inset-0 bg-gradient-to-t from-navy-950/60 to-transparent"
+                />
+                <p className="absolute bottom-4 left-4 right-4 text-sm font-medium text-ivory-100 drop-shadow sm:bottom-5 sm:left-5">
+                  From Zhang Auditorium to team rooms: prep that matches how
+                  recruiting actually feels.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
       </Container>
     </section>
   );

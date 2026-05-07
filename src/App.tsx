@@ -7,8 +7,6 @@ import { Recruiting } from "./components/Recruiting";
 import { Events } from "./components/Events";
 import { Leadership } from "./components/Leadership";
 import { Sponsors } from "./components/Sponsors";
-import { FAQ } from "./components/FAQ";
-import { JoinCTA } from "./components/JoinCTA";
 import { Footer } from "./components/Footer";
 
 export default function App() {
@@ -24,8 +22,6 @@ export default function App() {
         <Events />
         <Leadership />
         <Sponsors />
-        <FAQ />
-        <JoinCTA />
       </main>
       <Footer />
     </div>

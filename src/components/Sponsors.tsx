@@ -17,7 +17,7 @@ export function Sponsors() {
         <SectionHeader
           eyebrow="Sponsors & Partners"
           title="Built in partnership with the firms our members join."
-          description="We work closely with sponsoring firms on programming, mocks, and recruiting events. Logos shown are illustrative."
+          description="We work closely with sponsoring firms on programming, mocks, and recruiting events. Firm names and logos are trademarks of their respective owners."
         />
 
         <div className="mt-14 space-y-14">
@@ -100,7 +100,7 @@ function SponsorTier({
             }}
             className="group relative flex h-28 items-center justify-center bg-white px-6 transition-colors duration-500 ease-out-expo hover:bg-ivory-50 sm:h-32"
           >
-            <SponsorLogoMark name={sponsor.name} tier={tier} />
+            <SponsorLogoMark sponsor={sponsor} tier={tier} />
             {isGold && (
               <span className="pointer-events-none absolute right-3 top-3 text-[0.55rem] font-medium uppercase tracking-[0.2em] text-gold-500/80 opacity-0 transition-opacity group-hover:opacity-100">
                 Gold
@@ -113,40 +113,24 @@ function SponsorTier({
   );
 }
 
-/**
- * Stylized logo placeholder. Renders the firm name as a refined wordmark
- * that goes from grayscale to its branded look on hover, so future
- * leadership can drop in real logos without breaking the layout.
- */
 function SponsorLogoMark({
-  name,
+  sponsor,
   tier,
 }: {
-  name: string;
+  sponsor: Sponsor;
   tier: "Gold" | "Silver";
 }) {
   const isGold = tier === "Gold";
   return (
-    <span
-      className={`relative font-serif text-base font-medium tracking-tight transition-all duration-500 ease-out-expo sm:text-lg ${
-        isGold
-          ? "text-navy-900/55 group-hover:text-navy-900"
-          : "text-navy-900/45 group-hover:text-navy-900"
+    <img
+      src={sponsor.logoSrc}
+      alt={sponsor.name}
+      loading="lazy"
+      decoding="async"
+      referrerPolicy="no-referrer"
+      className={`mx-auto w-auto max-w-[min(100%,13rem)] object-contain object-center transition duration-500 ease-out-expo group-hover:scale-[1.03] ${
+        isGold ? "max-h-12 sm:max-h-14" : "max-h-10 sm:max-h-12"
       }`}
-      style={{ filter: "saturate(0.1)" }}
-    >
-      <span
-        className="block transition-[filter] duration-500 ease-out-expo group-hover:[filter:saturate(1)]"
-        style={{ filter: "inherit" }}
-      >
-        {name}
-      </span>
-      <span
-        aria-hidden
-        className={`absolute -bottom-1 left-1/2 h-px w-0 -translate-x-1/2 transition-all duration-500 ease-out-expo group-hover:w-8 ${
-          isGold ? "bg-gold-500" : "bg-navy-400"
-        }`}
-      />
-    </span>
+    />
   );
 }

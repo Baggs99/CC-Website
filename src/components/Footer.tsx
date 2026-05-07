@@ -43,11 +43,11 @@ export function Footer() {
             </p>
 
             <a
-              href="mailto:contact@yalesomcc.org"
+              href="mailto:club-consulting@som.yale.edu"
               className="mt-6 inline-flex items-center gap-2 text-sm text-ivory-100 underline-offset-4 hover:underline"
             >
               <Mail size={14} strokeWidth={1.8} />
-              contact@yalesomcc.org
+              club-consulting@som.yale.edu
               <ArrowUpRight size={13} className="opacity-60" />
             </a>
           </div>
@@ -91,7 +91,7 @@ export function Footer() {
             <SocialLink href="#" label="Instagram">
               <Instagram size={15} strokeWidth={1.8} />
             </SocialLink>
-            <SocialLink href="mailto:contact@yalesomcc.org" label="Email">
+            <SocialLink href="mailto:club-consulting@som.yale.edu" label="Email">
               <Mail size={15} strokeWidth={1.8} />
             </SocialLink>
           </div>
