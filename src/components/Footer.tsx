@@ -12,13 +12,19 @@ export function Footer() {
     >
       <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-ivory-50/15 to-transparent" />
 
-      <Container className="py-16 sm:py-20">
+      <Container className="py-12 sm:py-20">
         <div className="grid gap-14 lg:grid-cols-12 lg:gap-10">
           <div className="lg:col-span-5">
             <a href="#top" className="flex items-center gap-3">
-              <span className="relative grid h-10 w-10 place-items-center rounded-md bg-ivory-50 font-serif text-lg font-semibold text-navy-900">
-                Y
-                <span className="absolute -right-1 -top-1 h-1.5 w-1.5 rounded-full bg-gold-500" />
+              <span className="relative shrink-0 rounded-md bg-ivory-50 p-1 ring-1 ring-ivory-50/10">
+                <img
+                  src="/ycc_owlbook.png"
+                  alt=""
+                  width={72}
+                  height={72}
+                  decoding="async"
+                  className="h-9 w-auto max-h-9 object-contain sm:h-10 sm:max-h-10"
+                />
               </span>
               <span className="flex flex-col leading-tight">
                 <span className="text-[0.65rem] font-medium uppercase tracking-[0.22em] text-ivory-200/60">
@@ -136,7 +142,7 @@ function SocialLink({
     <a
       href={href}
       aria-label={label}
-      className="grid h-9 w-9 place-items-center rounded-full border border-ivory-50/15 text-ivory-100 transition-all duration-300 hover:-translate-y-0.5 hover:border-ivory-50/40 hover:bg-ivory-50/5"
+      className="grid h-11 w-11 place-items-center rounded-full border border-ivory-50/15 text-ivory-100 transition-all duration-300 hover:-translate-y-0.5 hover:border-ivory-50/40 hover:bg-ivory-50/5 sm:h-10 sm:w-10"
     >
       {children}
     </a>

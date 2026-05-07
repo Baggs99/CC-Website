@@ -4,10 +4,10 @@
  */
 
 export const SITE_IMAGES = {
-  /** High-resolution Evans Hall / Yale SOM exterior — see IMAGE_SOURCES.md */
+  /** High-resolution Evans Hall / Yale SOM exterior. See IMAGE_SOURCES.md */
   heroEvansHall: {
     src: "/images/yale-som-evans-hall-hero.jpg",
-    alt: "Yale School of Management — front facade of Edward P. Evans Hall, New Haven.",
+    alt: "Yale School of Management, front facade of Edward P. Evans Hall, New Haven.",
   },
   missionCampusLife: {
     src: "/images/students-evans-hall.jpg",
@@ -15,7 +15,7 @@ export const SITE_IMAGES = {
   },
   communityWhiteboard: {
     src: "/images/consulting-club-whiteboard-session.jpg",
-    alt: "Consulting Club meeting — member presenting at a whiteboard while peers collaborate.",
+    alt: "Consulting Club meeting: member presenting at a whiteboard while peers collaborate.",
   },
   communityAuditorium: {
     src: "/images/consulting-club-auditorium-listening.jpg",

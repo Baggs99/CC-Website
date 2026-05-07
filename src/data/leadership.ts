@@ -1,5 +1,5 @@
 /**
- * Leadership roster — Yale SOM Consulting Club.
+ * Leadership roster, Yale SOM Consulting Club.
  *
  * Photos: add files under `public/leadership/` and set `photoFile` to the
  * filename only (e.g. `"holly-briffa.jpg"` → `/leadership/holly-briffa.jpg`).

@@ -7,7 +7,7 @@ export const faqs: FAQItem[] = [
   {
     question: "Who can join the Yale SOM Consulting Club?",
     answer:
-      "Any full-time SOM student is welcome — first-years exploring consulting, second-years recruiting full-time, and career switchers from any background. Membership is free for SOM students.",
+      "Any full-time SOM student is welcome, including first-years exploring consulting, second-years recruiting full-time, and career switchers from any background. Membership is free for SOM students.",
   },
   {
     question: "Do I need prior consulting experience?",

@@ -6,7 +6,7 @@ export function JoinCTA() {
   return (
     <section
       id="join"
-      className="relative overflow-hidden bg-navy-950 py-24 text-ivory-50 sm:py-32"
+      className="relative overflow-hidden bg-navy-950 py-16 text-ivory-50 sm:py-24 lg:py-32"
     >
       <div
         aria-hidden
@@ -47,15 +47,21 @@ export function JoinCTA() {
             team matching.
           </p>
 
-          <div className="mt-10 flex flex-wrap items-center justify-center gap-3">
-            <a href="#" className="btn-primary-light group">
+          <div className="mt-10 flex w-full max-w-md flex-col gap-3 sm:mx-auto sm:max-w-none sm:flex-row sm:flex-wrap sm:justify-center">
+            <a
+              href="#"
+              className="btn-primary-light group flex min-h-[48px] w-full justify-center sm:w-auto"
+            >
               Join the club
               <ArrowRight
                 size={16}
                 className="transition-transform duration-300 group-hover:translate-x-1"
               />
             </a>
-            <a href="#contact" className="btn-ghost-light">
+            <a
+              href="#contact"
+              className="btn-ghost-light flex min-h-[48px] w-full justify-center sm:w-auto"
+            >
               Contact the board
             </a>
           </div>

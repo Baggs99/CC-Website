@@ -17,7 +17,7 @@ const missionPhrases = [
 
 export function Mission() {
   return (
-    <section id="mission" className="relative overflow-hidden bg-ivory-50 py-24 sm:py-32">
+    <section id="mission" className="relative overflow-hidden bg-ivory-50 py-16 sm:py-24 lg:py-32">
       <div
         aria-hidden
         className="absolute inset-x-0 top-0 -z-10 h-px bg-gradient-to-r from-transparent via-navy-900/15 to-transparent"
@@ -47,7 +47,7 @@ export function Mission() {
                 />
               </div>
               <figcaption className="border-t border-navy-900/[0.08] bg-white px-5 py-4 text-xs leading-relaxed text-navy-700/80">
-                Student life at Evans Hall — the daily backdrop for how we work,
+                Student life at Evans Hall: the daily backdrop for how we work,
                 learn, and support one another.
               </figcaption>
             </figure>
@@ -86,7 +86,7 @@ export function Mission() {
               >
                 “
               </span>
-              <blockquote className="relative font-serif text-2xl font-medium leading-[1.35] text-navy-900 text-pretty sm:text-3xl lg:text-[2.1rem] lg:leading-[1.3]">
+              <blockquote className="relative font-serif text-xl font-medium leading-[1.38] text-navy-900 text-pretty sm:text-2xl sm:leading-[1.35] lg:text-[2.1rem] lg:leading-[1.3]">
                 The mission of the Yale SOM Consulting Club is to create{" "}
                 {missionPhrases.map((phrase, i) => (
                   <span

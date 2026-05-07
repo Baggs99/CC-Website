@@ -15,7 +15,7 @@ export function Events() {
   return (
     <section
       id="events"
-      className="relative overflow-hidden bg-navy-900 py-24 text-ivory-50 sm:py-32"
+      className="relative overflow-hidden bg-navy-900 py-16 text-ivory-50 sm:py-24 lg:py-32"
     >
       <div
         aria-hidden
@@ -51,7 +51,7 @@ export function Events() {
               }}
               className="group relative overflow-hidden rounded-2xl border border-ivory-50/10 bg-navy-950/55 shadow-soft ring-1 ring-inset ring-ivory-50/[0.04] transition-all duration-500 hover:border-ivory-50/20 hover:shadow-elevated"
             >
-              <div className="relative aspect-[16/10] overflow-hidden">
+              <div className="relative aspect-[5/4] overflow-hidden sm:aspect-[16/10]">
                 <img
                   src={event.photo}
                   alt={event.photoAlt}
@@ -75,8 +75,8 @@ export function Events() {
                 </div>
               </div>
 
-              <div className="p-7 sm:p-8">
-                <h3 className="font-serif text-2xl font-medium leading-tight text-ivory-50">
+              <div className="p-5 sm:p-8">
+                <h3 className="font-serif text-xl font-medium leading-tight text-ivory-50 sm:text-2xl">
                   {event.title}
                 </h3>
 
@@ -125,22 +125,22 @@ function CalendarPreview() {
       transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
       className="mt-16 overflow-hidden rounded-2xl border border-ivory-50/10 bg-ivory-50/[0.03] backdrop-blur"
     >
-      <div className="flex flex-wrap items-center justify-between gap-3 border-b border-ivory-50/10 px-6 py-4">
+      <div className="flex flex-col gap-2 border-b border-ivory-50/10 px-4 py-3.5 sm:flex-row sm:flex-wrap sm:items-center sm:justify-between sm:gap-3 sm:px-6 sm:py-4">
         <div className="flex items-center gap-3">
-          <span className="h-2 w-2 rounded-full bg-gold-500" />
-          <span className="text-xs font-medium uppercase tracking-[0.22em] text-ivory-200/70">
+          <span className="h-2 w-2 shrink-0 rounded-full bg-gold-500" />
+          <span className="text-[0.65rem] font-medium uppercase tracking-[0.18em] text-ivory-200/70 sm:text-xs sm:tracking-[0.22em]">
             Recruiting Calendar Preview
           </span>
         </div>
-        <span className="text-xs text-ivory-200/50">
-          Indicative — exact dates published to members
+        <span className="text-[0.65rem] leading-snug text-ivory-200/50 sm:text-xs">
+          Indicative: exact dates published to members
         </span>
       </div>
-      <div className="grid grid-cols-5 gap-px bg-ivory-50/[0.06] sm:grid-cols-10">
+      <div className="grid grid-cols-2 gap-px bg-ivory-50/[0.06] sm:grid-cols-5 lg:grid-cols-10">
         {months.map((month, i) => (
           <div
             key={month.m}
-            className="bg-navy-950/60 p-4 transition-colors hover:bg-navy-950/85 sm:p-5"
+            className="bg-navy-950/60 p-3 transition-colors hover:bg-navy-950/85 sm:p-5"
           >
             <div className="flex items-center justify-between">
               <span className="font-serif text-base font-medium text-ivory-50">

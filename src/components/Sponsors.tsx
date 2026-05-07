@@ -11,7 +11,7 @@ export function Sponsors() {
   return (
     <section
       id="sponsors"
-      className="relative bg-ivory-100 py-24 sm:py-32"
+      className="relative bg-ivory-100 py-16 sm:py-24 lg:py-32"
     >
       <Container>
         <SectionHeader
@@ -30,7 +30,7 @@ export function Sponsors() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-60px" }}
           transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-          className="mt-16 flex flex-col items-start gap-6 rounded-2xl border border-navy-900/[0.08] bg-white p-8 shadow-soft sm:flex-row sm:items-center sm:justify-between sm:p-10"
+          className="mt-16 flex flex-col items-stretch gap-6 rounded-2xl border border-navy-900/[0.08] bg-white p-6 shadow-soft sm:flex-row sm:items-center sm:justify-between sm:p-10"
         >
           <div className="max-w-xl">
             <span className="eyebrow">Become a partner</span>
@@ -42,7 +42,10 @@ export function Sponsors() {
               Mock Madness sponsorship, and direct introductions to members.
             </p>
           </div>
-          <a href="#contact" className="btn-primary self-start">
+          <a
+            href="#contact"
+            className="btn-primary flex min-h-[48px] w-full justify-center sm:w-auto sm:justify-center sm:self-start"
+          >
             Partner with us
             <ArrowUpRight size={16} />
           </a>

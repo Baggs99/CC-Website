@@ -9,9 +9,9 @@ export function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <section id="faq" className="relative bg-ivory-50 py-24 sm:py-32">
+    <section id="faq" className="relative bg-ivory-50 py-16 sm:py-24 lg:py-32">
       <Container>
-        <div className="grid gap-14 lg:grid-cols-12 lg:gap-16">
+        <div className="grid gap-10 lg:grid-cols-12 lg:gap-16">
           <div className="lg:col-span-4">
             <SectionHeader
               eyebrow="FAQ"
@@ -32,18 +32,18 @@ export function FAQ() {
                     type="button"
                     onClick={() => setOpenIndex(isOpen ? null : i)}
                     aria-expanded={isOpen}
-                    className="group flex w-full items-center justify-between gap-6 py-6 text-left"
+                    className="group flex w-full items-start justify-between gap-3 py-5 text-left sm:items-center sm:gap-6 sm:py-6"
                   >
-                    <span className="flex items-center gap-5">
-                      <span className="font-mono text-[0.7rem] font-medium tracking-[0.2em] text-navy-700/40">
+                    <span className="flex min-w-0 flex-1 items-start gap-3 sm:gap-5">
+                      <span className="hidden shrink-0 pt-0.5 font-mono text-[0.65rem] font-medium tracking-[0.2em] text-navy-700/40 sm:block sm:text-[0.7rem]">
                         {String(i + 1).padStart(2, "0")}
                       </span>
-                      <span className="font-serif text-lg font-medium text-navy-900 sm:text-xl">
+                      <span className="min-w-0 font-serif text-[1.05rem] font-medium leading-snug text-navy-900 sm:text-lg md:text-xl">
                         {item.question}
                       </span>
                     </span>
                     <span
-                      className={`grid h-9 w-9 flex-none place-items-center rounded-full border border-navy-900/15 text-navy-900 transition-all duration-500 ease-out-expo group-hover:border-navy-900/40 group-hover:bg-navy-900 group-hover:text-ivory-50 ${
+                      className={`grid h-10 w-10 shrink-0 place-items-center rounded-full border border-navy-900/15 text-navy-900 transition-all duration-500 ease-out-expo group-hover:border-navy-900/40 group-hover:bg-navy-900 group-hover:text-ivory-50 sm:h-9 sm:w-9 ${
                         isOpen ? "rotate-45 bg-navy-900 text-ivory-50" : ""
                       }`}
                     >
@@ -64,7 +64,7 @@ export function FAQ() {
                         }}
                         className="overflow-hidden"
                       >
-                        <div className="pb-6 pl-12 pr-12 text-base leading-relaxed text-navy-700/85 text-pretty sm:pl-14">
+                        <div className="pb-5 pl-0 pr-14 text-sm leading-relaxed text-navy-700/85 text-pretty sm:pb-6 sm:pl-14 sm:pr-12 sm:text-base">
                           {item.answer}
                         </div>
                       </motion.div>

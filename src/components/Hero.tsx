@@ -20,9 +20,9 @@ export function Hero() {
   return (
     <section
       id="top"
-      className="relative isolate overflow-hidden pb-20 pt-32 text-ivory-50 sm:pb-28 sm:pt-36 lg:pb-36 lg:pt-44"
+      className="relative isolate overflow-hidden pb-16 pt-[calc(7.5rem+env(safe-area-inset-top))] text-ivory-50 sm:pb-28 sm:pt-[calc(8.5rem+env(safe-area-inset-top))] lg:pb-36 lg:pt-[calc(10rem+env(safe-area-inset-top))]"
     >
-      {/* Evans Hall — see public/images/IMAGE_SOURCES.md */}
+      {/* Evans Hall: see public/images/IMAGE_SOURCES.md */}
       <div className="absolute inset-0 z-0">
         <img
           src={SITE_IMAGES.heroEvansHall.src}
@@ -38,7 +38,7 @@ export function Hero() {
       {/* Readability scrims: heavy left column (headline), softer top/right (photo & sky) */}
       <div
         aria-hidden
-        className="absolute inset-0 z-[1] bg-gradient-to-r from-navy-950/[0.94] via-navy-950/72 to-navy-950/35 sm:from-navy-950/[0.92] sm:via-navy-950/60 sm:to-navy-950/30"
+        className="absolute inset-0 z-[1] bg-gradient-to-r from-navy-950/[0.96] via-navy-950/78 to-navy-950/42 sm:from-navy-950/[0.92] sm:via-navy-950/60 sm:to-navy-950/30"
       />
       <div
         aria-hidden
@@ -67,23 +67,8 @@ export function Hero() {
           animate="show"
           className="flex flex-col gap-10"
         >
-          <motion.div
-            custom={0}
-            variants={fadeUp}
-            className="inline-flex max-w-full flex-wrap items-center gap-x-3 gap-y-2 rounded-full border border-white/15 bg-navy-950/55 px-4 py-2.5 text-[0.68rem] font-semibold uppercase tracking-[0.2em] text-ivory-50 shadow-[0_8px_40px_rgba(5,14,28,0.55)] backdrop-blur-md sm:gap-3 sm:px-5 sm:py-3 sm:text-[0.7rem] sm:tracking-[0.22em]"
-          >
-            <span className="hidden h-px w-8 shrink-0 bg-ivory-200/50 sm:block" />
-            <span className="drop-shadow-[0_1px_6px_rgba(5,14,28,0.9)]">
-              Yale School of Management
-            </span>
-            <span className="hidden h-1 w-1 shrink-0 rounded-full bg-gold-400 sm:inline-block" />
-            <span className="hidden drop-shadow-[0_1px_6px_rgba(5,14,28,0.9)] sm:inline">
-              Evans Hall
-            </span>
-          </motion.div>
-
           <motion.h1
-            custom={1}
+            custom={0}
             variants={fadeUp}
             className="max-w-4xl font-serif text-display-xl font-medium text-balance text-ivory-50 [text-shadow:0_4px_48px_rgba(5,14,28,0.95),0_2px_12px_rgba(0,0,0,0.65)]"
           >
@@ -102,21 +87,24 @@ export function Hero() {
           </motion.h1>
 
           <motion.p
-            custom={2}
+            custom={1}
             variants={fadeUp}
-            className="max-w-2xl text-lg leading-relaxed text-ivory-50 text-pretty sm:text-xl [text-shadow:0_2px_24px_rgba(5,14,28,0.88)]"
+            className="max-w-2xl text-base leading-relaxed text-ivory-50 text-pretty sm:text-lg sm:leading-relaxed md:text-xl [text-shadow:0_2px_24px_rgba(5,14,28,0.88)]"
           >
             We prepare students for consulting careers through structured
             mentorship, rigorous case practice, end-to-end recruiting support,
-            and a community that learns — and wins — together.
+            and a community that learns and wins together.
           </motion.p>
 
           <motion.div
-            custom={3}
+            custom={2}
             variants={fadeUp}
-            className="flex flex-wrap items-center gap-3"
+            className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center"
           >
-            <a href="#recruiting" className="btn-primary-light group">
+            <a
+              href="#recruiting"
+              className="btn-primary-light group flex min-h-[48px] w-full justify-center sm:w-auto"
+            >
               Recruiting Resources
               <ArrowRight
                 size={16}
@@ -125,7 +113,7 @@ export function Hero() {
             </a>
             <a
               href="#join"
-              className="btn border border-ivory-50/40 bg-navy-950/45 px-6 py-3 text-sm font-medium text-ivory-50 shadow-[0_8px_32px_rgba(5,14,28,0.45)] backdrop-blur-md transition-all duration-300 ease-out-expo hover:-translate-y-0.5 hover:border-ivory-50/55 hover:bg-navy-950/65 hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-ivory-200/60 focus-visible:ring-offset-2 focus-visible:ring-offset-navy-950 group"
+              className="btn flex min-h-[48px] w-full justify-center border border-ivory-50/40 bg-navy-950/45 px-6 py-3 text-sm font-medium text-ivory-50 shadow-[0_8px_32px_rgba(5,14,28,0.45)] backdrop-blur-md transition-all duration-300 ease-out-expo hover:-translate-y-0.5 hover:border-ivory-50/55 hover:bg-navy-950/65 hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-ivory-200/60 focus-visible:ring-offset-2 focus-visible:ring-offset-navy-950 sm:w-auto group"
             >
               Join the Club
               <ArrowUpRight
@@ -137,7 +125,7 @@ export function Hero() {
               href="https://som.yale.edu/programs/mba/admissions/mba-admissions-events"
               target="_blank"
               rel="noopener noreferrer"
-              className="btn border border-ivory-50/30 bg-white/10 px-6 py-3 text-sm font-medium text-ivory-50 shadow-[0_4px_24px_rgba(5,14,28,0.35)] backdrop-blur-md transition-all duration-300 ease-out-expo hover:-translate-y-0.5 hover:border-ivory-50/50 hover:bg-white/15 hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-ivory-200/60 focus-visible:ring-offset-2 focus-visible:ring-offset-navy-950 group"
+              className="btn flex min-h-[48px] w-full justify-center border border-ivory-50/30 bg-white/10 px-6 py-3 text-sm font-medium text-ivory-50 shadow-[0_4px_24px_rgba(5,14,28,0.35)] backdrop-blur-md transition-all duration-300 ease-out-expo hover:-translate-y-0.5 hover:border-ivory-50/50 hover:bg-white/15 hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-ivory-200/60 focus-visible:ring-offset-2 focus-visible:ring-offset-navy-950 sm:w-auto group"
             >
               Admissions events
               <ArrowUpRight
@@ -148,7 +136,7 @@ export function Hero() {
           </motion.div>
 
           <motion.div
-            custom={4}
+            custom={3}
             variants={fadeUp}
             className="mt-10 grid grid-cols-2 gap-px overflow-hidden rounded-2xl border border-ivory-50/15 bg-ivory-50/5 shadow-glow backdrop-blur-md sm:mt-16 sm:grid-cols-4"
           >
@@ -160,12 +148,12 @@ export function Hero() {
             ].map((item) => (
               <div
                 key={item.k}
-                className="bg-navy-950/40 px-5 py-5 sm:px-6 sm:py-6"
+                className="bg-navy-950/40 px-3.5 py-4 sm:px-6 sm:py-6"
               >
-                <div className="text-[0.65rem] font-medium uppercase tracking-[0.2em] text-gold-400">
+                <div className="text-[0.6rem] font-medium uppercase tracking-[0.18em] text-gold-400 sm:text-[0.65rem] sm:tracking-[0.2em]">
                   {item.k}
                 </div>
-                <div className="mt-2 text-sm text-ivory-100/90 sm:text-base">
+                <div className="mt-1.5 text-xs leading-snug text-ivory-100/90 sm:mt-2 sm:text-base sm:leading-normal">
                   {item.v}
                 </div>
               </div>

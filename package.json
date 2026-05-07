@@ -8,6 +8,7 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "optimize-images": "node scripts/optimize-images.mjs",
+    "favicon": "node scripts/generate-favicon.mjs",
     "preview": "vite preview",
     "lint": "tsc --noEmit"
   },

@@ -11,7 +11,7 @@ export function Community() {
   return (
     <section
       id="community"
-      className="relative overflow-hidden bg-ivory-100 py-24 sm:py-32"
+      className="relative overflow-hidden bg-ivory-100 py-16 sm:py-24 lg:py-32"
     >
       <div
         aria-hidden
@@ -21,7 +21,7 @@ export function Community() {
       <Container>
         <SectionHeader
           eyebrow="On campus"
-          title="Recruiting is intense — you don't go through it alone."
+          title="Recruiting is intense. You don't go through it alone."
           description="Case teams, mock interviews, and auditorium programming bring hundreds of members together each fall. The culture is generous: second-years invest serious time so first-years can compete with confidence."
         />
 
@@ -43,7 +43,7 @@ export function Community() {
                   decoding="async"
                 />
                 <figcaption className="sr-only">
-                  Yale SOM Consulting Club programming — whiteboard working session.
+                  Yale SOM Consulting Club programming: whiteboard working session.
                 </figcaption>
               </div>
             </figure>
@@ -85,14 +85,14 @@ export function Community() {
             }}
             className="flex flex-col justify-center lg:col-span-5"
           >
-            <p className="font-serif text-2xl font-medium leading-snug text-navy-900 text-pretty sm:text-[1.65rem] sm:leading-snug">
+            <p className="font-serif text-xl font-medium leading-snug text-navy-900 text-pretty sm:text-[1.65rem] sm:leading-snug">
               Weekly meetings in Zhang Auditorium, structured casing teams, and
-              late-night prep in Evans Hall — that&apos;s the rhythm of
+              late-night prep in Evans Hall. That&apos;s the rhythm of
               consulting recruiting at SOM.
             </p>
             <p className="mt-6 text-base leading-relaxed text-navy-700/88 text-pretty">
-              Yale SOM featured our club&apos;s fall recruiting season — from
-              math refreshers to mock interview drills — as students tackle the
+              Yale SOM featured our club&apos;s fall recruiting season, from
+              math refreshers to mock interview drills, as students tackle the
               internship roadmap together.
             </p>
             <a

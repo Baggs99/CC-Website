@@ -2,14 +2,14 @@
 export default {
   content: ["./index.html", "./src/**/*.{ts,tsx}"],
   theme: {
-    container: {
-      center: true,
-      padding: {
-        DEFAULT: "1.25rem",
-        sm: "1.5rem",
-        lg: "2rem",
-        xl: "2.5rem",
-      },
+      container: {
+        center: true,
+        padding: {
+          DEFAULT: "1rem",
+          sm: "1.5rem",
+          lg: "2rem",
+          xl: "2.5rem",
+        },
       screens: {
         "2xl": "1280px",
       },
@@ -67,9 +67,19 @@ export default {
         ],
       },
       fontSize: {
-        "display-xl": ["clamp(3rem, 7vw, 6rem)", { lineHeight: "1.02", letterSpacing: "-0.025em" }],
-        "display-lg": ["clamp(2.5rem, 5vw, 4.25rem)", { lineHeight: "1.05", letterSpacing: "-0.02em" }],
-        "display-md": ["clamp(2rem, 3.5vw, 3rem)", { lineHeight: "1.1", letterSpacing: "-0.015em" }],
+        /* Mobile-first clamps so headlines never overpower narrow viewports */
+        "display-xl": [
+          "clamp(2.35rem, 9vw + 0.5rem, 6rem)",
+          { lineHeight: "1.02", letterSpacing: "-0.025em" },
+        ],
+        "display-lg": [
+          "clamp(2rem, 5.5vw + 0.35rem, 4.25rem)",
+          { lineHeight: "1.05", letterSpacing: "-0.02em" },
+        ],
+        "display-md": [
+          "clamp(1.65rem, 4vw + 0.5rem, 3rem)",
+          { lineHeight: "1.1", letterSpacing: "-0.015em" },
+        ],
       },
       boxShadow: {
         soft: "0 1px 2px rgba(10, 26, 47, 0.04), 0 8px 24px -12px rgba(10, 26, 47, 0.08)",

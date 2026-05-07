@@ -19,7 +19,7 @@ export function Leadership() {
   return (
     <section
       id="leadership"
-      className="relative scroll-mt-24 bg-ivory-50 py-24 sm:py-32"
+      className="relative bg-ivory-50 py-16 sm:py-24 lg:py-32"
     >
       <Container>
         <SectionHeader
@@ -28,7 +28,7 @@ export function Leadership() {
           description="Our board is elected each year from second-year SOM students currently recruiting and working at top consulting firms."
         />
 
-        {/* Presidents — dedicated row */}
+        {/* Presidents: dedicated row */}
         <ul
           role="list"
           className="mx-auto mt-14 grid max-w-3xl grid-cols-1 gap-5 sm:grid-cols-2 sm:gap-6"
@@ -51,7 +51,7 @@ export function Leadership() {
           ))}
         </ul>
 
-        {/* Executive committee — two rows of four on sm+ */}
+        {/* Executive committee: two rows of four on sm+ */}
         <ul
           role="list"
           className="mx-auto mt-12 grid max-w-5xl grid-cols-2 gap-4 sm:mt-14 sm:grid-cols-4 sm:gap-5 sm:items-stretch"
@@ -74,7 +74,7 @@ export function Leadership() {
           ))}
         </ul>
 
-        <p className="mt-12 max-w-2xl text-sm text-navy-700/75">
+        <p className="mt-10 max-w-2xl text-xs leading-relaxed text-navy-700/75 sm:mt-12 sm:text-sm">
           Headshots go in{" "}
           <code className="rounded bg-navy-900/[0.06] px-1.5 py-0.5 text-xs">
             public/leadership/
@@ -148,7 +148,7 @@ function LeaderCard({ leader }: { leader: Leader }) {
           target="_blank"
           rel="noreferrer"
           aria-label={`${leader.name} on LinkedIn`}
-          className="inline-flex w-fit items-center gap-2 rounded-full border border-navy-900/18 bg-navy-900/[0.03] px-3 py-1.5 text-xs font-medium text-navy-900 transition-all duration-300 hover:-translate-y-0.5 hover:border-navy-900/35 hover:bg-navy-900 hover:text-ivory-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-navy-500 sm:px-3.5 sm:py-2"
+          className="inline-flex min-h-[44px] w-full items-center justify-center gap-2 rounded-full border border-navy-900/18 bg-navy-900/[0.03] px-3 py-2 text-xs font-medium text-navy-900 transition-all duration-300 hover:-translate-y-0.5 hover:border-navy-900/35 hover:bg-navy-900 hover:text-ivory-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-navy-500 active:scale-[0.99] sm:w-fit sm:justify-start sm:px-3.5 sm:py-2"
         >
           <Linkedin size={15} strokeWidth={1.85} className="shrink-0" />
           LinkedIn

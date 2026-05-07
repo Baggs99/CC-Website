@@ -46,7 +46,7 @@ export const recruitingResources: RecruitingResource[] = [
   {
     title: "White Paper",
     description:
-      "Our internally written guide to MBB and tier-two recruiting at Yale SOM — written by alumni now at top firms.",
+      "Our internally written guide to MBB and tier-two recruiting at Yale SOM, written by alumni now at top firms.",
     icon: FileText,
     cta: "Read the paper",
     href: "#",

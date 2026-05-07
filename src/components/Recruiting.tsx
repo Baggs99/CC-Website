@@ -9,9 +9,9 @@ export function Recruiting() {
   return (
     <section
       id="recruiting"
-      className="relative overflow-hidden bg-ivory-100 py-24 sm:py-32"
+      className="relative overflow-hidden bg-ivory-100 py-16 sm:py-24 lg:py-32"
     >
-      {/* Tasteful photo wash — keeps the section from feeling like a flat SaaS grid */}
+      {/* Tasteful photo wash; keeps the section from feeling like a flat SaaS grid */}
       <div
         aria-hidden
         className="pointer-events-none absolute inset-0 z-0 bg-cover bg-center opacity-[0.09] mix-blend-multiply"
@@ -33,7 +33,7 @@ export function Recruiting() {
               className="!max-w-none"
               eyebrow="Recruiting Resources"
               title="Everything you need, in one place."
-              description="Eight focused resources that mirror the real recruiting cycle — from your first framework drill to your final round. Built by students who just finished the process."
+              description="Eight focused resources that mirror the real recruiting cycle, from your first framework drill to your final round. Built by students who just finished the process."
             />
           </div>
           <div className="lg:col-span-5">

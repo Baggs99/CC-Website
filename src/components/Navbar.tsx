@@ -29,31 +29,32 @@ export function Navbar() {
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
       className={cn(
-        "fixed inset-x-0 top-0 z-50 transition-all duration-500 ease-out-expo",
+        "fixed inset-x-0 top-0 z-50 pt-[env(safe-area-inset-top)] transition-all duration-500 ease-out-expo",
         scrolled
           ? "border-b border-navy-900/[0.07] bg-ivory-50/90 backdrop-blur-xl"
           : "border-b border-white/10 bg-gradient-to-b from-navy-950/90 via-navy-950/55 to-transparent backdrop-blur-md",
       )}
     >
-      <Container className="flex h-16 items-center justify-between md:h-20">
+      <Container className="flex min-h-[3.25rem] items-center justify-between py-1 sm:h-16 sm:min-h-0 sm:py-0 md:h-20">
         <a
           href="#top"
-          className="group flex items-center gap-3"
+          className="group flex min-h-[44px] min-w-0 items-center gap-2.5 sm:gap-3"
           aria-label="Yale SOM Consulting Club home"
         >
-          <span
-            className={cn(
-              "relative grid h-9 w-9 place-items-center rounded-md font-serif text-base font-semibold transition-colors duration-300",
-              "bg-navy-900 text-ivory-50",
-            )}
-          >
-            Y
-            <span className="absolute -right-1 -top-1 h-1.5 w-1.5 rounded-full bg-gold-500" />
+          <span className="relative shrink-0">
+            <img
+              src="/ycc_owlbook.png"
+              alt=""
+              width={80}
+              height={80}
+              decoding="async"
+              className="h-9 w-auto max-h-9 object-contain drop-shadow-[0_2px_12px_rgba(5,14,28,0.35)] sm:h-10 sm:max-h-10"
+            />
           </span>
-          <span className="hidden flex-col leading-tight sm:flex">
+          <span className="flex min-w-0 flex-col leading-tight sm:flex">
             <span
               className={cn(
-                "text-[0.65rem] font-medium uppercase tracking-[0.22em]",
+                "text-[0.58rem] font-medium uppercase tracking-[0.2em] sm:text-[0.65rem] sm:tracking-[0.22em]",
                 scrolled ? "text-navy-700/75" : "text-ivory-200/85",
               )}
             >
@@ -61,7 +62,7 @@ export function Navbar() {
             </span>
             <span
               className={cn(
-                "font-serif text-[0.95rem] font-medium",
+                "truncate font-serif text-[0.85rem] font-medium sm:text-[0.95rem]",
                 scrolled ? "text-navy-900" : "text-ivory-50",
               )}
             >
@@ -103,7 +104,7 @@ export function Navbar() {
         <button
           type="button"
           className={cn(
-            "grid h-10 w-10 place-items-center rounded-full border backdrop-blur md:hidden",
+            "grid h-11 w-11 shrink-0 place-items-center rounded-full border backdrop-blur md:hidden",
             scrolled
               ? "border-navy-900/10 bg-white/60 text-navy-900"
               : "border-white/25 bg-navy-950/45 text-ivory-50 shadow-[0_2px_16px_rgba(5,14,28,0.5)]",
@@ -126,14 +127,14 @@ export function Navbar() {
             className="md:hidden"
           >
             <div className="border-t border-navy-900/[0.07] bg-ivory-50/95 backdrop-blur-xl">
-              <Container className="flex flex-col py-6">
+              <Container className="flex flex-col pb-[max(1.5rem,env(safe-area-inset-bottom))] pt-4">
                 <ul className="flex flex-col">
                   {navLinks.map((link) => (
                     <li key={link.href}>
                       <a
                         href={link.href}
                         onClick={() => setOpen(false)}
-                        className="block py-3 font-serif text-2xl font-medium text-navy-900"
+                        className="flex min-h-[48px] items-center py-2 font-serif text-xl font-medium leading-snug text-navy-900 sm:text-2xl"
                       >
                         {link.label}
                       </a>
@@ -143,7 +144,7 @@ export function Navbar() {
                 <a
                   href="#join"
                   onClick={() => setOpen(false)}
-                  className="btn-primary mt-6 w-full"
+                  className="btn-primary mt-5 min-h-[48px] w-full justify-center sm:mt-6"
                 >
                   Join the club
                 </a>

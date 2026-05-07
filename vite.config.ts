@@ -15,7 +15,7 @@ export default defineConfig({
   },
 
   build: {
-    // Default — explicit so hashed bundles always land in dist/assets/
+    // Default: explicit so hashed bundles always land in dist/assets/
     assetsDir: "assets",
     emptyOutDir: true,
     sourcemap: false,

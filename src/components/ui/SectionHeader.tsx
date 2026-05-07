@@ -33,7 +33,7 @@ export function SectionHeader({
       viewport={{ once: true, margin: "-80px" }}
       transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
       className={cn(
-        "flex max-w-3xl flex-col gap-5",
+        "flex max-w-3xl flex-col gap-4 sm:gap-5",
         alignClass,
         className,
       )}

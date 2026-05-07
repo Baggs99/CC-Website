@@ -4,7 +4,7 @@ import { Container } from "./ui/Container";
 
 export function Stats() {
   return (
-    <section className="relative overflow-hidden bg-navy-950 py-20 text-ivory-50 sm:py-24">
+    <section className="relative overflow-hidden bg-navy-950 py-14 text-ivory-50 sm:py-20 md:py-24">
       <div
         aria-hidden
         className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_top,_rgba(61,94,137,0.35),_transparent_60%)]"
@@ -34,9 +34,9 @@ export function Stats() {
                 delay: 0.05 + i * 0.06,
                 ease: [0.16, 1, 0.3, 1],
               }}
-              className="bg-navy-950/60 p-7 sm:p-8"
+              className="bg-navy-950/60 p-5 sm:p-8"
             >
-              <div className="font-serif text-5xl font-medium tracking-tight text-ivory-50 sm:text-6xl">
+              <div className="font-serif text-4xl font-medium tracking-tight text-ivory-50 sm:text-5xl md:text-6xl">
                 {s.value}
               </div>
               <div className="mt-3 text-sm font-medium text-gold-400">
