@@ -1,4 +1,4 @@
-import { Linkedin, Instagram, Mail, ArrowUpRight } from "lucide-react";
+import { Mail, ArrowUpRight } from "lucide-react";
 import { Container } from "./ui/Container";
 
 export function Footer() {
@@ -56,17 +56,9 @@ export function Footer() {
             affiliated with the firms shown.
           </p>
 
-          <div className="flex items-center gap-2">
-            <SocialLink href="#" label="LinkedIn">
-              <Linkedin size={15} strokeWidth={1.8} />
-            </SocialLink>
-            <SocialLink href="#" label="Instagram">
-              <Instagram size={15} strokeWidth={1.8} />
-            </SocialLink>
-            <SocialLink href="mailto:club-consulting@som.yale.edu" label="Email">
-              <Mail size={15} strokeWidth={1.8} />
-            </SocialLink>
-          </div>
+          <SocialLink href="mailto:club-consulting@som.yale.edu" label="Email">
+            <Mail size={15} strokeWidth={1.8} />
+          </SocialLink>
         </div>
       </Container>
     </footer>
