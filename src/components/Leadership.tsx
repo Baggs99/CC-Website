@@ -25,7 +25,7 @@ export function Leadership() {
         <SectionHeader
           eyebrow="Leadership"
           title="Led by students who recently sat where you are."
-          description="Our board is elected each year from second-year SOM students currently recruiting and working at top consulting firms."
+          description="Our board is appointed each year from second-year SOM students currently recruiting and working at top consulting firms."
         />
 
         {/* Presidents: dedicated row */}

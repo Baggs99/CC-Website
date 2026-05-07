@@ -15,7 +15,7 @@ export function Sponsors() {
     >
       <Container>
         <SectionHeader
-          eyebrow="Sponsors & Partners"
+          eyebrow="Partners"
           title="Built in partnership with the firms our members join."
           description="We work closely with sponsoring firms on programming, mocks, and recruiting events. Firm names and logos are trademarks of their respective owners."
         />
@@ -38,8 +38,8 @@ export function Sponsors() {
               Hire from a community that&apos;s been preparing all year.
             </h3>
             <p className="mt-3 text-sm text-navy-700/80 sm:text-base">
-              Sponsorship tiers cover firm presentations, exclusive mocks,
-              Mock Madness sponsorship, and direct introductions to members.
+              Partnership tiers cover firm presentations, exclusive mocks,
+              Mock Madness partnership, and direct introductions to members.
             </p>
           </div>
           <a

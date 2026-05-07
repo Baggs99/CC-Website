@@ -117,7 +117,7 @@ export function Hero() {
               rel="noopener noreferrer"
               className="btn flex min-h-[48px] w-full justify-center border border-ivory-50/30 bg-white/10 px-6 py-3 text-sm font-medium text-ivory-50 shadow-[0_4px_24px_rgba(5,14,28,0.35)] backdrop-blur-md transition-all duration-300 ease-out-expo hover:-translate-y-0.5 hover:border-ivory-50/50 hover:bg-white/15 hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-ivory-200/60 focus-visible:ring-offset-2 focus-visible:ring-offset-navy-950 sm:w-auto group"
             >
-              Admissions events
+              Admissions Events
               <ArrowUpRight
                 size={16}
                 className="transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
