@@ -17,7 +17,7 @@ export function Sponsors() {
         <SectionHeader
           eyebrow="Partners"
           title="Built in partnership with the firms our members join."
-          description="We work closely with sponsoring firms on programming, mocks, and recruiting events. Firm names and logos are trademarks of their respective owners."
+          description="We work closely with partner firms on programming, mocks, and recruiting events. Firm names and logos are trademarks of their respective owners."
         />
 
         <div className="mt-14 space-y-14">
