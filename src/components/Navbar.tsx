@@ -66,12 +66,13 @@ export function Navbar() {
                 scrolled ? "text-navy-900" : "text-ivory-50",
               )}
             >
-              Consulting Club
+              <span className="hidden lg:inline">Consulting Club</span>
+              <span className="inline lg:hidden">Consulting</span>
             </span>
           </span>
         </a>
 
-        <nav className="hidden items-center gap-1 md:flex">
+        <nav className="ml-6 hidden flex-1 items-center justify-center gap-1 md:flex lg:ml-10">
           {navLinks.map((link) => (
             <a
               key={link.href}
@@ -87,19 +88,6 @@ export function Navbar() {
             </a>
           ))}
         </nav>
-
-        <div className="hidden md:block">
-          <a
-            href="#join"
-            className={
-              scrolled
-                ? "btn-primary"
-                : "btn-primary-light shadow-[0_4px_24px_rgba(5,14,28,0.35)]"
-            }
-          >
-            Join the club
-          </a>
-        </div>
 
         <button
           type="button"
@@ -141,13 +129,6 @@ export function Navbar() {
                     </li>
                   ))}
                 </ul>
-                <a
-                  href="#join"
-                  onClick={() => setOpen(false)}
-                  className="btn-primary mt-5 min-h-[48px] w-full justify-center sm:mt-6"
-                >
-                  Join the club
-                </a>
               </Container>
             </div>
           </motion.div>

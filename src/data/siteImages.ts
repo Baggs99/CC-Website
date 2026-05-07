@@ -9,10 +9,6 @@ export const SITE_IMAGES = {
     src: "/images/yale-som-evans-hall-hero.jpg",
     alt: "Yale School of Management, front facade of Edward P. Evans Hall, New Haven.",
   },
-  missionCampusLife: {
-    src: "/images/students-evans-hall.jpg",
-    alt: "Students chatting together inside Yale SOM Evans Hall.",
-  },
   communityWhiteboard: {
     src: "/images/consulting-club-whiteboard-session.jpg",
     alt: "Consulting Club meeting: member presenting at a whiteboard while peers collaborate.",

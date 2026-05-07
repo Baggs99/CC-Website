@@ -128,11 +128,6 @@ export function Community() {
             </ul>
           </motion.div>
         </div>
-
-        <p className="mt-12 text-center text-[0.65rem] uppercase tracking-[0.2em] text-navy-700/45">
-          Photography: Yale School of Management · Consulting Club feature,
-          2024
-        </p>
       </Container>
     </section>
   );
