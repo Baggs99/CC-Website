@@ -1,4 +1,5 @@
 import { Mail, ArrowUpRight } from "lucide-react";
+import { Link } from "react-router-dom";
 import { Container } from "./ui/Container";
 
 export function Footer() {
@@ -13,7 +14,7 @@ export function Footer() {
 
       <Container className="py-12 sm:py-20">
         <div className="max-w-xl">
-          <a href="#top" className="flex items-center gap-3">
+          <Link to="/" className="flex items-center gap-3">
             <span className="relative shrink-0 rounded-md bg-ivory-50 p-1 ring-1 ring-ivory-50/10">
               <img
                 src="/ycc_owlbook.png"
@@ -32,7 +33,7 @@ export function Footer() {
                 Consulting Club
               </span>
             </span>
-          </a>
+          </Link>
 
           <p className="mt-6 text-sm leading-relaxed text-ivory-200/70 text-pretty">
             A student-run organization at the Yale School of Management
