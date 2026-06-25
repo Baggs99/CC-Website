@@ -1,0 +1,18 @@
+# Render static site — SPA client-side routing
+# If this site was created manually in Render, either:
+# 1. Sync this Blueprint from the Render Dashboard, OR
+# 2. Add a rewrite in Dashboard → Redirects/Rewrites:
+#    Source: /*  Destination: /index.html  Action: Rewrite
+#
+# Update `name` below to match your existing Render static site service name.
+
+services:
+  - type: web
+    name: yale-som-consulting-club
+    runtime: static
+    buildCommand: npm install && npm run build
+    staticPublishPath: ./dist
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html
