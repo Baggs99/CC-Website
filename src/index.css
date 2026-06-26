@@ -103,6 +103,14 @@
   .hairline {
     @apply border-b border-navy-900/10;
   }
+
+  .leaflet-popup-content-wrapper {
+    @apply rounded-xl shadow-elevated;
+  }
+
+  .leaflet-popup-content {
+    @apply m-3 font-sans;
+  }
 }
 
 @layer utilities {

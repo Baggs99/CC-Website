@@ -131,6 +131,10 @@ export const recruitingPathSteps: RecruitingPathStep[] = [
       "Note personal ties, partner locations, and lifestyle fit.",
       "Align with firm guidance: pick where you want to be, not just where you interned.",
     ],
+    clubResource: {
+      label: "MBB global office map",
+      href: "/full-time-recruiting/office-map",
+    },
     detailSections: [
       {
         id: "office-rule",

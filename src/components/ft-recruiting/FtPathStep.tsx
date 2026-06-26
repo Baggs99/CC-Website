@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
+import { Link } from "react-router-dom";
 import type {
   RecruitingPathStep,
   RecruitingStepLink,
@@ -9,13 +10,26 @@ import { cn } from "@/lib/utils";
 function StepLink({ link }: { link: RecruitingStepLink }) {
   const external =
     link.href.startsWith("http") || link.href.startsWith("mailto:");
+  const internal = link.href.startsWith("/");
+  const className =
+    "inline-flex items-center gap-1 text-sm font-medium text-navy-900 underline-offset-4 hover:underline";
+
+  if (internal) {
+    return (
+      <Link to={link.href} className={className}>
+        {link.label}
+        <ArrowUpRight size={14} className="shrink-0 opacity-70" />
+      </Link>
+    );
+  }
+
   return (
     <a
       href={link.href}
       {...(external && !link.href.startsWith("mailto:")
         ? { target: "_blank", rel: "noopener noreferrer" }
         : {})}
-      className="inline-flex items-center gap-1 text-sm font-medium text-navy-900 underline-offset-4 hover:underline"
+      className={className}
     >
       {link.label}
       <ArrowUpRight size={14} className="shrink-0 opacity-70" />

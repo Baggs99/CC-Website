@@ -1,0 +1,2648 @@
+[
+  {
+    "firm": "Bain",
+    "name": "Amsterdam",
+    "country": "Netherlands",
+    "region": "Europe",
+    "lat": 52.345023,
+    "lng": 4.917127,
+    "address": "Amstelplein 1, Rembrandt Tower, 32nd Floor, 1096 HA Amsterdam"
+  },
+  {
+    "firm": "Bain",
+    "name": "Athens",
+    "country": "Greece",
+    "region": "Europe",
+    "lat": 37.9826,
+    "lng": 23.7447,
+    "address": "23 Tsakalof Street, 10673 Athens"
+  },
+  {
+    "firm": "Bain",
+    "name": "Atlanta",
+    "country": "USA",
+    "region": "North America",
+    "lat": 33.786924,
+    "lng": -84.383924,
+    "address": "1180 Peachtree Street NE, Suite 2700, Atlanta, GA 30309"
+  },
+  {
+    "firm": "Bain",
+    "name": "Austin",
+    "country": "USA",
+    "region": "North America",
+    "lat": 30.2686,
+    "lng": -97.7431,
+    "address": "405 Colorado St, Suite 2000, Austin, TX 78701"
+  },
+  {
+    "firm": "Bain",
+    "name": "Bangkok",
+    "country": "Thailand",
+    "region": "Asia Pacific",
+    "lat": 13.73527,
+    "lng": 100.561672,
+    "address": "689 Bhiraj Tower at EmQuartier, Level 31, Sukhumvit Road, Bangkok 10110"
+  },
+  {
+    "firm": "Bain",
+    "name": "Beijing",
+    "country": "China",
+    "region": "Asia Pacific",
+    "lat": 39.907939,
+    "lng": 116.474778,
+    "address": "No. 79 Jian'guo Road, Office Tower 2, China Central Place, Chaoyang, Beijing 100025"
+  },
+  {
+    "firm": "Bain",
+    "name": "Bengaluru",
+    "country": "India",
+    "region": "Asia Pacific",
+    "lat": 12.965451,
+    "lng": 77.596283,
+    "address": "10 Anand Bhavan, Vittal Mallya Road, Bengaluru 560001"
+  },
+  {
+    "firm": "Bain",
+    "name": "Berlin",
+    "country": "Germany",
+    "region": "Europe",
+    "lat": 52.508661,
+    "lng": 13.375581,
+    "address": "Potsdamer Platz 11, 10785 Berlin"
+  },
+  {
+    "firm": "Bain",
+    "name": "Bogotá",
+    "country": "Colombia",
+    "region": "Central & South America",
+    "lat": 4.6628,
+    "lng": -74.0578,
+    "address": "Carrera 11 #79-52, Building 80/ONCE, 11th floor, Bogotá DC"
+  },
+  {
+    "firm": "Bain",
+    "name": "Boston",
+    "country": "USA",
+    "region": "North America",
+    "lat": 42.351751,
+    "lng": -71.070809,
+    "address": "350 Boylston Street, Boston, MA 02116"
+  },
+  {
+    "firm": "Bain",
+    "name": "Brisbane",
+    "country": "Australia",
+    "region": "Asia Pacific",
+    "lat": -27.4695,
+    "lng": 153.0236,
+    "address": "1 Eagle Street, Waterfront Place, Level 13, Brisbane QLD 4000"
+  },
+  {
+    "firm": "Bain",
+    "name": "Brussels",
+    "country": "Belgium",
+    "region": "Europe",
+    "lat": 50.823143,
+    "lng": 4.369011,
+    "address": "Avenue Louise 326, Blue Tower, 22nd Floor, Brussels 1050"
+  },
+  {
+    "firm": "Bain",
+    "name": "Buenos Aires",
+    "country": "Argentina",
+    "region": "Central & South America",
+    "lat": -34.588842,
+    "lng": -58.382271,
+    "address": "Av. Leandro N. Alem 815, 6th Floor, Buenos Aires C1001AAD"
+  },
+  {
+    "firm": "Bain",
+    "name": "Chicago",
+    "country": "USA",
+    "region": "North America",
+    "lat": 41.879758,
+    "lng": -87.632649,
+    "address": "190 S. LaSalle Street, Suite 3400, Chicago, IL 60603"
+  },
+  {
+    "firm": "Bain",
+    "name": "Copenhagen",
+    "country": "Denmark",
+    "region": "Europe",
+    "lat": 55.675239,
+    "lng": 12.567869,
+    "address": "Kristen Bernikows Gade 1, Galleri K, 1105 Copenhagen K"
+  },
+  {
+    "firm": "Bain",
+    "name": "Dallas",
+    "country": "USA",
+    "region": "North America",
+    "lat": 32.788356,
+    "lng": -96.804607,
+    "address": "1717 McKinney Avenue, Suite 1600, Dallas, TX 75202"
+  },
+  {
+    "firm": "Bain",
+    "name": "Denver",
+    "country": "USA",
+    "region": "North America",
+    "lat": 39.744181,
+    "lng": -104.992625,
+    "address": "675 15th St, Denver, CO 80202"
+  },
+  {
+    "firm": "Bain",
+    "name": "Doha",
+    "country": "Qatar",
+    "region": "Middle East",
+    "lat": 25.3195,
+    "lng": 51.5241,
+    "address": "Tornado Tower, Level 12, West Bay, Doha PO Box 19915"
+  },
+  {
+    "firm": "Bain",
+    "name": "Dubai",
+    "country": "UAE",
+    "region": "Middle East",
+    "lat": 25.09003,
+    "lng": 55.15261,
+    "address": "Dubai World Trade Centre, One Central, The Offices 4, Level 7, PO Box 23236"
+  },
+  {
+    "firm": "Bain",
+    "name": "Dusseldorf",
+    "country": "Germany",
+    "region": "Europe",
+    "lat": 51.216834,
+    "lng": 6.75232,
+    "address": "Hafenspitze, Speditionstrasse 21, 40221 Dusseldorf"
+  },
+  {
+    "firm": "Bain",
+    "name": "Frankfurt",
+    "country": "Germany",
+    "region": "Europe",
+    "lat": 50.114073,
+    "lng": 8.672596,
+    "address": "Neue Mainzer Straße 80, 60311 Frankfurt"
+  },
+  {
+    "firm": "Bain",
+    "name": "Helsinki",
+    "country": "Finland",
+    "region": "Europe",
+    "lat": 60.168734,
+    "lng": 24.950167,
+    "address": "Aleksanterinkatu 30-34, 00100 Helsinki"
+  },
+  {
+    "firm": "Bain",
+    "name": "Ho Chi Minh City",
+    "country": "Vietnam",
+    "region": "Asia Pacific",
+    "lat": 10.7771,
+    "lng": 106.7019,
+    "address": "15B/8 Le Thanh Ton Street, 5th Floor, Sai Gon Ward, Ho Chi Minh City"
+  },
+  {
+    "firm": "Bain",
+    "name": "Hong Kong",
+    "country": "China (SAR)",
+    "region": "Asia Pacific",
+    "lat": 22.2855,
+    "lng": 114.1587,
+    "address": "1 Harbour View Street, 30/F, One International Finance Centre, Central, Hong Kong"
+  },
+  {
+    "firm": "Bain",
+    "name": "Houston",
+    "country": "USA",
+    "region": "North America",
+    "lat": 29.756058,
+    "lng": -95.362476,
+    "address": "845 Texas Ave, Suite 3700 (Texas Tower), Houston, TX 77002"
+  },
+  {
+    "firm": "Bain",
+    "name": "Istanbul",
+    "country": "Turkey",
+    "region": "Europe",
+    "lat": 41.077014,
+    "lng": 29.026325,
+    "address": "Nispetiye Caddesi, Akmerkez B 3 Blok, Floor 10, Etiler, Istanbul 34337"
+  },
+  {
+    "firm": "Bain",
+    "name": "Jakarta",
+    "country": "Indonesia",
+    "region": "Asia Pacific",
+    "lat": -6.2271,
+    "lng": 106.8198,
+    "address": "Jl. Jend. Sudirman Kav. 71, Sequis Tower, Level 19, Jakarta 12190"
+  },
+  {
+    "firm": "Bain",
+    "name": "Johannesburg",
+    "country": "South Africa",
+    "region": "Africa",
+    "lat": -26.103665,
+    "lng": 28.059431,
+    "address": "129 Rivonia Road, Sandton, 2196, Gauteng"
+  },
+  {
+    "firm": "Bain",
+    "name": "Kuala Lumpur",
+    "country": "Malaysia",
+    "region": "Asia Pacific",
+    "lat": 3.1239,
+    "lng": 101.6755,
+    "address": "285 Jalan Maarof, Lot 6.02, Level 6, Menara BRDB, KL 59000"
+  },
+  {
+    "firm": "Bain",
+    "name": "Kyiv",
+    "country": "Ukraine",
+    "region": "Europe",
+    "lat": 50.451285,
+    "lng": 30.497798,
+    "address": "75 Zhylyanska Street, Eurasia Business Centre, Kyiv 01032"
+  },
+  {
+    "firm": "Bain",
+    "name": "Lima",
+    "country": "Peru",
+    "region": "Central & South America",
+    "lat": -12.045981,
+    "lng": -77.030591,
+    "address": "Lima, Peru"
+  },
+  {
+    "firm": "Bain",
+    "name": "Lisbon",
+    "country": "Portugal",
+    "region": "Europe",
+    "lat": 38.7159,
+    "lng": -9.1439,
+    "address": "Rua Mouzinho da Silveira nº 10, Maleo Office, 1st floor, 1250-167 Lisbon"
+  },
+  {
+    "firm": "Bain",
+    "name": "London",
+    "country": "UK",
+    "region": "Europe",
+    "lat": 51.509806,
+    "lng": -0.122969,
+    "address": "40 Strand, London WC2N 5RW"
+  },
+  {
+    "firm": "Bain",
+    "name": "Los Angeles",
+    "country": "USA",
+    "region": "North America",
+    "lat": 34.059529,
+    "lng": -118.417618,
+    "address": "1999 Avenue of the Stars, Suite 3900, Los Angeles, CA 90067"
+  },
+  {
+    "firm": "Bain",
+    "name": "Madrid",
+    "country": "Spain",
+    "region": "Europe",
+    "lat": 40.434525,
+    "lng": -3.683346,
+    "address": "C. de Velázquez, 86D, 28006 Madrid"
+  },
+  {
+    "firm": "Bain",
+    "name": "Manila",
+    "country": "Philippines",
+    "region": "Asia Pacific",
+    "lat": 14.58003,
+    "lng": 120.985536,
+    "address": "PSE Tower, Level 25, 5th Ave cor. 28th St, Bonifacio Global City, Taguig 1634"
+  },
+  {
+    "firm": "Bain",
+    "name": "Melbourne",
+    "country": "Australia",
+    "region": "Asia Pacific",
+    "lat": -37.813737,
+    "lng": 144.969386,
+    "address": "120 Collins Street, Level 37, Melbourne VIC 3000"
+  },
+  {
+    "firm": "Bain",
+    "name": "Mexico City",
+    "country": "Mexico",
+    "region": "Central & South America",
+    "lat": 19.387721,
+    "lng": -99.250935,
+    "address": "Av. Paseo de Tamarindos 90 Tower 2, 16th Floor, Bosques de las Lomas, CDMX 05120"
+  },
+  {
+    "firm": "Bain",
+    "name": "Milan",
+    "country": "Italy",
+    "region": "Europe",
+    "lat": 45.457156,
+    "lng": 9.186043,
+    "address": "Via Santa Maria Segreta 2/3, Cordusio 2.0, 20123 Milano"
+  },
+  {
+    "firm": "Bain",
+    "name": "Minneapolis",
+    "country": "USA",
+    "region": "North America",
+    "lat": 44.9773,
+    "lng": -93.265469,
+    "address": "Minneapolis, MN"
+  },
+  {
+    "firm": "Bain",
+    "name": "Monterrey",
+    "country": "Mexico",
+    "region": "Central & South America",
+    "lat": 25.589328,
+    "lng": -100.259998,
+    "address": "Av. Roble 660, Torre Cytrus PH, Valle del Campestre, San Pedro Garza García 66265"
+  },
+  {
+    "firm": "Bain",
+    "name": "Montreal",
+    "country": "Canada",
+    "region": "North America",
+    "lat": 45.4954,
+    "lng": -73.5693,
+    "address": "1275 Ave des Canadiens-de-Montréal, Suite 05-127, Montréal, QC H3B 0G4"
+  },
+  {
+    "firm": "Bain",
+    "name": "Mumbai",
+    "country": "India",
+    "region": "Asia Pacific",
+    "lat": 19.063376,
+    "lng": 72.86201,
+    "address": "The Capital, 13th Floor B Wing, Bandra Kurla Complex, Bandra (East), Mumbai 400051"
+  },
+  {
+    "firm": "Bain",
+    "name": "Munich",
+    "country": "Germany",
+    "region": "Europe",
+    "lat": 48.140062,
+    "lng": 11.567032,
+    "address": "Karlsplatz 1, 80335 Munich"
+  },
+  {
+    "firm": "Bain",
+    "name": "New Delhi",
+    "country": "India",
+    "region": "Asia Pacific",
+    "lat": 28.613895,
+    "lng": 77.209006,
+    "address": "DLF Cybercity Phase II, Building 10, Tower C, 20th Floor, Gurgaon, Haryana 122002"
+  },
+  {
+    "firm": "Bain",
+    "name": "New York",
+    "country": "USA",
+    "region": "North America",
+    "lat": 40.753622,
+    "lng": -73.978073,
+    "address": "335 Madison Avenue, New York, NY 10017"
+  },
+  {
+    "firm": "Bain",
+    "name": "Oslo",
+    "country": "Norway",
+    "region": "Europe",
+    "lat": 59.9128,
+    "lng": 10.732773,
+    "address": "Kronprinsesse Märthas plass 1, 6th floor, 0160 Oslo"
+  },
+  {
+    "firm": "Bain",
+    "name": "Paris",
+    "country": "France",
+    "region": "Europe",
+    "lat": 48.870015,
+    "lng": 2.29258,
+    "address": "25 avenue Kléber, Paris 75116"
+  },
+  {
+    "firm": "Bain",
+    "name": "Perth",
+    "country": "Australia",
+    "region": "Asia Pacific",
+    "lat": -31.956202,
+    "lng": 115.858436,
+    "address": "9 The Esplanade, Level 17, Perth WA 6000"
+  },
+  {
+    "firm": "Bain",
+    "name": "Rio de Janeiro",
+    "country": "Brazil",
+    "region": "Central & South America",
+    "lat": -22.909632,
+    "lng": -43.182672,
+    "address": "Av. República do Chile, 500 – 28º andar, Rio de Janeiro RJ 20031-170"
+  },
+  {
+    "firm": "Bain",
+    "name": "Riyadh",
+    "country": "Saudi Arabia",
+    "region": "Middle East",
+    "lat": 24.7581,
+    "lng": 46.6402,
+    "address": "King Abdullah Financial District (KAFD), Building 1.15, Floor 41, Riyadh 13519"
+  },
+  {
+    "firm": "Bain",
+    "name": "Rome",
+    "country": "Italy",
+    "region": "Europe",
+    "lat": 41.904426,
+    "lng": 12.489167,
+    "address": "Via di San Basilio, 72, 00187 Rome"
+  },
+  {
+    "firm": "Bain",
+    "name": "San Francisco",
+    "country": "USA",
+    "region": "North America",
+    "lat": 37.794446,
+    "lng": -122.399668,
+    "address": "415 Mission Street, Suite 4800 (Salesforce Tower), San Francisco, CA 94105"
+  },
+  {
+    "firm": "Bain",
+    "name": "Santiago",
+    "country": "Chile",
+    "region": "Central & South America",
+    "lat": -33.418181,
+    "lng": -70.600452,
+    "address": "Av. Apoquindo 2827, Piso 20, Las Condes, Santiago"
+  },
+  {
+    "firm": "Bain",
+    "name": "São Paulo",
+    "country": "Brazil",
+    "region": "Central & South America",
+    "lat": -23.5882,
+    "lng": -46.6768,
+    "address": "Av. Pres. Juscelino Kubitschek, 1909, São Paulo Corporate Towers, Torre Norte, 17-18F, SP 04543-907"
+  },
+  {
+    "firm": "Bain",
+    "name": "Seattle",
+    "country": "USA",
+    "region": "North America",
+    "lat": 47.606455,
+    "lng": -122.331268,
+    "address": "1001 4th Ave, Floor 46, Seattle, WA 98154"
+  },
+  {
+    "firm": "Bain",
+    "name": "Seoul",
+    "country": "South Korea",
+    "region": "Asia Pacific",
+    "lat": 37.560294,
+    "lng": 126.982951,
+    "address": "100 Toegye-ro, Jung-gu, 24th Floor, State Tower Namsan, Seoul 04631"
+  },
+  {
+    "firm": "Bain",
+    "name": "Shanghai",
+    "country": "China",
+    "region": "Asia Pacific",
+    "lat": 31.229992,
+    "lng": 121.448571,
+    "address": "1266 West Nanjing Road, 38F, Plaza 66, Tower I, Shanghai 200040"
+  },
+  {
+    "firm": "Bain",
+    "name": "Silicon Valley",
+    "country": "USA",
+    "region": "North America",
+    "lat": 37.448805,
+    "lng": -122.159156,
+    "address": "525 University Avenue, Suite 23, Palo Alto, CA 94301"
+  },
+  {
+    "firm": "Bain",
+    "name": "Singapore",
+    "country": "Singapore",
+    "region": "Asia Pacific",
+    "lat": 1.295688,
+    "lng": 103.856516,
+    "address": "38 Beach Road, South Beach Tower, Level 28, Singapore 189767"
+  },
+  {
+    "firm": "Bain",
+    "name": "Stockholm",
+    "country": "Sweden",
+    "region": "Europe",
+    "lat": 59.333817,
+    "lng": 18.074584,
+    "address": "Birger Jarlsgatan 7, 111 45 Stockholm"
+  },
+  {
+    "firm": "Bain",
+    "name": "Sydney",
+    "country": "Australia",
+    "region": "Asia Pacific",
+    "lat": -33.863989,
+    "lng": 151.211369,
+    "address": "1 Farrer Place, Governor Phillip Tower, Level 45, Sydney NSW 2000"
+  },
+  {
+    "firm": "Bain",
+    "name": "Tokyo",
+    "country": "Japan",
+    "region": "Asia Pacific",
+    "lat": 35.682736,
+    "lng": 139.769453,
+    "address": "Midtown Tower, Floor 37, 9-7-1 Akasaka, Minato-ku, Tokyo 107-6237"
+  },
+  {
+    "firm": "Bain",
+    "name": "Toronto",
+    "country": "Canada",
+    "region": "North America",
+    "lat": 43.671004,
+    "lng": -79.386163,
+    "address": "2 Bloor Street East, 29th Floor, Toronto, ON M4W 1A8"
+  },
+  {
+    "firm": "Bain",
+    "name": "Vienna",
+    "country": "Austria",
+    "region": "Europe",
+    "lat": 48.200922,
+    "lng": 16.359215,
+    "address": "Mariahilfer Straße 17, 1060 Vienna"
+  },
+  {
+    "firm": "Bain",
+    "name": "Warsaw",
+    "country": "Poland",
+    "region": "Europe",
+    "lat": 52.2355,
+    "lng": 21.0139,
+    "address": "Rondo ONZ 1, 29th floor, Warsaw 00-124"
+  },
+  {
+    "firm": "Bain",
+    "name": "Washington DC",
+    "country": "USA",
+    "region": "North America",
+    "lat": 38.9044,
+    "lng": -77.0378,
+    "address": "1101 16th St NW, Suite 700, Washington DC 20036"
+  },
+  {
+    "firm": "Bain",
+    "name": "Zurich",
+    "country": "Switzerland",
+    "region": "Europe",
+    "lat": 47.372386,
+    "lng": 8.53399,
+    "address": "Sihlporte 3, 8001 Zurich"
+  },
+  {
+    "firm": "BCG",
+    "name": "Abu Dhabi",
+    "country": "UAE",
+    "region": "Middle East",
+    "lat": 24.463642,
+    "lng": 54.376245,
+    "address": "Al Niyadi Building, 1st Floor, Rashid Bin Saeed al Maktoum, P.O. Box 109619, Abu Dhabi , United Arab Emirates"
+  },
+  {
+    "firm": "BCG",
+    "name": "Amsterdam",
+    "country": "Netherlands",
+    "region": "Europe",
+    "lat": 52.33755,
+    "lng": 4.866873,
+    "address": "Hildegard von Bingenstraat 16-20, , 1081 LH Amsterdam , Netherlands"
+  },
+  {
+    "firm": "BCG",
+    "name": "Athens",
+    "country": "Greece",
+    "region": "Europe",
+    "lat": 37.975196,
+    "lng": 23.742427,
+    "address": "11, Vassilissis Sophias Ave , Athens GR-10671 , Greece"
+  },
+  {
+    "firm": "BCG",
+    "name": "Atlanta",
+    "country": "USA",
+    "region": "North America",
+    "lat": 33.772321,
+    "lng": -84.365348,
+    "address": "1075 Peachtree Street NE, Suite 3800, Atlanta, GA 30309"
+  },
+  {
+    "firm": "BCG",
+    "name": "Atlanta",
+    "country": "USA",
+    "region": "North America",
+    "lat": 33.772321,
+    "lng": -84.365348,
+    "address": "1075 Peachtree Street N.E., Suite 3800 Atlanta, Georgia 30309 , United States"
+  },
+  {
+    "firm": "BCG",
+    "name": "Atlanta BrightHouse",
+    "country": "USA",
+    "region": "North America",
+    "lat": 33.77244,
+    "lng": -84.365203,
+    "address": "675 Ponce de Leon Avenue, Suite 9700, Ponce City Market, Atlanta, GA"
+  },
+  {
+    "firm": "BCG",
+    "name": "Atlanta Nexus",
+    "country": "USA",
+    "region": "North America",
+    "lat": 48.738014,
+    "lng": 19.151536,
+    "address": "100 Peachtree Street NW, Suite 800, Atlanta, GA"
+  },
+  {
+    "firm": "BCG",
+    "name": "Austin",
+    "country": "USA",
+    "region": "North America",
+    "lat": 30.26918,
+    "lng": -97.745616,
+    "address": "300 West 6th Street , Suite 1800 , Austin, Texas 78701 , United States"
+  },
+  {
+    "firm": "BCG",
+    "name": "Bangkok",
+    "country": "Thailand",
+    "region": "Asia Pacific",
+    "lat": 13.727046,
+    "lng": 100.541032,
+    "address": "One City Centre, 49th Floor,, Unit No. 4901 – 4905,, 548 Phloen Chit Road, Lumpini,, Pathumwan, Bangkok 10330 , Thailand"
+  },
+  {
+    "firm": "BCG",
+    "name": "Barcelona",
+    "country": "Spain",
+    "region": "Europe",
+    "lat": 41.386441,
+    "lng": 2.118421,
+    "address": "Avda. Diagonal, 640 - 5°A Barcelona 08017 , Spain"
+  },
+  {
+    "firm": "BCG",
+    "name": "Beijing",
+    "country": "China",
+    "region": "Asia Pacific",
+    "lat": 39.946066,
+    "lng": 116.446147,
+    "address": "Level 22, West Tower, Genesis Beijing 8 Xinyuan South Road, Chaoyang District Beijing 100027 , China"
+  },
+  {
+    "firm": "BCG",
+    "name": "Bengaluru",
+    "country": "India",
+    "region": "Asia Pacific",
+    "lat": 12.976794,
+    "lng": 77.590082,
+    "address": "1701, 17th Floor, Canberra Tower B UB City-24, Vittal Mallya Road Bengaluru 560001 , India"
+  },
+  {
+    "firm": "BCG",
+    "name": "Berlin",
+    "country": "Germany",
+    "region": "Europe",
+    "lat": 52.507948,
+    "lng": 13.437406,
+    "address": "Am Postbahnhof 15, 10243 Berlin"
+  },
+  {
+    "firm": "BCG",
+    "name": "Bogotá",
+    "country": "Colombia",
+    "region": "Central & South America",
+    "lat": 4.653382,
+    "lng": -74.083633,
+    "address": "Av. Calle 82 No. 9-65 , Edificio Savile, 07th Floor , Bogotá , Colombia"
+  },
+  {
+    "firm": "BCG",
+    "name": "Boston HQ",
+    "country": "USA",
+    "region": "North America",
+    "lat": 42.352013,
+    "lng": -71.042758,
+    "address": "200 Pier 4 Boulevard, Boston, MA 02210"
+  },
+  {
+    "firm": "BCG",
+    "name": "Brussels",
+    "country": "Belgium",
+    "region": "Europe",
+    "lat": 50.846206,
+    "lng": 4.356953,
+    "address": "Keizerinlaan 13, Boulevard de l'Impératrice, 1000 Brussels"
+  },
+  {
+    "firm": "BCG",
+    "name": "Budapest",
+    "country": "Hungary",
+    "region": "Europe",
+    "lat": 47.49276,
+    "lng": 19.052156,
+    "address": "Piarista köz 2, Budapest 1052"
+  },
+  {
+    "firm": "BCG",
+    "name": "Buenos Aires",
+    "country": "Argentina",
+    "region": "Central & South America",
+    "lat": -34.601457,
+    "lng": -58.368815,
+    "address": "Av. Cordoba 111,, 17th floor. CABA. , Argentina"
+  },
+  {
+    "firm": "BCG",
+    "name": "Cairo",
+    "country": "Egypt",
+    "region": "Africa",
+    "lat": 30.044388,
+    "lng": 31.235726,
+    "address": "511, Fifth Floor, Building 2, Podium 1, Cairo Festival City, New Cairo, Cairo , Egypt"
+  },
+  {
+    "firm": "BCG",
+    "name": "Calgary",
+    "country": "Canada",
+    "region": "North America",
+    "lat": 51.045568,
+    "lng": -114.072647,
+    "address": "525 8th Avenue SW , Suite 3150 , Calgary, AB, T2P 1G1 , Canada"
+  },
+  {
+    "firm": "BCG",
+    "name": "Casablanca",
+    "country": "Morocco",
+    "region": "Africa",
+    "lat": 33.262713,
+    "lng": -7.963903,
+    "address": "CFC Cube Tower, Lot 65.1, Avenue Mainstreet,, Quartier Casa Anfa, Hay Hassani, Casablanca 20250 , Morocco"
+  },
+  {
+    "firm": "BCG",
+    "name": "Chennai",
+    "country": "India",
+    "region": "Asia Pacific",
+    "lat": 13.083694,
+    "lng": 80.270186,
+    "address": "1st floor, Prestige Palladium Bayan,, 129 - 140, Greams Road, Nungambakkam Division,, Egmore, Chennai – 600006 , India"
+  },
+  {
+    "firm": "BCG",
+    "name": "Chicago",
+    "country": "USA",
+    "region": "North America",
+    "lat": 41.888696,
+    "lng": -87.649309,
+    "address": "360 North Green Street, Chicago, IL 60607"
+  },
+  {
+    "firm": "BCG",
+    "name": "Cologne",
+    "country": "Germany",
+    "region": "Europe",
+    "lat": 50.948037,
+    "lng": 6.943177,
+    "address": "Im Mediapark 8, 50670 Cologne"
+  },
+  {
+    "firm": "BCG",
+    "name": "Copenhagen",
+    "country": "Denmark",
+    "region": "Europe",
+    "lat": 55.665989,
+    "lng": 12.529769,
+    "address": "J.C. Jacobsens Gade 12, 1799 København"
+  },
+  {
+    "firm": "BCG",
+    "name": "Dallas",
+    "country": "USA",
+    "region": "North America",
+    "lat": 32.79171,
+    "lng": -96.806145,
+    "address": "2501 North Harwood Suite 2200 Dallas, Texas 75201 , United States"
+  },
+  {
+    "firm": "BCG",
+    "name": "Delhi",
+    "country": "India",
+    "region": "Asia Pacific",
+    "lat": 28.613895,
+    "lng": 77.209006,
+    "address": "DLF Cyberpark, 7th and 8th Floor, Tower C, Phase II, Udyog Vihar, Sec-20, Gurugram, Haryana 122 008 , India"
+  },
+  {
+    "firm": "BCG",
+    "name": "Denver",
+    "country": "USA",
+    "region": "North America",
+    "lat": 39.753347,
+    "lng": -105.003311,
+    "address": "1144 15th Street Suite 3800 Denver, CO 80202 , United States"
+  },
+  {
+    "firm": "BCG",
+    "name": "Detroit",
+    "country": "USA",
+    "region": "North America",
+    "lat": 42.560812,
+    "lng": -83.151069,
+    "address": "2715 Woodward Ave. , Suite 200, Detroit, MI 48201 , United States"
+  },
+  {
+    "firm": "BCG",
+    "name": "Doha",
+    "country": "Qatar",
+    "region": "Middle East",
+    "lat": 25.310881,
+    "lng": 51.508181,
+    "address": "Tower 121, Abraj Quartier 2 (AQ2), Floor 22, The Pearl, Doha , Qatar"
+  },
+  {
+    "firm": "BCG",
+    "name": "Dubai",
+    "country": "UAE",
+    "region": "Middle East",
+    "lat": 25.22118,
+    "lng": 55.285136,
+    "address": "The Offices 3 at One Central Dubai Level 7, P.O. Box 32257 Dubai , United Arab Emirates"
+  },
+  {
+    "firm": "BCG",
+    "name": "Dublin",
+    "country": "Ireland",
+    "region": "Europe",
+    "lat": 53.350831,
+    "lng": -6.249337,
+    "address": "International House, 3 Harbourmaster Place, IFSC, Dublin 1, D01 K8F1, Ireland"
+  },
+  {
+    "firm": "BCG",
+    "name": "Düsseldorf",
+    "country": "Germany",
+    "region": "Europe",
+    "lat": 51.227069,
+    "lng": 6.781054,
+    "address": "Königsallee 2 , 40212 Düsseldorf , Germany"
+  },
+  {
+    "firm": "BCG",
+    "name": "Frankfurt",
+    "country": "Germany",
+    "region": "Europe",
+    "lat": 50.111969,
+    "lng": 8.673605,
+    "address": "Große Gallusstraße 14 , 60315 Frankfurt am Main , Germany"
+  },
+  {
+    "firm": "BCG",
+    "name": "Geneva",
+    "country": "Switzerland",
+    "region": "Europe",
+    "lat": 46.211302,
+    "lng": 6.14417,
+    "address": "Rue de Lausanne 15, 1201 Geneva , Switzerland"
+  },
+  {
+    "firm": "BCG",
+    "name": "Hamburg",
+    "country": "Germany",
+    "region": "Europe",
+    "lat": 53.553896,
+    "lng": 9.998554,
+    "address": "Ballindamm 17, 20095 Hamburg , Germany"
+  },
+  {
+    "firm": "BCG",
+    "name": "Helsinki",
+    "country": "Finland",
+    "region": "Europe",
+    "lat": 60.168668,
+    "lng": 24.947746,
+    "address": "Kluuvikatu 3 A , 4th Floor , Helsinki 00100 , Finland"
+  },
+  {
+    "firm": "BCG",
+    "name": "Ho Chi Minh City",
+    "country": "Vietnam",
+    "region": "Asia Pacific",
+    "lat": 10.781484,
+    "lng": 106.700128,
+    "address": "601-605, 6th Floor, Friendship Tower, No. 31 Le Duan Street, Sai Gon Ward, Ho Chi Minh City , Vietnam"
+  },
+  {
+    "firm": "BCG",
+    "name": "Hong Kong",
+    "country": "China (SAR)",
+    "region": "Asia Pacific",
+    "lat": 22.286541,
+    "lng": 114.212198,
+    "address": "37/F Two Taikoo Place,, 979 King’s Road, Quarry Bay, , Hong Kong , China"
+  },
+  {
+    "firm": "BCG",
+    "name": "Houston",
+    "country": "USA",
+    "region": "North America",
+    "lat": 29.755994,
+    "lng": -95.362332,
+    "address": "1550 Lamar St., Suite 1200, Houston, Texas 77010 , United States"
+  },
+  {
+    "firm": "BCG",
+    "name": "Istanbul",
+    "country": "Turkey",
+    "region": "Europe",
+    "lat": 41.078328,
+    "lng": 29.011818,
+    "address": "Büyükdere Caddesi 185, , Kanyon Plaza, 16th Floor, 34394 Levent, Istanbul , Turkey"
+  },
+  {
+    "firm": "BCG",
+    "name": "Jakarta",
+    "country": "Indonesia",
+    "region": "Asia Pacific",
+    "lat": -6.217129,
+    "lng": 106.818146,
+    "address": "Sampoerna Strategic Square, 19th Floor , Jl. Jenderal Sudirman Kav. 45-46 , Jakarta 12930 , Indonesia"
+  },
+  {
+    "firm": "BCG",
+    "name": "Johannesburg",
+    "country": "South Africa",
+    "region": "Africa",
+    "lat": -26.102453,
+    "lng": 28.050625,
+    "address": "5 Parks Boulevard,, Oxford Parks, Dunkeld, 2196 , South Africa"
+  },
+  {
+    "firm": "BCG",
+    "name": "Kuala Lumpur",
+    "country": "Malaysia",
+    "region": "Asia Pacific",
+    "lat": 3.142686,
+    "lng": 101.69694,
+    "address": "Level 28, Menara IMC No. 8 Jalan Sultan Ismail Kuala Lumpur 50250 , Malaysia"
+  },
+  {
+    "firm": "BCG",
+    "name": "Kyiv",
+    "country": "Ukraine",
+    "region": "Europe",
+    "lat": 50.450034,
+    "lng": 30.524136,
+    "address": "8/4 Marii Kapnist Street, Office 806, Kyiv 02000, Ukraine"
+  },
+  {
+    "firm": "BCG",
+    "name": "Lagos",
+    "country": "Nigeria",
+    "region": "Africa",
+    "lat": 6.450888,
+    "lng": 3.430566,
+    "address": "The Rising Sun Building 2 Olumegbon Road, Off Alfred Rewane (Kingsway) Road Ikoyi , Nigeria"
+  },
+  {
+    "firm": "BCG",
+    "name": "Lima",
+    "country": "Peru",
+    "region": "Central & South America",
+    "lat": -12.045981,
+    "lng": -77.030591,
+    "address": "Av. Jorge Basadre Nro. 347, Edificio Patio Centric piso 9, Oficina 903, San Isidro , Peru"
+  },
+  {
+    "firm": "BCG",
+    "name": "Lisbon",
+    "country": "Portugal",
+    "region": "Europe",
+    "lat": 38.710018,
+    "lng": -9.14544,
+    "address": "Rua das Chagas, 7 - 15 , Lisbon 1200-106 , Portugal"
+  },
+  {
+    "firm": "BCG",
+    "name": "London",
+    "country": "UK",
+    "region": "Europe",
+    "lat": 51.521183,
+    "lng": -0.137181,
+    "address": "80 Charlotte Street, London W1T 4DF"
+  },
+  {
+    "firm": "BCG",
+    "name": "Los Angeles",
+    "country": "USA",
+    "region": "North America",
+    "lat": 34.051395,
+    "lng": -118.256739,
+    "address": "515 South Flower Street, Suite 5100 , Los Angeles, California 90071 , United States"
+  },
+  {
+    "firm": "BCG",
+    "name": "Madrid",
+    "country": "Spain",
+    "region": "Europe",
+    "lat": 40.421271,
+    "lng": -3.684192,
+    "address": "Alcalá, 95-2nd Floor Madrid 28009 , Spain"
+  },
+  {
+    "firm": "BCG",
+    "name": "Melbourne",
+    "country": "Australia",
+    "region": "Asia Pacific",
+    "lat": -37.814596,
+    "lng": 144.97066,
+    "address": "Level 51, 101 Collins Street , Melbourne, VIC 3000 , Australia"
+  },
+  {
+    "firm": "BCG",
+    "name": "Mexico City",
+    "country": "Mexico",
+    "region": "Central & South America",
+    "lat": 19.425893,
+    "lng": -99.167483,
+    "address": "Reforma 342, Piso 31 México, D.F. 06600 , México"
+  },
+  {
+    "firm": "BCG",
+    "name": "Miami",
+    "country": "USA",
+    "region": "North America",
+    "lat": 25.758636,
+    "lng": -80.193047,
+    "address": "1450 Brickell Avenue 34th Floor Miami, Florida 33131 , United States"
+  },
+  {
+    "firm": "BCG",
+    "name": "Milan",
+    "country": "Italy",
+    "region": "Europe",
+    "lat": 45.46512,
+    "lng": 9.190617,
+    "address": "Via Ugo Foscolo 1 , Milan 20121 , Italy"
+  },
+  {
+    "firm": "BCG",
+    "name": "Minneapolis",
+    "country": "USA",
+    "region": "North America",
+    "lat": 44.97796,
+    "lng": -93.271053,
+    "address": "60 South 6th Street , Suite 2300 , Minneapolis, Minnesota 55402 , United States"
+  },
+  {
+    "firm": "BCG",
+    "name": "Monterrey",
+    "country": "Mexico",
+    "region": "Central & South America",
+    "lat": 25.589328,
+    "lng": -100.259998,
+    "address": "Av. Ricardo Margain #335 , Torre 1 - Piso 10 , Col. Valle del Campestre , San Pedro Garza García, N.L. 66265 , México"
+  },
+  {
+    "firm": "BCG",
+    "name": "Montreal",
+    "country": "Canada",
+    "region": "North America",
+    "lat": 45.498357,
+    "lng": -73.566504,
+    "address": "600 rue de la Gauchetiere Ouest,, Suite 2801 Montreal,, Quebec H3B 4L2 , Canada"
+  },
+  {
+    "firm": "BCG",
+    "name": "Moscow",
+    "country": "Russia",
+    "region": "Europe",
+    "lat": 55.750541,
+    "lng": 37.617478,
+    "address": "6 Gasheka Street, Ducat Place III, Moscow 125047, Russia"
+  },
+  {
+    "firm": "BCG",
+    "name": "Mumbai",
+    "country": "India",
+    "region": "Asia Pacific",
+    "lat": 18.925867,
+    "lng": 72.821623,
+    "address": "G2 (Ground Floor), 2, North Avenue, , Maker Maxity, , Bandra Kurla Complex, , Mumbai 400051 , India"
+  },
+  {
+    "firm": "BCG",
+    "name": "Munich",
+    "country": "Germany",
+    "region": "Europe",
+    "lat": 48.147194,
+    "lng": 11.579285,
+    "address": "Ludwigstraße 21 80539 Munich , Germany"
+  },
+  {
+    "firm": "BCG",
+    "name": "Nairobi",
+    "country": "Kenya",
+    "region": "Africa",
+    "lat": -1.374566,
+    "lng": 36.839702,
+    "address": "One Africa Place, Waiyaki Way, Westlands, P O Box 66154-00800, 19th Floor, Nairobi , Kenya"
+  },
+  {
+    "firm": "BCG",
+    "name": "New York",
+    "country": "USA",
+    "region": "North America",
+    "lat": 40.752686,
+    "lng": -74.001546,
+    "address": "10 Hudson Yards, New York, NY 10001"
+  },
+  {
+    "firm": "BCG",
+    "name": "Osaka",
+    "country": "Japan",
+    "region": "Asia Pacific",
+    "lat": 34.693757,
+    "lng": 135.501454,
+    "address": "Shin-Osaka Trust Tower 17F, 3-5-36 Miyahara, Yodogawa-ku,, Osaka 532-0003 , Japan"
+  },
+  {
+    "firm": "BCG",
+    "name": "Oslo",
+    "country": "Norway",
+    "region": "Europe",
+    "lat": 59.915108,
+    "lng": 10.728458,
+    "address": "Henrik Ibsens Gate 4 , Oslo 0255 , Norway"
+  },
+  {
+    "firm": "BCG",
+    "name": "Paris",
+    "country": "France",
+    "region": "Europe",
+    "lat": 48.876412,
+    "lng": 2.285335,
+    "address": "75 Avenue de la Grande Armée, 75016 Paris , France"
+  },
+  {
+    "firm": "BCG",
+    "name": "Philadelphia",
+    "country": "USA",
+    "region": "North America",
+    "lat": 39.953389,
+    "lng": -75.169598,
+    "address": "1735 Market Street , Suite 4000 , Philadelphia, Pennsylvania , 19103 , United States"
+  },
+  {
+    "firm": "BCG",
+    "name": "Prague",
+    "country": "Czech Republic",
+    "region": "Europe",
+    "lat": 50.088494,
+    "lng": 14.43572,
+    "address": "Na Florenci 2139/4, Prague 1, 110 00 , Czech Republic"
+  },
+  {
+    "firm": "BCG",
+    "name": "Rio de Janeiro",
+    "country": "Brazil",
+    "region": "Central & South America",
+    "lat": -22.957316,
+    "lng": -43.176043,
+    "address": "Rua Lauro Müller, 116, 29º andar – Cjs #2903, Rio de Janeiro 22290-160 , Brazil"
+  },
+  {
+    "firm": "BCG",
+    "name": "Riyadh",
+    "country": "Saudi Arabia",
+    "region": "Middle East",
+    "lat": 24.697426,
+    "lng": 46.682407,
+    "address": "Floor 20, Tadawul Tower,, Financial Boulevard, Al Aqeeq District, , Riyadh , Saudi Arabia"
+  },
+  {
+    "firm": "BCG",
+    "name": "Rome",
+    "country": "Italy",
+    "region": "Europe",
+    "lat": 41.908928,
+    "lng": 12.492523,
+    "address": "Via Abruzzi 2/4, Rome 00187 , Italy"
+  },
+  {
+    "firm": "BCG",
+    "name": "San Francisco",
+    "country": "USA",
+    "region": "North America",
+    "lat": 37.794877,
+    "lng": -122.398416,
+    "address": "Two Embarcadero Center Suite 2400 San Francisco, California 94111 , United States"
+  },
+  {
+    "firm": "BCG",
+    "name": "Santiago",
+    "country": "Chile",
+    "region": "Central & South America",
+    "lat": -33.413351,
+    "lng": -70.606043,
+    "address": "Av. Costanera Sur 2730, 8th Floor Parque Titanium, Las Condes Santiago , Chile"
+  },
+  {
+    "firm": "BCG",
+    "name": "São Paulo",
+    "country": "Brazil",
+    "region": "Central & South America",
+    "lat": -23.601089,
+    "lng": -46.69218,
+    "address": "Av. Brig. Faria Lima, 3732 – 18º andar, São Paulo - SP, 04538-132 , Brazil"
+  },
+  {
+    "firm": "BCG",
+    "name": "Seattle",
+    "country": "USA",
+    "region": "North America",
+    "lat": 47.607137,
+    "lng": -122.336055,
+    "address": "1201 Third Avenue , Suite 5400 , Seattle, Washington 98101 , United States"
+  },
+  {
+    "firm": "BCG",
+    "name": "Seoul",
+    "country": "South Korea",
+    "region": "Asia Pacific",
+    "lat": 37.567237,
+    "lng": 126.985415,
+    "address": "Grand Central Tower B, , 27FL 14, Sejong-daero,, Jung-gu, Seoul 04527 , Korea"
+  },
+  {
+    "firm": "BCG",
+    "name": "Shanghai",
+    "country": "China",
+    "region": "Asia Pacific",
+    "lat": 31.238938,
+    "lng": 121.497893,
+    "address": "41/F, Phase II Shanghai ifc, 8 Century Avenue Shanghai 200120 , China"
+  },
+  {
+    "firm": "BCG",
+    "name": "Silicon Valley",
+    "country": "USA",
+    "region": "North America",
+    "lat": 37.390379,
+    "lng": -122.08179,
+    "address": "444 Castro Street Suite 150 Mountain View, California 94041 , United States"
+  },
+  {
+    "firm": "BCG",
+    "name": "Singapore",
+    "country": "Singapore",
+    "region": "Asia Pacific",
+    "lat": 1.28472,
+    "lng": 103.85206,
+    "address": "79 Robinson Road, Level 27, CapitaSky, Singapore 068897"
+  },
+  {
+    "firm": "BCG",
+    "name": "Stockholm",
+    "country": "Sweden",
+    "region": "Europe",
+    "lat": 59.329913,
+    "lng": 18.069277,
+    "address": "Gustav Adolfs torg 18, 111 52 Stockholm , Sweden"
+  },
+  {
+    "firm": "BCG",
+    "name": "Stuttgart",
+    "country": "Germany",
+    "region": "Europe",
+    "lat": 48.778449,
+    "lng": 9.180013,
+    "address": "Calwer Straße 7, (Postal Address: Kronprinzstraße 6), 70173 Stuttgart , Germany"
+  },
+  {
+    "firm": "BCG",
+    "name": "Sydney",
+    "country": "Australia",
+    "region": "Asia Pacific",
+    "lat": -33.87124,
+    "lng": 151.209158,
+    "address": "Level 26, 60 Martin Place, Sydney, NSW 2000 , Australia"
+  },
+  {
+    "firm": "BCG",
+    "name": "Taipei",
+    "country": "Taiwan",
+    "region": "Asia Pacific",
+    "lat": 25.033541,
+    "lng": 121.564758,
+    "address": "27F, Cathay Landmark, No. 68, Sec. 5, Zhongxiao E. Road, Xinyi District, , Taipei City, 110419 , Taiwan"
+  },
+  {
+    "firm": "BCG",
+    "name": "Tel Aviv",
+    "country": "Israel",
+    "region": "Middle East",
+    "lat": 32.074585,
+    "lng": 34.79226,
+    "address": "132 Menachem Begin Road 3 Azrieli Center Tel Aviv 6701101 , Israel"
+  },
+  {
+    "firm": "BCG",
+    "name": "Tokyo",
+    "country": "Japan",
+    "region": "Asia Pacific",
+    "lat": 35.679448,
+    "lng": 139.735792,
+    "address": "New Otani Garden Court, 4-1 Kioi-cho, Chiyoda-ku, Tokyo 102-0094"
+  },
+  {
+    "firm": "BCG",
+    "name": "Toronto",
+    "country": "Canada",
+    "region": "North America",
+    "lat": 43.646506,
+    "lng": -79.378673,
+    "address": "81 Bay Street, Suite 4800, Toronto, Ontario, M5J 0E7 , Canada"
+  },
+  {
+    "firm": "BCG",
+    "name": "Vienna",
+    "country": "Austria",
+    "region": "Europe",
+    "lat": 48.212088,
+    "lng": 16.222537,
+    "address": "Postgasse 10, 1010 Vienna , Austria"
+  },
+  {
+    "firm": "BCG",
+    "name": "Warsaw",
+    "country": "Poland",
+    "region": "Europe",
+    "lat": 52.217589,
+    "lng": 21.016048,
+    "address": "Zebra Tower , ul. Mokotowska 1 (6th floor) , Warsaw 00-640 , Poland"
+  },
+  {
+    "firm": "BCG",
+    "name": "Washington DC",
+    "country": "USA",
+    "region": "North America",
+    "lat": 38.895098,
+    "lng": -77.036385,
+    "address": "655 15th Street NW, Suite 1100, Washington, DC 20005 , United States"
+  },
+  {
+    "firm": "BCG",
+    "name": "Zürich",
+    "country": "Switzerland",
+    "region": "Europe",
+    "lat": 47.367158,
+    "lng": 8.533415,
+    "address": "Bleicherweg 62 , 8002 Zurich , Switzerland"
+  },
+  {
+    "firm": "McKinsey",
+    "name": "Abu Dhabi",
+    "country": "UAE",
+    "region": "Middle East",
+    "lat": 24.420848,
+    "lng": 54.440657,
+    "address": "McKinsey & Company, شارع المُؤتَمرات, Capital Centre, السفارات"
+  },
+  {
+    "firm": "McKinsey",
+    "name": "Addis Ababa",
+    "country": "Ethiopia",
+    "region": "Africa",
+    "lat": 8.996859,
+    "lng": 38.785092,
+    "address": "McKinsey & Company, BL_03_655 Street, ግሂሊፍፋለግን ምንጭ, Bole"
+  },
+  {
+    "firm": "McKinsey",
+    "name": "Almaty",
+    "country": "Kazakhstan",
+    "region": "Asia Pacific",
+    "lat": 43.219275,
+    "lng": 76.929277,
+    "address": "Esentai Tower, 15th Floor, 77/7 Al-Farabi Avenue, Almaty 050000, Kazakhstan"
+  },
+  {
+    "firm": "McKinsey",
+    "name": "Amman",
+    "country": "Jordan",
+    "region": "Middle East",
+    "address": "2nd Floor, Prestige Towers Building, Zahran Street, Amman 11831, Jordan",
+    "lat": 31.961036,
+    "lng": 35.873808
+  },
+  {
+    "firm": "McKinsey",
+    "name": "Amsterdam",
+    "country": "Netherlands",
+    "region": "Europe",
+    "lat": 52.360496,
+    "lng": 4.902962,
+    "address": "McKinsey & Company, 344, Amstel, Centrum"
+  },
+  {
+    "firm": "McKinsey",
+    "name": "Astana",
+    "country": "Kazakhstan",
+    "region": "Asia Pacific",
+    "lat": 51.10682,
+    "lng": 71.424944,
+    "address": "16 Dostyk Street, Yessil District, Astana 010016, Kazakhstan"
+  },
+  {
+    "firm": "McKinsey",
+    "name": "Athens",
+    "country": "Greece",
+    "region": "Europe",
+    "lat": 37.974916,
+    "lng": 23.735133,
+    "address": "6 Othonos Street, 105 57 Athens, Greece"
+  },
+  {
+    "firm": "McKinsey",
+    "name": "Atlanta",
+    "country": "USA",
+    "region": "North America",
+    "lat": 33.771869,
+    "lng": -84.363711,
+    "address": "725 Ponce de Leon Ave, Suite 700, Atlanta, GA 30306, USA"
+  },
+  {
+    "firm": "McKinsey",
+    "name": "Auckland",
+    "country": "New Zealand",
+    "region": "Asia Pacific",
+    "lat": -36.843037,
+    "lng": 174.765352,
+    "address": "Level 13, 188 Quay Street, Auckland 1010, New Zealand"
+  },
+  {
+    "firm": "McKinsey",
+    "name": "Austin",
+    "country": "USA",
+    "region": "North America",
+    "lat": 30.269633,
+    "lng": -97.742605,
+    "address": "1221 S. Congress Ave., Bldg 1, Suite 200, Austin, TX 78704, USA"
+  },
+  {
+    "firm": "McKinsey",
+    "name": "Baku",
+    "country": "Azerbaijan",
+    "region": "Middle East",
+    "lat": 40.375504,
+    "lng": 49.862256,
+    "address": "McKinsey & Company, Neftçilər prospekti, Nəsimi rayonu, Bakı"
+  },
+  {
+    "firm": "McKinsey",
+    "name": "Bangkok",
+    "country": "Thailand",
+    "region": "Asia Pacific",
+    "lat": 13.739619,
+    "lng": 100.547643,
+    "address": "M. Thai Tower, 24th Floor, All Seasons Place, 87 Wireless Road, Bangkok 10330, Thailand"
+  },
+  {
+    "firm": "McKinsey",
+    "name": "Barcelona",
+    "country": "Spain",
+    "region": "Europe",
+    "lat": 41.38845,
+    "lng": 2.129693,
+    "address": "McKinsey & Company, 605, Avinguda Diagonal, les Corts"
+  },
+  {
+    "firm": "McKinsey",
+    "name": "Bay Area – San Francisco",
+    "country": "USA",
+    "region": "North America",
+    "lat": 37.792113,
+    "lng": -122.403957,
+    "address": "555 California Street, Suite 4700, San Francisco, CA 94104, USA"
+  },
+  {
+    "firm": "McKinsey",
+    "name": "Bay Area – Silicon Valley",
+    "country": "USA",
+    "region": "North America",
+    "lat": 37.485816,
+    "lng": -122.229481,
+    "address": "889 Winslow St, Suite 300, Redwood City, CA 94063, USA"
+  },
+  {
+    "firm": "McKinsey",
+    "name": "Beijing",
+    "country": "China",
+    "region": "Asia Pacific",
+    "lat": 39.912498,
+    "lng": 116.454387,
+    "address": "28/F South Tower, Beijing Kerry Centre, 1 Guanghua Road, Chaoyang District, Beijing 100020, China"
+  },
+  {
+    "firm": "McKinsey",
+    "name": "Belo Horizonte",
+    "country": "Brazil",
+    "region": "Central & South America",
+    "lat": -19.922732,
+    "lng": -43.945095,
+    "address": "Alameda Oscar Niemeyer, 132, Concordia Tower, 1st Floor, Nova Lima, MG 34006-049, Brazil"
+  },
+  {
+    "firm": "McKinsey",
+    "name": "Bengaluru – Brigade Center",
+    "country": "India",
+    "region": "Asia Pacific",
+    "lat": 12.992761,
+    "lng": 77.702147,
+    "address": "Nalapad Brigade Center, Whitefield Rd, Mahadevapura, ITPL Road, Bengaluru, Karnataka 560048, India"
+  },
+  {
+    "firm": "McKinsey",
+    "name": "Berlin",
+    "country": "Germany",
+    "region": "Europe",
+    "lat": 52.505526,
+    "lng": 13.335702,
+    "address": "McKinsey & Company, 46, Budapester Straße, City West"
+  },
+  {
+    "firm": "McKinsey",
+    "name": "Bogotá",
+    "country": "Colombia",
+    "region": "Central & South America",
+    "lat": 4.654679,
+    "lng": -74.055963,
+    "address": "Carrera 7 No 71-21, Torre B, Suite 1606, Bogotá, Colombia"
+  },
+  {
+    "firm": "McKinsey",
+    "name": "Boston",
+    "country": "USA",
+    "region": "North America",
+    "lat": 42.354505,
+    "lng": -71.057155,
+    "address": "115 Federal Street, Winthrop Center, Floor 20, Boston, MA 02110, USA"
+  },
+  {
+    "firm": "McKinsey",
+    "name": "Brisbane",
+    "country": "Australia",
+    "region": "Asia Pacific",
+    "lat": -27.469122,
+    "lng": 153.029801,
+    "address": "McKinsey & Company, 10, Eagle Street, Golden Triangle"
+  },
+  {
+    "firm": "McKinsey",
+    "name": "Brussels",
+    "country": "Belgium",
+    "region": "Europe",
+    "lat": 50.84077,
+    "lng": 4.360063,
+    "address": "McKinsey & Company, Rue Brederode - Brederodestraat, Quartier Royal - Koninklijke Wijk, Pentagone - Vijfhoek"
+  },
+  {
+    "firm": "McKinsey",
+    "name": "Bucharest",
+    "country": "Romania",
+    "region": "Europe",
+    "lat": 44.436602,
+    "lng": 26.096502,
+    "address": "McKinsey & Company, 6, Strada Matei Millo, Teatrului"
+  },
+  {
+    "firm": "McKinsey",
+    "name": "Budapest",
+    "country": "Hungary",
+    "region": "Europe",
+    "lat": 47.502123,
+    "lng": 19.058185,
+    "address": "McKinsey & Company, 22, Andrássy út, Terézváros"
+  },
+  {
+    "firm": "McKinsey",
+    "name": "Buenos Aires",
+    "country": "Argentina",
+    "region": "Central & South America",
+    "lat": -34.597621,
+    "lng": -58.370987,
+    "address": "Av. Leandro N. Alem 855, Alem Plaza, 24th Floor, Buenos Aires, Argentina"
+  },
+  {
+    "firm": "McKinsey",
+    "name": "Cairo",
+    "country": "Egypt",
+    "region": "Africa",
+    "lat": 30.072745,
+    "lng": 31.228195,
+    "address": "5A by the Waterway, Building A3 First Floor, New Cairo, Egypt"
+  },
+  {
+    "firm": "McKinsey",
+    "name": "Casablanca",
+    "country": "Morocco",
+    "region": "Africa",
+    "lat": 33.598032,
+    "lng": -7.665712,
+    "address": "McKinsey & Company, Boulevard de la Corniche شارع الكورنيش, Anfa Supérieur أنفا العليا, Arrondissement d'Anfa ⴰⴱⵏⵏⵣ ⴰⵏⴼⴰ مقاطعة أنفا"
+  },
+  {
+    "firm": "McKinsey",
+    "name": "Charlotte",
+    "country": "USA",
+    "region": "North America",
+    "lat": 35.227429,
+    "lng": -80.842201,
+    "address": "300 South Tryon Street, Suite 1100, Charlotte, NC 28202, USA"
+  },
+  {
+    "firm": "McKinsey",
+    "name": "Chengdu",
+    "country": "China",
+    "region": "Asia Pacific",
+    "lat": 30.656749,
+    "lng": 104.078111,
+    "address": "Unit 4502-03, 45F, Tower 1, Chengdu IFS, No. 1 Section 3 Hongxing Road, Jinjiang District, Chengdu, China"
+  },
+  {
+    "firm": "McKinsey",
+    "name": "Chennai – Brigade WTC",
+    "country": "India",
+    "region": "Asia Pacific",
+    "lat": 12.961815,
+    "lng": 80.243027,
+    "address": "World Trade Center, 5/142, Tower B, 17th-19th Floor, Rajiv Gandhi Salai, OMR, Perungudi, Chennai 600096, India"
+  },
+  {
+    "firm": "McKinsey",
+    "name": "Chicago",
+    "country": "USA",
+    "region": "North America",
+    "lat": 41.884868,
+    "lng": -87.619905,
+    "address": "300 East Randolph Street, Suite 3100, Chicago, IL 60601, USA"
+  },
+  {
+    "firm": "McKinsey",
+    "name": "Cologne",
+    "country": "Germany",
+    "region": "Europe",
+    "lat": 50.943832,
+    "lng": 6.944184,
+    "address": "McKinsey & Company, 17, Christophstraße, Gereonsviertel"
+  },
+  {
+    "firm": "McKinsey",
+    "name": "Colombo",
+    "country": "Sri Lanka",
+    "region": "Asia Pacific",
+    "lat": 6.938861,
+    "lng": 79.854201,
+    "address": "One Galle Face Tower, Level 24, Unit 2406 & 2407, 1A Center Road, Galle Face, Colombo 02, Sri Lanka"
+  },
+  {
+    "firm": "McKinsey",
+    "name": "Connecticut – Darien",
+    "country": "USA",
+    "region": "North America",
+    "lat": 41.074766,
+    "lng": -73.470312,
+    "address": "34 Old Kings Highway South, Darien, CT 06820, USA"
+  },
+  {
+    "firm": "McKinsey",
+    "name": "Copenhagen",
+    "country": "Denmark",
+    "region": "Europe",
+    "lat": 55.677494,
+    "lng": 12.581431,
+    "address": "McKinsey & Company, Ved Stranden, Gammelholm, Indre By"
+  },
+  {
+    "firm": "McKinsey",
+    "name": "Dallas",
+    "country": "USA",
+    "region": "North America",
+    "lat": 32.791339,
+    "lng": -96.803756,
+    "address": "McKinney & Olive, 2021 McKinney Ave, Suite 1800, Dallas, TX 75201, USA"
+  },
+  {
+    "firm": "McKinsey",
+    "name": "Detroit",
+    "country": "USA",
+    "region": "North America",
+    "lat": 42.32847,
+    "lng": -83.046613,
+    "address": "500 Woodward Avenue, Suite 2850, Detroit, MI 48226, USA"
+  },
+  {
+    "firm": "McKinsey",
+    "name": "Doha",
+    "country": "Qatar",
+    "region": "Middle East",
+    "lat": 25.322611,
+    "lng": 51.526574,
+    "address": "Office 1203, 12th Floor, Tower 2, The Gate, Maysaloun St., West Bay, Doha, Qatar"
+  },
+  {
+    "firm": "McKinsey",
+    "name": "Dubai",
+    "country": "UAE",
+    "region": "Middle East",
+    "lat": 25.214037,
+    "lng": 55.279806,
+    "address": "Legatum Plaza, Gate Precinct 6 Level 5, DIFC, Dubai, UAE"
+  },
+  {
+    "firm": "McKinsey",
+    "name": "Dublin",
+    "country": "Ireland",
+    "region": "Europe",
+    "lat": 53.335749,
+    "lng": -6.263069,
+    "address": "McKinsey & Company, 80, Harcourt Street, Saint Kevin's ED"
+  },
+  {
+    "firm": "McKinsey",
+    "name": "Düsseldorf",
+    "country": "Germany",
+    "region": "Europe",
+    "lat": 51.246884,
+    "lng": 6.771168,
+    "address": "McKinsey & Company, 24, Kennedydamm, Golzheim"
+  },
+  {
+    "firm": "McKinsey",
+    "name": "Florida – Miami",
+    "country": "USA",
+    "region": "North America",
+    "lat": 25.767134,
+    "lng": -80.194739,
+    "address": "78 SW 7th St, Suite 1000, Miami, FL 33130, USA"
+  },
+  {
+    "firm": "McKinsey",
+    "name": "Frankfurt",
+    "country": "Germany",
+    "region": "Europe",
+    "lat": 50.110818,
+    "lng": 8.672925,
+    "address": "McKinsey & Company, 1, Taunustor, Innenstadt"
+  },
+  {
+    "firm": "McKinsey",
+    "name": "Gaborone",
+    "country": "Botswana",
+    "region": "Africa",
+    "address": "Plot 54360, iTowers Main Tower, Level 4 & 7, CBD, Gaborone, Botswana",
+    "lat": -24.64825,
+    "lng": 25.905663
+  },
+  {
+    "firm": "McKinsey",
+    "name": "Geneva",
+    "country": "Switzerland",
+    "region": "Europe",
+    "lat": 46.210748,
+    "lng": 6.143289,
+    "address": "McKinsey & Company, 7, Place de Cornavin, Saint-Gervais"
+  },
+  {
+    "firm": "McKinsey",
+    "name": "Gothenburg",
+    "country": "Sweden",
+    "region": "Europe",
+    "lat": 57.701677,
+    "lng": 11.972318,
+    "address": "McKinsey & Company, 1, Kungsportsavenyen, Vasastaden"
+  },
+  {
+    "firm": "McKinsey",
+    "name": "Guatemala City",
+    "country": "Guatemala",
+    "region": "Central & South America",
+    "lat": 14.641614,
+    "lng": -90.513284,
+    "address": "12 Calle 2-25, Zona 10, Edificio Corporativo Avia, Torre 2, Suite 1701, Guatemala City 01010, Guatemala"
+  },
+  {
+    "firm": "McKinsey",
+    "name": "Gurugram/Delhi",
+    "country": "India",
+    "region": "Asia Pacific",
+    "lat": 28.406149,
+    "lng": 77.045143,
+    "address": "16th Floor, Downtown Tower 4, DLF 3 (Ambience Island), Gurugram 122002, Haryana, India"
+  },
+  {
+    "firm": "McKinsey",
+    "name": "Gurugram/Delhi – Vatika",
+    "country": "India",
+    "region": "Asia Pacific",
+    "lat": 28.406149,
+    "lng": 77.045143,
+    "address": "3rd Floor Block III, Vatika Business Park, Sector 49, Sohna Road, Gurugram 122018, India"
+  },
+  {
+    "firm": "McKinsey",
+    "name": "Hamburg",
+    "country": "Germany",
+    "region": "Europe",
+    "lat": 53.542307,
+    "lng": 9.982558,
+    "address": "McKinsey & Company, 77, Am Sandtorkai, Quartier Am Sandtorkai"
+  },
+  {
+    "firm": "McKinsey",
+    "name": "Hanoi",
+    "country": "Vietnam",
+    "region": "Asia Pacific",
+    "lat": 21.024238,
+    "lng": 105.841997,
+    "address": "Tower 1, 24th Floor, Capital Place, 29 Lieu Giai Street, Ngoc Ha Ward, Hanoi, Vietnam"
+  },
+  {
+    "firm": "McKinsey",
+    "name": "Helsinki",
+    "country": "Finland",
+    "region": "Europe",
+    "lat": 60.166984,
+    "lng": 24.946101,
+    "address": "McKinsey & Company, 18, Eteläesplanadi, Kaartinkaupunki"
+  },
+  {
+    "firm": "McKinsey",
+    "name": "Herzliya",
+    "country": "Israel",
+    "region": "Middle East",
+    "lat": 32.160182,
+    "lng": 34.808119,
+    "address": "11 Hamanofim, Herzliya 4672562, Israel"
+  },
+  {
+    "firm": "McKinsey",
+    "name": "Ho Chi Minh City",
+    "country": "Vietnam",
+    "region": "Asia Pacific",
+    "lat": 10.818697,
+    "lng": 106.651835,
+    "address": "Saigon Centre Tower 2, Level 21, 67 Le Loi Street, District 1, Ho Chi Minh City, Vietnam"
+  },
+  {
+    "firm": "McKinsey",
+    "name": "Hong Kong",
+    "country": "China (SAR)",
+    "region": "Asia Pacific",
+    "lat": 22.278482,
+    "lng": 114.161034,
+    "address": "33/F, Alexandra House, 18 Chater Road, Central, Hong Kong"
+  },
+  {
+    "firm": "McKinsey",
+    "name": "Houston",
+    "country": "USA",
+    "region": "North America",
+    "lat": 29.759255,
+    "lng": -95.362736,
+    "address": "609 Main Street, Suite 2300, Houston, TX 77002, USA"
+  },
+  {
+    "firm": "McKinsey",
+    "name": "Istanbul",
+    "country": "Turkey",
+    "region": "Europe",
+    "lat": 41.077155,
+    "lng": 29.011275,
+    "address": "McKinsey & Company, Dede Korkut Sokağı, Esentepe Mahallesi, Şişli"
+  },
+  {
+    "firm": "McKinsey",
+    "name": "Jakarta",
+    "country": "Indonesia",
+    "region": "Asia Pacific",
+    "lat": -6.21746,
+    "lng": 106.812861,
+    "address": "Wisma GKBI, 40th Floor, Jl. Jend. Sudirman 28, Jakarta 10210, Indonesia"
+  },
+  {
+    "firm": "McKinsey",
+    "name": "Johannesburg",
+    "country": "South Africa",
+    "region": "Africa",
+    "lat": -26.105809,
+    "lng": 28.056463,
+    "address": "The MARC Tower 2, 129 Rivonia Road, Sandhurst Ext 3, Sandton, 2196, South Africa"
+  },
+  {
+    "firm": "McKinsey",
+    "name": "Kansai – Osaka",
+    "country": "Japan",
+    "region": "Asia Pacific",
+    "lat": 34.684001,
+    "lng": 135.505298,
+    "address": "Grand Front Osaka, Tower B, 3-1 Ofuka-cho, Kita-ku, Osaka 530-0011, Japan"
+  },
+  {
+    "firm": "McKinsey",
+    "name": "Karachi",
+    "country": "Pakistan",
+    "region": "Asia Pacific",
+    "lat": 24.815338,
+    "lng": 67.002142,
+    "address": "Ocean Tower, 24th Floor, G-3, Khyaban-e-Iqbal, Block 9 Clifton, Karachi 75600, Pakistan"
+  },
+  {
+    "firm": "McKinsey",
+    "name": "Kolkata",
+    "country": "India",
+    "region": "Asia Pacific",
+    "lat": 22.572646,
+    "lng": 88.363895,
+    "address": "69 Park Street, P.S. Arcadia Centrum, 11th Floor, Kolkata, WB 700016, India"
+  },
+  {
+    "firm": "McKinsey",
+    "name": "Kuala Lumpur",
+    "country": "Malaysia",
+    "region": "Asia Pacific",
+    "lat": 3.156692,
+    "lng": 101.711332,
+    "address": "Level 27, Menara 3 Petronas, Persiaran KLCC, 50088 Kuala Lumpur, Malaysia"
+  },
+  {
+    "firm": "McKinsey",
+    "name": "Kuwait City",
+    "country": "Kuwait",
+    "region": "Middle East",
+    "lat": 29.366522,
+    "lng": 47.990139,
+    "address": "Al Shaya Building, Level 14, Al Soor Street, Al Mirqab, P.O. Box 181, Safat 13002, Kuwait"
+  },
+  {
+    "firm": "McKinsey",
+    "name": "Kyiv",
+    "country": "Ukraine",
+    "region": "Europe",
+    "lat": 50.445958,
+    "lng": 30.512235,
+    "address": "McKinsey & Company, 19/21, вулиця Богдана Хмельницького, Афанасівський яр"
+  },
+  {
+    "firm": "McKinsey",
+    "name": "Lagos",
+    "country": "Nigeria",
+    "region": "Africa",
+    "lat": 6.452319,
+    "lng": 3.420712,
+    "address": "McKinsey & Company, 1, Murtala Muhammed Drive, Ikoyi"
+  },
+  {
+    "firm": "McKinsey",
+    "name": "Lima",
+    "country": "Peru",
+    "region": "Central & South America",
+    "lat": -12.092043,
+    "lng": -77.023965,
+    "address": "Las Begonias 415, 16th Floor, Suite 1601 A, Torre Begonias, Lima 27, Peru"
+  },
+  {
+    "firm": "McKinsey",
+    "name": "Lisbon",
+    "country": "Portugal",
+    "region": "Europe",
+    "lat": 38.724637,
+    "lng": -9.151,
+    "address": "Rua Ant&oacute;nio Mega Ferreira,, 61 - 4 B&amp;C, 1800-056, Parque das Na&ccedil;&otilde;es, Lisboa, Portgual"
+  },
+  {
+    "firm": "McKinsey",
+    "name": "London",
+    "country": "UK",
+    "region": "Europe",
+    "lat": 51.507957,
+    "lng": -0.130899,
+    "address": "McKinsey & Company, 1, Pall Mall East, St. James's"
+  },
+  {
+    "firm": "McKinsey",
+    "name": "Luanda",
+    "country": "Angola",
+    "region": "Africa",
+    "lat": -8.820253,
+    "lng": 13.236059,
+    "address": "Telassa Supermarket, Rua Dos Mártires de Qifica, Luanda Talatona, Angola"
+  },
+  {
+    "firm": "McKinsey",
+    "name": "Luxembourg",
+    "country": "Luxembourg",
+    "region": "Europe",
+    "lat": 49.609936,
+    "lng": 6.119519,
+    "address": "McKinsey & Company, 40, Avenue Monterey, Ville-Haute"
+  },
+  {
+    "firm": "McKinsey",
+    "name": "Lyon",
+    "country": "France",
+    "region": "Europe",
+    "lat": 45.768436,
+    "lng": 4.861523,
+    "address": "McKinsey & Company, Espace Dolly Argaud-Harrison, Bellecombe, Lyon 6e Arrondissement"
+  },
+  {
+    "firm": "McKinsey",
+    "name": "Madrid",
+    "country": "Spain",
+    "region": "Europe",
+    "lat": 40.428031,
+    "lng": -3.696583,
+    "address": "McKinsey & Company, 33, Calle de Sagasta, Trafalgar"
+  },
+  {
+    "firm": "McKinsey",
+    "name": "Manama",
+    "country": "Bahrain",
+    "region": "Middle East",
+    "lat": 26.23759,
+    "lng": 50.573196,
+    "address": "Office 1069, Building 15, Road 3801, Block 338, Manama, Bahrain"
+  },
+  {
+    "firm": "McKinsey",
+    "name": "Manila",
+    "country": "Philippines",
+    "region": "Asia Pacific",
+    "lat": 14.557974,
+    "lng": 121.026497,
+    "address": "7/F Zuellig Building, Makati Avenue Corner Paseo de Roxas, Makati City 1225, Philippines"
+  },
+  {
+    "firm": "McKinsey",
+    "name": "Medellín",
+    "country": "Colombia",
+    "region": "Central & South America",
+    "lat": 6.201621,
+    "lng": -75.572641,
+    "address": "Cra 42 #3 sur-81, Edificio Milla de Oro, Torre 1, Suite 404, Medellín, Colombia"
+  },
+  {
+    "firm": "McKinsey",
+    "name": "Melbourne",
+    "country": "Australia",
+    "region": "Asia Pacific",
+    "lat": -37.814009,
+    "lng": 144.972662,
+    "address": "McKinsey & Company, 35, Collins Street, East End Theatre District"
+  },
+  {
+    "firm": "McKinsey",
+    "name": "Mexico City",
+    "country": "Mexico",
+    "region": "Central & South America",
+    "lat": 19.425212,
+    "lng": -99.203359,
+    "address": "Pedregal 24, Torre Virreyes, 23rd Floor, Molino del Rey 11040, Mexico City, Mexico"
+  },
+  {
+    "firm": "McKinsey",
+    "name": "Milan",
+    "country": "Italy",
+    "region": "Europe",
+    "lat": 45.4649,
+    "lng": 9.191926,
+    "address": "McKinsey & Company, 31, Piazza del Duomo, Duomo"
+  },
+  {
+    "firm": "McKinsey",
+    "name": "Minneapolis",
+    "country": "USA",
+    "region": "North America",
+    "lat": 44.976471,
+    "lng": -93.27518,
+    "address": "800 LaSalle Avenue, Suite 2350, Minneapolis, MN 55402, USA"
+  },
+  {
+    "firm": "McKinsey",
+    "name": "Miramar",
+    "country": "USA",
+    "region": "North America",
+    "lat": 25.976858,
+    "lng": -80.345142,
+    "address": "3350 SW 148th Avenue, Suite 403, Miramar, FL 33027, USA"
+  },
+  {
+    "firm": "McKinsey",
+    "name": "Monterrey",
+    "country": "Mexico",
+    "region": "Central & South America",
+    "lat": 25.589328,
+    "lng": -100.259998,
+    "address": "Av. Ricardo Margain Zozaya 444, Torre Norte Piso 4, Col. Valle del Campestre, San Pedro Garza García, NL 66265, Mexico"
+  },
+  {
+    "firm": "McKinsey",
+    "name": "Montevideo",
+    "country": "Uruguay",
+    "region": "Central & South America",
+    "lat": -34.905892,
+    "lng": -56.191309,
+    "address": "Luis Bonavita 1294, WTC FZ, Torre I, Suite 704, Montevideo 11300, Uruguay"
+  },
+  {
+    "firm": "McKinsey",
+    "name": "Montreal",
+    "country": "Canada",
+    "region": "North America",
+    "lat": 45.497134,
+    "lng": -73.570289,
+    "address": "1250 Boulevard René-Lévesque Ouest, Bureau 4430, Montréal, QC H3B 4W8, Canada"
+  },
+  {
+    "firm": "McKinsey",
+    "name": "Moscow",
+    "country": "Russia",
+    "region": "Europe",
+    "lat": 55.777812,
+    "lng": 37.586704,
+    "address": "Яков и партнеры, 5, Лесная улица"
+  },
+  {
+    "firm": "McKinsey",
+    "name": "Mumbai",
+    "country": "India",
+    "region": "Asia Pacific",
+    "lat": 18.928224,
+    "lng": 72.822018,
+    "address": "Ground Floor, North Avenue 1, Maker Maxity, Bandra Kurla Complex Rd, BKC, Bandra East, Mumbai 400051, India"
+  },
+  {
+    "firm": "McKinsey",
+    "name": "Munich",
+    "country": "Germany",
+    "region": "Europe",
+    "lat": 48.143232,
+    "lng": 11.56293,
+    "address": "McKinsey & Company, 26, Sophienstraße, St. Benno-Viertel"
+  },
+  {
+    "firm": "McKinsey",
+    "name": "Nairobi",
+    "country": "Kenya",
+    "region": "Africa",
+    "lat": -1.265674,
+    "lng": 36.802048,
+    "address": "Westlands Business Park, Block B, 3rd Floor, Nairobi, Kenya"
+  },
+  {
+    "firm": "McKinsey",
+    "name": "New Jersey – Newark",
+    "country": "USA",
+    "region": "North America",
+    "lat": 40.733075,
+    "lng": -74.167416,
+    "address": "110 Edison Place, Suite 400, Newark, NJ 07102, USA"
+  },
+  {
+    "firm": "McKinsey",
+    "name": "New York – 3WTC",
+    "country": "USA",
+    "region": "North America",
+    "lat": 40.711006,
+    "lng": -74.011643,
+    "address": "3 World Trade Center, 175 Greenwich Street, New York, NY 10007, USA"
+  },
+  {
+    "firm": "McKinsey",
+    "name": "Nuremberg",
+    "country": "Germany",
+    "region": "Europe",
+    "lat": 49.450161,
+    "lng": 11.085244,
+    "address": "Gleissbuehlstraße 2, 90402 Nuremberg, Germany"
+  },
+  {
+    "firm": "McKinsey",
+    "name": "Ohio – Cleveland",
+    "country": "USA",
+    "region": "North America",
+    "lat": 41.500869,
+    "lng": -81.703527,
+    "address": "127 Public Sq, Suite 5250, Cleveland, OH 44114, USA"
+  },
+  {
+    "firm": "McKinsey",
+    "name": "Ohio – Columbus",
+    "country": "USA",
+    "region": "North America",
+    "lat": 39.980282,
+    "lng": -83.004682,
+    "address": "Industrious The Sutton, 875 N High Street, Columbus, OH 43215, USA"
+  },
+  {
+    "firm": "McKinsey",
+    "name": "Oslo",
+    "country": "Norway",
+    "region": "Europe",
+    "lat": 59.912522,
+    "lng": 10.729988,
+    "address": "McKinsey & Company, Dronning Mauds gate, Vika, Sentrum"
+  },
+  {
+    "firm": "McKinsey",
+    "name": "Panama City",
+    "country": "Panama",
+    "region": "Central & South America",
+    "lat": 8.973388,
+    "lng": -79.529325,
+    "address": "Avenida Balboa PH Davivienda Tower, 21st Floor, Panamá, Panama"
+  },
+  {
+    "firm": "McKinsey",
+    "name": "Paris",
+    "country": "France",
+    "region": "Europe",
+    "lat": 48.871623,
+    "lng": 2.303526,
+    "address": "McKinsey & Company, Avenue des Champs-Élysées, Quartier du Faubourg-du-Roule, Paris 8e Arrondissement"
+  },
+  {
+    "firm": "McKinsey",
+    "name": "Perth",
+    "country": "Australia",
+    "region": "Asia Pacific",
+    "lat": -31.954542,
+    "lng": 115.855265,
+    "address": "McKinsey & Company, 129, St Georges Terrace, Perth"
+  },
+  {
+    "firm": "McKinsey",
+    "name": "Philadelphia",
+    "country": "USA",
+    "region": "North America",
+    "lat": 39.957366,
+    "lng": -75.182478,
+    "address": "The Cira Centre, 2929 Arch Street, Suite 1400, Philadelphia, PA 19104, USA"
+  },
+  {
+    "firm": "McKinsey",
+    "name": "Phoenix",
+    "country": "USA",
+    "region": "North America",
+    "lat": 33.428065,
+    "lng": -111.940418,
+    "address": "222 S Mill Ave, Tempe Gateway, Ste 600 and 700, Tempe, AZ 85281, USA"
+  },
+  {
+    "firm": "McKinsey",
+    "name": "Pittsburgh",
+    "country": "USA",
+    "region": "North America",
+    "lat": 40.440018,
+    "lng": -80.003597,
+    "address": "One PPG Place, Suite 2350, Pittsburgh, PA 15222, USA"
+  },
+  {
+    "firm": "McKinsey",
+    "name": "Poznan",
+    "country": "Poland",
+    "region": "Europe",
+    "lat": 52.400637,
+    "lng": 16.920753,
+    "address": "Nowy Rynek Poznan, Building E, ul. Wierzbięcice 1a, 61-558 Poznań, Poland"
+  },
+  {
+    "firm": "McKinsey",
+    "name": "Prague",
+    "country": "Czech Republic",
+    "region": "Europe",
+    "lat": 50.049484,
+    "lng": 14.437075,
+    "address": "Milevsk&aacute; 5,, 140 00, Praha 4, Czech Republic"
+  },
+  {
+    "firm": "McKinsey",
+    "name": "Quito",
+    "country": "Ecuador",
+    "region": "Central & South America",
+    "lat": -0.220164,
+    "lng": -78.512327,
+    "address": "Centro Corporativo Ekopark, Av. Libertador Simón Bolívar, Quito 170124, Ecuador"
+  },
+  {
+    "firm": "McKinsey",
+    "name": "Raleigh",
+    "country": "USA",
+    "region": "North America",
+    "lat": 33.757395,
+    "lng": -84.387343,
+    "address": "1101 E Whitaker Mill Rd, Suite 280, Raleigh, NC 27604, USA"
+  },
+  {
+    "firm": "McKinsey",
+    "name": "Rio de Janeiro",
+    "country": "Brazil",
+    "region": "Central & South America",
+    "lat": -22.945838,
+    "lng": -43.182837,
+    "address": "Praia de Botafogo, 300, Centro Empresarial Botafogo, 13th floor, RJ 22250-905"
+  },
+  {
+    "firm": "McKinsey",
+    "name": "Riyadh",
+    "country": "Saudi Arabia",
+    "region": "Middle East",
+    "lat": 24.711181,
+    "lng": 46.673765,
+    "address": "Kingdom Tower, 54th Floor, P.O. Box 54517, Riyadh 11524, Saudi Arabia"
+  },
+  {
+    "firm": "McKinsey",
+    "name": "Rocky Mountains – Denver",
+    "country": "USA",
+    "region": "North America",
+    "lat": 39.750987,
+    "lng": -104.994484,
+    "address": "1800 Larimer St, Suite 2200, Denver, CO 80202, USA"
+  },
+  {
+    "firm": "McKinsey",
+    "name": "Rome",
+    "country": "Italy",
+    "region": "Europe",
+    "lat": 41.908773,
+    "lng": 12.496259,
+    "address": "McKinsey & Company, 26, Via Boncompagni, Sallustiano"
+  },
+  {
+    "firm": "McKinsey",
+    "name": "Salvador",
+    "country": "Brazil",
+    "region": "Central & South America",
+    "lat": -12.979613,
+    "lng": -38.461133,
+    "address": "McKinsey & Company, 620, Avenida Tancredo Neves, Caminho das Árvores"
+  },
+  {
+    "firm": "McKinsey",
+    "name": "Santiago",
+    "country": "Chile",
+    "region": "Central & South America",
+    "lat": -33.417931,
+    "lng": -70.598891,
+    "address": "Av. Apoquindo 2929, Edificio Apoquindo 2929, 20th Floor, Las Condes, Santiago, Chile"
+  },
+  {
+    "firm": "McKinsey",
+    "name": "Santo Domingo",
+    "country": "Dominican Republic",
+    "region": "Central & South America",
+    "lat": 18.473142,
+    "lng": -69.906198,
+    "address": "95 Winston Churchill Ave, Blue Mall Tower, Floor 21, Santo Domingo 10148, Dominican Republic"
+  },
+  {
+    "firm": "McKinsey",
+    "name": "São Paulo",
+    "country": "Brazil",
+    "region": "Central & South America",
+    "lat": -23.595333,
+    "lng": -46.686902,
+    "address": "Av. Pres. Juscelino Kubitschek, 1909, São Paulo Corporate Towers, Torre Sul, SP 04543-907"
+  },
+  {
+    "firm": "McKinsey",
+    "name": "Seattle",
+    "country": "USA",
+    "region": "North America",
+    "lat": 47.61052,
+    "lng": -122.334766,
+    "address": "1420 Fifth Avenue, Suite 4300, Seattle, WA 98101, USA"
+  },
+  {
+    "firm": "McKinsey",
+    "name": "Seoul",
+    "country": "South Korea",
+    "region": "Asia Pacific",
+    "lat": 37.524872,
+    "lng": 126.925737,
+    "address": "54F Three IFC, 10 Gukjegeumyung-ro, Yeongdeungpo-gu, Seoul 07326, South Korea"
+  },
+  {
+    "firm": "McKinsey",
+    "name": "Shanghai",
+    "country": "China",
+    "region": "Asia Pacific",
+    "lat": 31.222249,
+    "lng": 121.473559,
+    "address": "21F, 168 Hubin Road, Shanghai 200020, China"
+  },
+  {
+    "firm": "McKinsey",
+    "name": "Shenzhen",
+    "country": "China",
+    "region": "Asia Pacific",
+    "lat": 22.535894,
+    "lng": 114.057527,
+    "address": "Unit 02B, Floor 10, Tower 2, Qianhai Kerry Centre, Qianhai Avenue, Nanshan District, Shenzhen 518052, China"
+  },
+  {
+    "firm": "McKinsey",
+    "name": "Singapore",
+    "country": "Singapore",
+    "region": "Asia Pacific",
+    "lat": 1.280911,
+    "lng": 103.85168,
+    "address": "One Raffles Quay, Level 24, South Tower, Singapore 048583"
+  },
+  {
+    "firm": "McKinsey",
+    "name": "St. Louis",
+    "country": "USA",
+    "region": "North America",
+    "lat": 38.650363,
+    "lng": -90.335651,
+    "address": "7733 Forsyth Blvd, Suite 825, Saint Louis, MO 63105, USA"
+  },
+  {
+    "firm": "McKinsey",
+    "name": "Southern California",
+    "country": "USA",
+    "region": "North America",
+    "lat": 34.051064,
+    "lng": -118.254423,
+    "address": "633 W. Fifth Street, Suite 7000, Los Angeles, CA 90071, USA"
+  },
+  {
+    "firm": "McKinsey",
+    "name": "Stockholm",
+    "country": "Sweden",
+    "region": "Europe",
+    "lat": 59.331731,
+    "lng": 18.055743,
+    "address": "McKinsey & Company, Terminalslingan, Klara, Norrmalm"
+  },
+  {
+    "firm": "McKinsey",
+    "name": "Stuttgart",
+    "country": "Germany",
+    "region": "Europe",
+    "lat": 48.776023,
+    "lng": 9.180388,
+    "address": "Dorotheenstraße 6, 70173 Stuttgart, Germany"
+  },
+  {
+    "firm": "McKinsey",
+    "name": "Sydney",
+    "country": "Australia",
+    "region": "Asia Pacific",
+    "lat": -33.864733,
+    "lng": 151.211912,
+    "address": "McKinsey & Company, 88, Phillip Street, Quay Quarter"
+  },
+  {
+    "firm": "McKinsey",
+    "name": "Taipei",
+    "country": "Taiwan",
+    "region": "Asia Pacific",
+    "lat": 25.0335,
+    "lng": 121.564743,
+    "address": "47/F, 7 Xin-Yi Road Section 5, Taipei 101 Tower, Taipei 110, Taiwan"
+  },
+  {
+    "firm": "McKinsey",
+    "name": "Tampa",
+    "country": "USA",
+    "region": "North America",
+    "lat": 27.89206,
+    "lng": -82.658613,
+    "address": "140 Fountain Parkway, Floor 3 & Floor 8, St. Petersburg, FL 33716, USA"
+  },
+  {
+    "firm": "McKinsey",
+    "name": "Tel Aviv",
+    "country": "Israel",
+    "region": "Middle East",
+    "lat": 32.070186,
+    "lng": 34.784178,
+    "address": "McKinsey & Company, 30, גבעון, תל־אביב–יפו"
+  },
+  {
+    "firm": "McKinsey",
+    "name": "Tokyo",
+    "country": "Japan",
+    "region": "Asia Pacific",
+    "lat": 35.663657,
+    "lng": 139.741861,
+    "address": "32F Ark Hills Sengokuyama Mori Tower, 9-10 Roppongi 1-chome, Minato-ku, Tokyo 106-0032, Japan"
+  },
+  {
+    "firm": "McKinsey",
+    "name": "Toronto",
+    "country": "Canada",
+    "region": "North America",
+    "lat": 43.668204,
+    "lng": -79.391408,
+    "address": "110 Charles Street West, Toronto, ON M5S 1K9, Canada"
+  },
+  {
+    "firm": "McKinsey",
+    "name": "Vienna",
+    "country": "Austria",
+    "region": "Europe",
+    "lat": 48.215803,
+    "lng": 16.367374,
+    "address": "McKinsey & Company, 19, Schottenring, Textilviertel"
+  },
+  {
+    "firm": "McKinsey",
+    "name": "Warsaw",
+    "country": "Poland",
+    "region": "Europe",
+    "lat": 52.242354,
+    "lng": 21.011586,
+    "address": "McKinsey & Company, 2, Plac marszałka Józefa Piłsudskiego, Staromiejskie"
+  },
+  {
+    "firm": "McKinsey",
+    "name": "Washington DC",
+    "country": "USA",
+    "region": "North America",
+    "lat": 38.906032,
+    "lng": -77.043895,
+    "address": "1200 Nineteenth Street NW, Suite 1000, Washington, DC 20036, USA"
+  },
+  {
+    "firm": "McKinsey",
+    "name": "Western Canada – Calgary",
+    "country": "Canada",
+    "region": "North America",
+    "lat": 51.045326,
+    "lng": -114.070192,
+    "address": "Royal Bank Building, 335 8th Avenue SW, Suite 2210, Calgary, AB T2P 1C9, Canada"
+  },
+  {
+    "firm": "McKinsey",
+    "name": "Western Canada – Vancouver",
+    "country": "Canada",
+    "region": "North America",
+    "lat": 49.281907,
+    "lng": -123.117695,
+    "address": "McKinsey & Company, 650, West Georgia Street, Downtown"
+  },
+  {
+    "firm": "McKinsey",
+    "name": "Wroclaw",
+    "country": "Poland",
+    "region": "Europe",
+    "lat": 51.112118,
+    "lng": 17.063912,
+    "address": "McKinsey & Company Wroclaw Knowledge Center, 23-27, plac Grunwaldzki, Plac Grunwaldzki"
+  },
+  {
+    "firm": "McKinsey",
+    "name": "Zagreb",
+    "country": "Croatia",
+    "region": "Europe",
+    "lat": 45.801775,
+    "lng": 16.001515,
+    "address": "McKinsey & Company, 269A, Ulica grada Vukovara, Mjesni odbor Kanal"
+  },
+  {
+    "firm": "McKinsey",
+    "name": "Zürich",
+    "country": "Switzerland",
+    "region": "Europe",
+    "lat": 47.368114,
+    "lng": 8.53552,
+    "address": "McKinsey & Company, 30, Bleicherweg, Enge"
+  }
+]
