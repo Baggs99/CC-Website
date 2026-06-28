@@ -4,7 +4,8 @@ export type FirmDeadline = {
   portalOpens: string;
   applicationDeadline: string;
   interviewWindow: string;
-  notes: string;
+  notes?: string;
+  cmsReminder?: boolean;
   href?: string;
 };
 
@@ -18,6 +19,7 @@ export type StepDetailSection = {
   title: string;
   body: string[];
   comingSoon?: boolean;
+  image?: { src: string; alt: string };
 };
 
 export type RecruitingPathStep = {
@@ -40,14 +42,14 @@ export const ftRecruitingEyebrow = "Full-Time Recruiting Hub";
 export const ftRecruitingTitle =
   "Deadlines hit before fall semester. Start in July.";
 export const ftRecruitingDescription =
-  "Follow the path below—from understanding the process to submitting your application and prepping for interviews. Built for second-year MBAs targeting McKinsey, Bain, BCG, and similar firms.";
+  "Follow the path below, from understanding the process to submitting your application and prepping for interviews. Built for second-year MBAs targeting McKinsey, Bain, BCG, and similar firms.";
 
 export const consultingOrientation = {
   eyebrow: "Start here",
   title: "What is consulting recruiting?",
   whatIsConsulting: [
-    "Management consulting firms hire MBAs into generalist roles—often called Associate or Consultant—where you solve business problems for clients across industries. McKinsey, Bain, and BCG (MBB) are the most competitive targets, but the same playbook applies to tier-two and boutique firms.",
-    "Full-time MBA recruiting runs on a compressed summer timeline. Portals open in July, applications are due in August, and interviews can start in September—before fall semester feels fully underway. You apply to specific offices (e.g. Boston, New York, Chicago), not just the firm as a whole.",
+    "Management consulting firms hire MBAs into generalist roles, often called Associate or Consultant, where you solve business problems for clients across industries. McKinsey, Bain, and BCG (MBB) are the most competitive targets, but the same playbook applies to tier-two and boutique firms.",
+    "Full-time MBA recruiting runs on a compressed summer timeline. Portals open in July, applications are due in August, and interviews can start in September, before fall semester feels fully underway. You apply to specific offices (e.g. Boston, New York, Chicago), not just the firm as a whole.",
     "Your office choice matters. It's where you'll live, build your network, and spend your career if you accept an offer. Firms expect you to have a thoughtful reason for each office on your application.",
   ],
   processAtAGlance: [
@@ -79,10 +81,18 @@ export const consultingOrientation = {
 } as const;
 
 export const ftOverwhelmedBullets = [
-  "Pick 2–3 target offices where you'd actually live and build ties.",
-  "Get your resume in for club review in early July—not the week of the deadline.",
+  "Pick one target office per firm, where you'd actually live and build ties.",
+  "Get your resume in for club review in early July, not the week of the deadline.",
   "Start casing in July. Early apps mean September interviews.",
 ] as const;
+
+export const somCmsJobPortal: RecruitingStepLink = {
+  label: "SOM Career Development Office, Job Hunting Portal (12Twenty)",
+  href: "https://som-yale.12twenty.com/jobPostings#/jobPostings/home",
+};
+
+export const firmDeadlinesNote =
+  "When firm dates are TBD or missing here, check SOM CMS, the CDO Job Hunting Portal on 12Twenty, for posted consulting deadlines and job postings.";
 
 export const firmDeadlines: FirmDeadline[] = [
   {
@@ -94,25 +104,23 @@ export const firmDeadlines: FirmDeadline[] = [
     interviewWindow:
       "First rounds: September 2026 · Finals: late Sep–early Oct · Offers: October",
     notes:
-      "APD and MBA deadlines are aligned this year. Choose offices where you want to live and build long-term networks—not just where you interned.",
+      "APD and MBA deadlines are aligned this year. Choose offices where you want to live and build long-term networks, not just where you interned.",
     href: "https://www.mckinsey.com/careers",
   },
   {
     firm: "Bain & Company",
     portalOpens: "Check firm portal",
     applicationDeadline: "MBA full-time dates TBD",
-    interviewWindow: "TBD — confirm on Bain careers site",
-    notes:
-      "Undergrad and Silver Scholars timelines are not MBA full-time. Watch the firm portal and #consulting-fulltime-recruiting for updates.",
+    interviewWindow: "TBD, confirm on Bain careers site",
+    cmsReminder: true,
     href: "https://www.bain.com/careers/",
   },
   {
     firm: "Boston Consulting Group",
     portalOpens: "Check firm portal",
     applicationDeadline: "MBA full-time dates TBD",
-    interviewWindow: "TBD — confirm on BCG careers site",
-    notes:
-      "Mid-July UG dates you've seen elsewhere do not apply to MBA FT. We'll update when BCG posts MBA timelines.",
+    interviewWindow: "TBD, confirm on BCG careers site",
+    cmsReminder: true,
     href: "https://careers.bcg.com/",
   },
 ];
@@ -127,9 +135,9 @@ export const recruitingPathSteps: RecruitingPathStep[] = [
       "Decide where you'd live, build a network, and see yourself long term. Office choice drives events, chats, and your application.",
     timing: "June–July, before you submit",
     actions: [
-      "Shortlist 2–3 offices (e.g. Boston, New York, Darien, Chicago).",
-      "Note personal ties, partner locations, and lifestyle fit.",
-      "Align with firm guidance: pick where you want to be, not just where you interned.",
+      "Pick one office per firm you apply to, not a scattershot list across cities.",
+      "If you're torn between regions, use a one-firm-one-city approach across MBB (see deep dive).",
+      "Note personal ties, partner locations, and lifestyle fit for each choice.",
     ],
     clubResource: {
       label: "MBB global office map",
@@ -138,10 +146,11 @@ export const recruitingPathSteps: RecruitingPathStep[] = [
     detailSections: [
       {
         id: "office-rule",
-        title: "The 2–3 office rule",
+        title: "One office per firm",
         body: [
-          "Most candidates apply to two or three offices. More than that dilutes your story; fewer limits your options if one office passes.",
-          "Each office should pass a simple test: Would you be excited to live there for 3–5 years? Can you articulate why this office—not just this firm?",
+          "Apply to one office per firm. That keeps your networking focused, gives each firm a clear signal about where you want to be, and makes your story easier to tell in apps and interviews.",
+          "If you're not sure which single city is right yet, you can still cover a region with a one-firm-one-city approach across MBB, for example, if you want the Northeast: BCG Boston, McKinsey Darien, and Bain New York. Three firms, three cities, one office each.",
+          "Each pick should pass a simple test: Would you be excited to live there for 3–5 years? Can you explain why this office, not just this firm?",
         ],
       },
       {
@@ -149,17 +158,18 @@ export const recruitingPathSteps: RecruitingPathStep[] = [
         title: "How to evaluate office fit",
         body: [
           "Lifestyle: cost of living, commute, partner job market, distance from family.",
-          "Network: SOM alumni, pre-MBA contacts, people you've met at events or GTKO sessions.",
-          "Staffing & culture: office size, industry mix, travel norms—learn this from events and coffee chats, not firm marketing alone.",
+          "Network: SOM alumni, pre-MBA contacts, people you've met at firm recruiting events or office info sessions.",
+          "Staffing & culture: office size, industry mix, travel norms, learn this from events and coffee chats, not firm marketing alone.",
           "Don't default to where you interned unless you'd genuinely choose to return there full-time.",
         ],
       },
       {
         id: "office-ranking",
-        title: "Office ranking on applications",
+        title: "Office choice on applications",
         body: [
-          "Firms ask you to rank offices. Your #1 should be defensible in an interview—\"I ranked Boston first because…\"",
-          "Be honest in ranking; gaming the system (ranking a small office hoping for less competition) often backfires.",
+          "When you apply to a single office per firm, your materials and conversations stay aligned, with no mixed signals about Boston vs. New York at the same company.",
+          "If a portal still asks you to rank offices, put your true first choice first and be ready to defend it: \"I ranked Boston first because…\"",
+          "Don't game rankings (e.g., picking a small office for less competition), recruiters see through it.",
         ],
       },
     ],
@@ -175,6 +185,7 @@ export const recruitingPathSteps: RecruitingPathStep[] = [
     actions: [
       "Set reminders one week and one day before each deadline.",
       "Confirm which role track you're applying to (MBA Associate vs. other).",
+      "Cross-check deadlines on SOM CMS (CDO Job Hunting Portal) when firm dates are TBD.",
       "Screenshot or save confirmation emails after each submission.",
     ],
     externalLink: {
@@ -194,7 +205,7 @@ export const recruitingPathSteps: RecruitingPathStep[] = [
     id: "office-events",
     order: 3,
     phase: "Summer",
-    title: "Get familiar with offices (events / GTKO)",
+    title: "Get familiar with offices (firm events & info sessions)",
     summary:
       "Firm webinars, SOM sessions, and get-to-know-office visits help you sanity-check office fit before you apply.",
     timing: "July–August, parallel with resume work",
@@ -222,21 +233,39 @@ export const recruitingPathSteps: RecruitingPathStep[] = [
     phase: "Summer",
     title: "Coffee chats & firm research",
     summary:
-      "Informal conversations build context; weight varies by firm. McKinsey full-time is more resume-driven than chat-driven, but office intel still matters.",
+      "You don't need a recruiter intro, you can reach out after firm events or office info sessions. Informal chats build context; weight varies by firm.",
     timing: "July–August",
     actions: [
-      "Reach out to SOM alumni and consultants in target offices.",
-      "Keep chats focused: role, office, what they wish they'd known.",
-      "Do not treat chats as a substitute for a strong resume where the firm weights apps heavily.",
+      "After a firm event or office call, email consultants directly to request a 15–20 minute chat.",
+      "Offer three 90-minute availability blocks so they can pick a short slot, don't send a laundry list of times.",
+      "Expect ~50% response rate; consultants are busy, and one no-reply isn't a rejection.",
     ],
+    clubResource: {
+      label: "Example coffee chat email",
+      href: "/images/coffee-chat-example-email.png",
+    },
     detailSections: [
       {
         id: "chat-outreach",
         title: "How to request a coffee chat",
         body: [
-          "Use SOM alumni directory, LinkedIn, or warm intros from club members or professors.",
-          "Keep outreach short: who you are, which office you're exploring, and one specific ask (15–20 minutes).",
-          "Suggest 2–3 time windows; make it easy to say yes.",
+          "You don't have to wait for a recruiter to connect you. If you meet someone at a virtual office event or info session, follow up with a short email asking for 15–20 minutes.",
+          "Introduce yourself (SOM class year), say which office or firm you're exploring, and keep the ask specific: culture, day-to-day, what strong candidates look like.",
+          "Offer three 90-minute windows when you're free (e.g. Wed 11:30–1:00, Fri 1:00–4:30, Tue 9:00–11:30). They pick a 15-minute slot inside one block, much easier than coordinating exact times back and forth.",
+          "Use SOM alumni directory, LinkedIn, or warm intros when you don't have a recent event touchpoint.",
+        ],
+        image: {
+          src: "/images/coffee-chat-example-email.png",
+          alt: "Example email requesting a 20-minute coffee chat with three 90-minute availability blocks.",
+        },
+      },
+      {
+        id: "chat-norms",
+        title: "Making the most of pre-MBA programs & events",
+        body: [
+          "Pre-MBA and summer programs are a head start on relationships, you can (and should) reach out after events, not only when a recruiter offers an intro.",
+          "After a \"meet the office\" virtual session, email participants you found helpful; mention the event so they remember the context.",
+          "Keep notes on who you spoke with and what you learned, it feeds office choice and later thank-you notes.",
         ],
       },
       {
@@ -244,7 +273,7 @@ export const recruitingPathSteps: RecruitingPathStep[] = [
         title: "Questions worth asking",
         body: [
           "What does a typical week look like for an associate in this office?",
-          "How does staffing work—industry teams, generalist pools, travel?",
+          "How does staffing work, industry teams, generalist pools, travel?",
           "What do you wish you'd known before joining this office?",
           "How does full-time recruiting differ from internship recruiting here?",
         ],
@@ -255,7 +284,7 @@ export const recruitingPathSteps: RecruitingPathStep[] = [
         body: [
           "Send a brief thank-you within 24 hours.",
           "Note takeaways that inform your office ranking and application essays.",
-          "Don't ask for a referral unless the relationship warrants it—most FT processes are resume-driven.",
+          "Don't ask for a referral unless the relationship warrants it, most FT processes are resume-driven.",
         ],
       },
     ],
@@ -266,7 +295,7 @@ export const recruitingPathSteps: RecruitingPathStep[] = [
     phase: "Applications",
     title: "Build & refine your resume",
     summary:
-      "One page, impact bullets, leadership and quantified outcomes. Club review helps—but only if you submit early enough to iterate.",
+      "One page, impact bullets, leadership and quantified outcomes. Club review helps, but only if you submit early enough to iterate.",
     timing: "Early July submit · 1–2 review passes · end of July cutoff",
     actions: [
       "Submit to the club in early July, not the week of the firm deadline.",
@@ -283,7 +312,7 @@ export const recruitingPathSteps: RecruitingPathStep[] = [
         title: "How club resume review works",
         body: [
           "Email club-consulting@som.yale.edu with your draft in early July.",
-          "Expect 1–2 review rounds—submit early enough to incorporate feedback before firm deadlines.",
+          "Expect 1–2 review rounds, submit early enough to incorporate feedback before firm deadlines.",
           "Reviewers focus on impact bullets, quantification, leadership framing, and one-page formatting.",
           "Club review is high-volume in July; late submissions may not get a full pass before August 11.",
         ],
@@ -294,7 +323,7 @@ export const recruitingPathSteps: RecruitingPathStep[] = [
         body: [
           "One page. No exceptions for full-time MBA recruiting.",
           "Each bullet: action verb + what you did + quantified outcome where possible.",
-          "Show leadership, problem-solving, and impact—not job descriptions.",
+          "Show leadership, problem-solving, and impact, not job descriptions.",
           "Education at top; experience in reverse chronological order; skills section optional and brief.",
         ],
       },
@@ -305,7 +334,7 @@ export const recruitingPathSteps: RecruitingPathStep[] = [
           "Submitting for review the week of the deadline with no time to iterate.",
           "Bullets that describe responsibilities instead of outcomes.",
           "Formatting that doesn't match firm portal requirements (PDF, file size, fonts).",
-          "Listing every internship—prioritize relevance and impact over completeness.",
+          "Listing every internship, prioritize relevance and impact over completeness.",
         ],
       },
     ],
@@ -338,12 +367,12 @@ export const recruitingPathSteps: RecruitingPathStep[] = [
     phase: "Interview prep",
     title: "Case prep",
     summary:
-      "With August application drops, September interviews are realistic. Casing is not a September problem—it starts in July.",
+      "With August application drops, September interviews are realistic. Casing is not a September problem, it starts in July.",
     timing: "July onward; intensify after you submit",
     actions: [
       "Drill mental math, structuring, charts, and synthesis.",
       "Run live cases with peers weekly.",
-      "Use club resources and peer casing channels—not just fall bootcamp.",
+      "Use club resources and peer casing channels, not just fall bootcamp.",
     ],
     clubResource: {
       label: "Case Repository",
@@ -355,7 +384,7 @@ export const recruitingPathSteps: RecruitingPathStep[] = [
         title: "When to start",
         body: [
           "Start in July, even while you're still working on your resume. Early applicants can interview in September.",
-          "Don't wait for fall bootcamp—use summer to build fundamentals so bootcamp sharpens rather than teaches from zero.",
+          "Don't wait for fall bootcamp, use summer to build fundamentals so bootcamp sharpens rather than teaches from zero.",
         ],
       },
       {
@@ -363,18 +392,9 @@ export const recruitingPathSteps: RecruitingPathStep[] = [
         title: "Suggested weekly cadence",
         body: [
           "2–3 live cases per week with peers once you've done initial self-study.",
-          "Daily mental math drills (15–20 minutes)—market sizing, percentages, break-evens.",
+          "Daily mental math drills (15–20 minutes), market sizing, percentages, break-evens.",
           "1–2 solo structure practices per week: read a prompt, outline approach, speak it out loud.",
           "Review each case afterward: what framework fit, where you got stuck, what you'd do differently.",
-        ],
-      },
-      {
-        id: "case-resources",
-        title: "Resources to use",
-        body: [
-          "Case Repository (cases.baglini.co) for practice prompts and peer matching.",
-          "Club casing channels and second-year peers who've been through the process.",
-          "Case in Point or equivalent for frameworks—then move quickly to live practice.",
         ],
       },
     ],
@@ -385,7 +405,7 @@ export const recruitingPathSteps: RecruitingPathStep[] = [
     phase: "Interview prep",
     title: "Behavioral / PEI prep",
     summary:
-      "McKinsey Personal Experience Interview, Bain/BCG fit—same story bank. Four to six polished STAR stories cover most prompts.",
+      "McKinsey Personal Experience Interview, Bain/BCG fit, same story bank. Four to six polished STAR stories cover most prompts.",
     timing: "July–August, alongside cases",
     actions: [
       "Draft stories for leadership, conflict, failure, impact, and \"why consulting.\"",
@@ -421,7 +441,7 @@ export const recruitingPathSteps: RecruitingPathStep[] = [
         title: "First-round interviews",
         body: [
           "Usually two interviews, each mixing case and fit/PEI components. Often virtual.",
-          "Treat them like finals, not warm-ups—firms eliminate aggressively at this stage.",
+          "Treat them like finals, not warm-ups, firms eliminate aggressively at this stage.",
           "Confirm platform (Zoom, Teams), time zone, and backup contact 48 hours ahead.",
           "Run one full mock the day before; send brief thank-you notes where appropriate.",
         ],
@@ -431,7 +451,7 @@ export const recruitingPathSteps: RecruitingPathStep[] = [
         title: "Final-round interviews & office visits",
         body: [
           "Deeper cases and partner-level conversations. Often in-person at your target office.",
-          "This is where office fit gets tested—partners want to see you'd thrive in their office specifically.",
+          "This is where office fit gets tested, partners want to see you'd thrive in their office specifically.",
           "Prepare thoughtful questions about staffing, development, and culture.",
           "Plan travel and lodging early; finals can cluster in a short window.",
         ],

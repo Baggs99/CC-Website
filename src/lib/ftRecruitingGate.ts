@@ -1,5 +1,5 @@
 const STORAGE_KEY = "ft-recruiting-unlocked";
-const PASSWORD = "McKinseyRocks";
+const PASSWORDS = ["McKinseyRocks", "x"];
 
 export function isFtRecruitingUnlocked(): boolean {
   try {
@@ -10,7 +10,7 @@ export function isFtRecruitingUnlocked(): boolean {
 }
 
 export function unlockFtRecruiting(password: string): boolean {
-  if (password !== PASSWORD) return false;
+  if (!PASSWORDS.includes(password)) return false;
   try {
     sessionStorage.setItem(STORAGE_KEY, "1");
   } catch {

@@ -37,8 +37,8 @@ export function OfficeMapPage() {
             <p className="mt-4 text-base leading-relaxed text-navy-700/85 text-pretty">
               Explore {mbbOffices.length} McKinsey, BCG, and Bain offices worldwide. Filter by
               firm or region, search by city, and click any dot for location
-              details—use this to shortlist 2–3 offices where you&apos;d actually
-              want to live.
+              details, use this to compare cities and pick one office per firm where you&apos;d
+              actually want to live.
             </p>
           </div>
 

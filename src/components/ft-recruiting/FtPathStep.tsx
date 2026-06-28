@@ -10,7 +10,8 @@ import { cn } from "@/lib/utils";
 function StepLink({ link }: { link: RecruitingStepLink }) {
   const external =
     link.href.startsWith("http") || link.href.startsWith("mailto:");
-  const internal = link.href.startsWith("/");
+  const internal =
+    link.href.startsWith("/") && !/\.[a-z0-9]+(\?|$)/i.test(link.href);
   const className =
     "inline-flex items-center gap-1 text-sm font-medium text-navy-900 underline-offset-4 hover:underline";
 
@@ -28,7 +29,9 @@ function StepLink({ link }: { link: RecruitingStepLink }) {
       href={link.href}
       {...(external && !link.href.startsWith("mailto:")
         ? { target: "_blank", rel: "noopener noreferrer" }
-        : {})}
+        : link.href.startsWith("/images/")
+          ? { target: "_blank", rel: "noopener noreferrer" }
+          : {})}
       className={className}
     >
       {link.label}
@@ -158,6 +161,21 @@ export function FtPathStep({
                       ))}
                     </ul>
                   )}
+                  {section.image ? (
+                    <a
+                      href={section.image.src}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="mt-4 block overflow-hidden rounded-lg border border-navy-900/10 bg-white"
+                    >
+                      <img
+                        src={section.image.src}
+                        alt={section.image.alt}
+                        className="w-full"
+                        loading="lazy"
+                      />
+                    </a>
+                  ) : null}
                 </div>
               </details>
             ))}

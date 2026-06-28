@@ -5,11 +5,13 @@ import { FtPathNav } from "@/components/ft-recruiting/FtPathNav";
 import { FtPathStep } from "@/components/ft-recruiting/FtPathStep";
 import {
   firmDeadlines,
+  firmDeadlinesNote,
   ftOverwhelmedBullets,
   ftRecruitingDescription,
   ftRecruitingEyebrow,
   ftRecruitingTitle,
   recruitingPathSteps,
+  somCmsJobPortal,
 } from "@/data/fullTimeRecruiting";
 import { SectionHeader } from "./ui/SectionHeader";
 
@@ -67,6 +69,19 @@ export function FullTimeRecruitingHub() {
             Firm deadlines
           </h3>
         </div>
+
+        <p className="mb-6 max-w-3xl text-sm leading-relaxed text-navy-700/90 text-pretty">
+          {firmDeadlinesNote}{" "}
+          <a
+            href={somCmsJobPortal.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1 font-medium text-navy-900 underline-offset-4 hover:underline"
+          >
+            {somCmsJobPortal.label}
+            <ArrowUpRight size={14} className="shrink-0 opacity-70" />
+          </a>
+        </p>
 
         <ul
           role="list"
@@ -128,7 +143,22 @@ export function FullTimeRecruitingHub() {
               </dl>
 
               <p className="mt-4 flex-1 text-sm leading-relaxed text-navy-700/85 text-pretty">
-                {firm.notes}
+                {firm.cmsReminder ? (
+                  <>
+                    Regularly check{" "}
+                    <a
+                      href={somCmsJobPortal.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="font-medium text-navy-900 underline-offset-4 hover:underline"
+                    >
+                      SOM CMS
+                    </a>{" "}
+                    for due date updates.
+                  </>
+                ) : (
+                  firm.notes
+                )}
               </p>
 
               {firm.href ? (
