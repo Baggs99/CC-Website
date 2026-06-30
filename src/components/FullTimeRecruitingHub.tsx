@@ -19,6 +19,7 @@ export function FullTimeRecruitingHub() {
     <div id="full-time-recruiting">
       <SectionHeader
         className="!max-w-none"
+        compact
         eyebrow={ftRecruitingEyebrow}
         title={ftRecruitingTitle}
         description={ftRecruitingDescription}

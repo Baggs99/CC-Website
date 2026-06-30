@@ -17,7 +17,7 @@ export function FullTimeRecruitingPage() {
       />
 
       <FtRecruitingGate>
-        <Container className="relative z-10 py-16 sm:py-24 lg:py-32">
+        <Container className="relative z-10 pb-16 pt-8 sm:pb-20 sm:pt-10 lg:pb-24 lg:pt-12">
           <FullTimeRecruitingHub />
         </Container>
       </FtRecruitingGate>

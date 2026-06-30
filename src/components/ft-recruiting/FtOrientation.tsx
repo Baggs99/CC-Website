@@ -16,18 +16,18 @@ export function FtOrientation() {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-60px" }}
       transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-      className="mt-12 rounded-2xl border border-navy-900/[0.08] bg-white p-6 shadow-soft sm:p-8 lg:p-10"
+      className="mt-6 rounded-2xl border border-navy-900/[0.08] bg-white p-5 shadow-soft sm:mt-8 sm:p-6"
       aria-labelledby="ft-orientation-heading"
     >
       <span className="eyebrow">{eyebrow}</span>
       <h3
         id="ft-orientation-heading"
-        className="mt-3 font-serif text-xl font-medium text-navy-900 sm:text-2xl"
+        className="mt-2 font-serif text-xl font-medium text-navy-900 sm:text-2xl"
       >
         {title}
       </h3>
 
-      <div className="mt-5 space-y-4 text-sm leading-relaxed text-navy-700/90 sm:text-base">
+      <div className="mt-3 space-y-3 text-sm leading-relaxed text-navy-700/90">
         {whatIsConsulting.map((paragraph) => (
           <p key={paragraph.slice(0, 40)} className="text-pretty">
             {paragraph}
@@ -36,7 +36,7 @@ export function FtOrientation() {
       </div>
 
       <aside
-        className="mt-8 rounded-2xl border border-gold-500/25 bg-gradient-to-br from-white to-ivory-50 p-6 sm:p-7"
+        className="mt-5 rounded-2xl border border-gold-500/25 bg-gradient-to-br from-white to-ivory-50 p-4 sm:mt-6 sm:p-5"
         aria-labelledby="ft-overwhelmed-heading"
       >
         <div className="flex items-start gap-3">
@@ -46,11 +46,11 @@ export function FtOrientation() {
           <div className="min-w-0">
             <h4
               id="ft-overwhelmed-heading"
-              className="font-serif text-lg font-medium text-navy-900 sm:text-xl"
+              className="font-serif text-lg font-medium text-navy-900"
             >
               Start here if you&apos;re overwhelmed
             </h4>
-            <ul className="mt-4 space-y-2.5 text-sm leading-relaxed text-navy-700/90">
+            <ul className="mt-3 space-y-2 text-sm leading-relaxed text-navy-700/90">
               {ftOverwhelmedBullets.map((bullet) => (
                 <li key={bullet} className="flex gap-2.5">
                   <span
