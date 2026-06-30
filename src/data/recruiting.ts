@@ -1,4 +1,4 @@
-import { BookOpenText, Calendar, type LucideIcon } from "lucide-react";
+import { BookOpenText, Calendar, FileText, type LucideIcon } from "lucide-react";
 
 export type RecruitingResource = {
   title: string;
@@ -24,5 +24,13 @@ export const recruitingResources: RecruitingResource[] = [
     icon: Calendar,
     cta: "View calendar",
     href: "https://groups.som.yale.edu/events?group_ids=1116",
+  },
+  {
+    title: "Resume Review",
+    description:
+      "Submit your one-page consulting resume for club feedback in early July. Google Form collects your Yale email and PDF; 1–2 review rounds before firm deadlines.",
+    icon: FileText,
+    cta: "Submit resume",
+    href: "/resume-review",
   },
 ];

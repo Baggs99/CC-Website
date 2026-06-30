@@ -1,12 +1,11 @@
 import { motion } from "framer-motion";
-import { ArrowUpRight, Calendar, ListChecks } from "lucide-react";
+import { ArrowUpRight, Calendar } from "lucide-react";
 import { FtOrientation } from "@/components/ft-recruiting/FtOrientation";
 import { FtPathNav } from "@/components/ft-recruiting/FtPathNav";
 import { FtPathStep } from "@/components/ft-recruiting/FtPathStep";
 import {
   firmDeadlines,
   firmDeadlinesNote,
-  ftOverwhelmedBullets,
   ftRecruitingDescription,
   ftRecruitingEyebrow,
   ftRecruitingTitle,
@@ -27,40 +26,6 @@ export function FullTimeRecruitingHub() {
       />
 
       <FtOrientation />
-
-      <motion.aside
-        initial={{ opacity: 0, y: 14 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, margin: "-60px" }}
-        transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-        className="mt-10 rounded-2xl border border-gold-500/25 bg-gradient-to-br from-white to-ivory-50 p-6 shadow-soft sm:p-8"
-        aria-labelledby="ft-overwhelmed-heading"
-      >
-        <div className="flex items-start gap-3">
-          <span className="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-navy-900 text-ivory-50">
-            <ListChecks size={20} strokeWidth={1.6} />
-          </span>
-          <div className="min-w-0">
-            <h3
-              id="ft-overwhelmed-heading"
-              className="font-serif text-lg font-medium text-navy-900 sm:text-xl"
-            >
-              Start here if you&apos;re overwhelmed
-            </h3>
-            <ul className="mt-4 space-y-2.5 text-sm leading-relaxed text-navy-700/90">
-              {ftOverwhelmedBullets.map((bullet) => (
-                <li key={bullet} className="flex gap-2.5">
-                  <span
-                    className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-gold-500"
-                    aria-hidden
-                  />
-                  <span className="text-pretty">{bullet}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
-      </motion.aside>
 
       <div className="mt-14">
         <div className="flex items-center gap-3 pb-5">
@@ -145,7 +110,7 @@ export function FullTimeRecruitingHub() {
               <p className="mt-4 flex-1 text-sm leading-relaxed text-navy-700/85 text-pretty">
                 {firm.cmsReminder ? (
                   <>
-                    Regularly check{" "}
+                    Confirm due dates in{" "}
                     <a
                       href={somCmsJobPortal.href}
                       target="_blank"
@@ -153,8 +118,8 @@ export function FullTimeRecruitingHub() {
                       className="font-medium text-navy-900 underline-offset-4 hover:underline"
                     >
                       SOM CMS
-                    </a>{" "}
-                    for due date updates.
+                    </a>
+                    , the source of truth.
                   </>
                 ) : (
                   firm.notes
@@ -168,7 +133,7 @@ export function FullTimeRecruitingHub() {
                   rel="noopener noreferrer"
                   className="mt-5 inline-flex items-center gap-1.5 text-sm font-medium text-navy-900"
                 >
-                  Firm careers site
+                  {firm.hrefLabel ?? "Firm careers site"}
                   <ArrowUpRight size={14} />
                 </a>
               ) : null}

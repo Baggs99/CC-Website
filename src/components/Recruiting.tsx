@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
+import { Link } from "react-router-dom";
 import { recruitingResources } from "@/data/recruiting";
 import { SITE_IMAGES } from "@/data/siteImages";
 import { Container } from "./ui/Container";
@@ -42,6 +43,40 @@ export function Recruiting() {
             {recruitingResources.map((res, i) => {
               const Icon = res.icon;
               const external = res.href.startsWith("http");
+              const cardClassName =
+                "card card-hover relative flex h-full flex-col overflow-hidden border-navy-900/[0.07] bg-white/90 p-7 backdrop-blur-sm sm:p-8";
+              const cardBody = (
+                <>
+                  <span className="absolute right-6 top-6 text-[0.65rem] font-medium tracking-[0.2em] text-navy-900/25">
+                    {String(i + 1).padStart(2, "0")}
+                  </span>
+
+                  <span className="grid h-12 w-12 place-items-center rounded-xl bg-navy-900 text-ivory-50 ring-1 ring-inset ring-white/10 transition-all duration-500 ease-out-expo group-hover:bg-navy-800 group-hover:ring-gold-500/40">
+                    <Icon size={22} strokeWidth={1.6} />
+                  </span>
+
+                  <h3 className="mt-7 font-serif text-xl font-medium text-navy-900">
+                    {res.title}
+                  </h3>
+
+                  <p className="mt-3 flex-1 whitespace-pre-line text-sm leading-relaxed text-navy-700/88 text-pretty">
+                    {res.description}
+                  </p>
+
+                  <span className="mt-7 inline-flex items-center gap-1.5 text-sm font-medium text-navy-900">
+                    {res.cta}
+                    <ArrowUpRight
+                      size={15}
+                      className="transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
+                    />
+                  </span>
+
+                  <span
+                    aria-hidden
+                    className="absolute inset-x-7 bottom-0 h-px origin-left scale-x-0 bg-gradient-to-r from-gold-500 via-gold-400/60 to-transparent transition-transform duration-700 ease-out-expo group-hover:scale-x-100 sm:inset-x-8"
+                  />
+                </>
+              );
               return (
                 <motion.li
                   key={res.title}
@@ -55,42 +90,20 @@ export function Recruiting() {
                   }}
                   className="group relative"
                 >
-                  <a
-                    href={res.href}
-                    {...(external
-                      ? { target: "_blank", rel: "noopener noreferrer" }
-                      : {})}
-                    className="card card-hover relative flex h-full flex-col overflow-hidden border-navy-900/[0.07] bg-white/90 p-7 backdrop-blur-sm sm:p-8"
-                  >
-                    <span className="absolute right-6 top-6 text-[0.65rem] font-medium tracking-[0.2em] text-navy-900/25">
-                      {String(i + 1).padStart(2, "0")}
-                    </span>
-
-                    <span className="grid h-12 w-12 place-items-center rounded-xl bg-navy-900 text-ivory-50 ring-1 ring-inset ring-white/10 transition-all duration-500 ease-out-expo group-hover:bg-navy-800 group-hover:ring-gold-500/40">
-                      <Icon size={22} strokeWidth={1.6} />
-                    </span>
-
-                    <h3 className="mt-7 font-serif text-xl font-medium text-navy-900">
-                      {res.title}
-                    </h3>
-
-                    <p className="mt-3 flex-1 whitespace-pre-line text-sm leading-relaxed text-navy-700/88 text-pretty">
-                      {res.description}
-                    </p>
-
-                    <span className="mt-7 inline-flex items-center gap-1.5 text-sm font-medium text-navy-900">
-                      {res.cta}
-                      <ArrowUpRight
-                        size={15}
-                        className="transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
-                      />
-                    </span>
-
-                    <span
-                      aria-hidden
-                      className="absolute inset-x-7 bottom-0 h-px origin-left scale-x-0 bg-gradient-to-r from-gold-500 via-gold-400/60 to-transparent transition-transform duration-700 ease-out-expo group-hover:scale-x-100 sm:inset-x-8"
-                    />
-                  </a>
+                  {external ? (
+                    <a
+                      href={res.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={cardClassName}
+                    >
+                      {cardBody}
+                    </a>
+                  ) : (
+                    <Link to={res.href} className={cardClassName}>
+                      {cardBody}
+                    </Link>
+                  )}
                 </motion.li>
               );
             })}

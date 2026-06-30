@@ -3,6 +3,7 @@ import { Layout } from "./components/Layout";
 import { FullTimeRecruitingPage } from "./pages/FullTimeRecruitingPage";
 import { HomePage } from "./pages/HomePage";
 import { OfficeMapPage } from "./pages/OfficeMapPage";
+import { ResumeReviewPage } from "./pages/ResumeReviewPage";
 
 export default function App() {
   return (
@@ -18,6 +19,7 @@ export default function App() {
             path="/full-time-recruiting/office-map"
             element={<OfficeMapPage />}
           />
+          <Route path="/resume-review" element={<ResumeReviewPage />} />
         </Route>
       </Routes>
     </BrowserRouter>
