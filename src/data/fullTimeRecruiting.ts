@@ -22,12 +22,20 @@ export type RecruitingStepLink = {
   };
 };
 
+export type StepDetailBullet =
+  | string
+  | {
+      text: string;
+      indent?: boolean;
+    };
+
 export type StepDetailSection = {
   id: string;
   title: string;
-  body: string[];
+  body: StepDetailBullet[];
   comingSoon?: boolean;
   image?: { src: string; alt: string };
+  links?: RecruitingStepLink[];
 };
 
 export type RecruitingStepLinkGroup = {
@@ -458,34 +466,58 @@ export const recruitingPathSteps: RecruitingPathStep[] = [
     phase: "Interview prep",
     title: "Case prep",
     summary:
-      "With August application drops, September interviews are realistic. Casing is not a September problem, it starts in July.",
+      "September interviews are realistic for August applicants, so start in July. Case count is a bad scoreboard: quality, feedback, and targeted drills beat grinding volume.",
     timing: "July onward; intensify after you submit",
     actions: [
-      "Drill mental math, structuring, charts, and synthesis.",
-      "Run live cases with peers weekly.",
-      "Use club resources and peer casing channels, not just fall bootcamp.",
+      "Sign up for Rocketblocks free with your Yale email through SOM CDO, then pair it with live peer cases from the club repo.",
+      "After every case, write down what went wrong and fix that pattern before you run another one.",
+      "Weak at structuring? Drill structure-only reps until that piece is solid, then add the full case back in.",
     ],
     clubResource: {
       label: "Case Repository",
       href: "https://cases.baglini.co",
     },
+    resourceLinks: [
+      {
+        label: "Rocketblocks (free via SOM CDO)",
+        href: "https://cdo.som.yale.edu/resources/rocketblocks/",
+      },
+    ],
     detailSections: [
       {
         id: "when-to-start",
         title: "When to start",
         body: [
           "Start in July, even while you're still working on your resume. Early applicants can interview in September.",
-          "Don't wait for fall bootcamp, use summer to build fundamentals so bootcamp sharpens rather than teaches from zero.",
+          "Don't wait for fall bootcamp. Use summer to build fundamentals so bootcamp sharpens rather than teaches from zero.",
         ],
       },
       {
-        id: "weekly-cadence",
-        title: "Suggested weekly cadence",
+        id: "quality-over-quantity",
+        title: "Quality over quantity",
         body: [
-          "2–3 live cases per week with peers once you've done initial self-study.",
-          "Daily mental math drills (15–20 minutes), market sizing, percentages, break-evens.",
-          "1–2 solo structure practices per week: read a prompt, outline approach, speak it out loud.",
-          "Review each case afterward: what framework fit, where you got stuck, what you'd do differently.",
+          "Total cases completed is a weak measure of readiness. Two thoughtful cases with a clear debrief beat five rushed ones.",
+          "Track what you miss: bad math, weak structure, unclear synthesis, slow charts. Fix the recurring error, not just the last case.",
+          "Identify your top one or two improvement areas and drill there until they stop showing up in feedback.",
+          "Use your time on the highest-leverage work: targeted reps, not endless full cases when one skill is the bottleneck.",
+        ],
+      },
+      {
+        id: "mental-math",
+        title: "Mental math",
+        body: [
+          "Can you build a formula? For market sizing and back-of-envelope math, write the equation first, then plug in assumptions.",
+          "Drill daily in short blocks (15–20 minutes): percentages, growth rates, break-evens, and sanity checks on your final number.",
+          "Rocketblocks has structured drills; use them to build speed without skipping the logic step.",
+        ],
+      },
+      {
+        id: "structuring-drills",
+        title: "If structuring is your weak spot",
+        body: [
+          "You don't need a full 45-minute case to improve structure. Read a prompt, build a MECE framework, and talk through your approach out loud.",
+          "Stop after the opening structure and get feedback before you spend time on analysis you can't deliver cleanly.",
+          "Once structure is consistent, add math, charts, and synthesis back into full cases with peers.",
         ],
       },
     ],
@@ -496,19 +528,86 @@ export const recruitingPathSteps: RecruitingPathStep[] = [
     phase: "Interview prep",
     title: "Behavioral / PEI prep",
     summary:
-      "McKinsey Personal Experience Interview, Bain/BCG fit, same story bank. Four to six polished STAR stories cover most prompts.",
+      "Behaviorals are more than STAR stories. Prep your intro and why questions, but also small talk, genuine conversation, and the less-scripted questions BCG Fit and Bain Experience interviews often ask.",
     timing: "July–August, alongside cases",
     actions: [
-      "Draft stories for leadership, conflict, failure, impact, and \"why consulting.\"",
-      "Practice out loud until answers are crisp, not memorized.",
-      "Tie each story to the office and firm you're targeting.",
+      "Write and rehearse a 90-second introduction you can deliver without rambling.",
+      "Prepare distinct answers for why consulting, why firm, and why office. Your why consulting answer should convince you, not just the interviewer.",
+      "Practice small talk and off-script conversation, not only polished stories from your story bank.",
+      "Targeting McKinsey? Prepare two answers for each of the four PEI questions; make each one interesting and on-target for what they're assessing.",
     ],
+    clubResource: {
+      label: "Example intro & why consulting / firm / office",
+      href: "/documents/behavioral/introduction-why-consulting-firm-office.pdf",
+    },
     detailSections: [
       {
-        id: "story-bank",
-        title: "Building your story bank",
-        body: [],
-        comingSoon: true,
+        id: "intro-and-why",
+        title: "90-second intro & why questions",
+        body: [
+          "Most interviews open with a short introduction. Aim for about 90 seconds: who you are, what you've done, and why you're here now.",
+          "Have ready answers for why consulting, why this firm, and why this office. They should connect to each other, not read like three unrelated scripts.",
+          "Use the example linked above as a format reference, then make it yours for the firms and cities you're targeting.",
+        ],
+      },
+      {
+        id: "small-talk",
+        title: "Small talk before the interview starts",
+        body: [
+          "There's often a few minutes of small talk before the case or behavioral portion begins. Don't treat it as filler.",
+          "Have light, genuine topics ready: something you noticed about the office, a recent article in their industry, or a thoughtful question about their path.",
+        ],
+      },
+      {
+        id: "beyond-story-bank",
+        title: "Beyond your story bank",
+        body: [
+          "Polished STAR stories are table stakes. You also need to hold a dynamic, introspective conversation that doesn't sound rehearsed.",
+          "Answer why consulting in a way that satisfies you, not just what you think the interviewer wants to hear. If you can't convince yourself, it will show.",
+          "Aim for a conversation you'd want to keep having at the firm: curious, specific, and human.",
+          "Know how to talk to a senior partner. Be intellectually and emotionally flexible: listen, follow their lead, and respond like a person, not a recruiting robot.",
+        ],
+      },
+      {
+        id: "bcg-bain-fit",
+        title: "BCG Fit Interview & Bain Experience Interview",
+        body: [
+          "BCG's Fit Interview and Bain's Experience Interview tend to be less rigid than McKinsey's PEI. Expect more conversational prompts alongside standard fit questions.",
+          "Examples you might get:",
+          {
+            text: "\"Tell me about something you've been curious about recently.\"",
+            indent: true,
+          },
+          {
+            text: "\"What would the title of your autobiography be, and why?\"",
+            indent: true,
+          },
+          {
+            text: "\"If you were CEO of your last company, what would you change?\"",
+            indent: true,
+          },
+          "Have real answers ready. These are testing whether you're interesting and thoughtful, not whether you memorized a script.",
+        ],
+      },
+      {
+        id: "mckinsey-pei",
+        title: "McKinsey Personal Experience Interview (PEI)",
+        body: [
+          "The McKinsey Personal Experience Interview is unique among consulting firms. During the PEI, McKinsey asks one of only four questions.",
+          "Prepare two answers for each PEI question so you can choose the strongest story when it comes up in the room.",
+          "Each answer should be interesting and actually address what the interviewer is looking for, not a generic story recycled from another firm's fit interview.",
+          "Use McKinsey's official PEI guidance for the four question types, then draft and rehearse with the club PEI template.",
+        ],
+        links: [
+          {
+            label: "Official PEI questions",
+            href: "https://www.mckinsey.com/careers/interviewing#:~:text=Personal%20Experience%20Interview%20(PEI)",
+          },
+          {
+            label: "PEI answer template",
+            href: "/documents/behavioral/mckinsey-pei-template.docx",
+          },
+        ],
       },
     ],
   },
@@ -522,29 +621,34 @@ export const recruitingPathSteps: RecruitingPathStep[] = [
     timing: "September–early October (McKinsey 2026 cycle)",
     actions: [
       "Confirm logistics, time zone, and interview format 48 hours ahead.",
+      "Prepare thoughtful questions for each interviewer.",
       "Run one full mock the day before each round.",
-      "Research partners and office leadership if names are shared for finals.",
-      "Plan travel early if the office requires an in-person visit.",
+      "Send a personalized thank-you within 24 hours of each interview.",
     ],
+    clubResource: {
+      label: "Example post-interview thank-you",
+      href: "/images/post-interview-thank-you-example.png",
+    },
     detailSections: [
       {
         id: "first-round",
         title: "First-round interviews",
         body: [
           "Usually two interviews, each mixing case and fit/PEI components. Often virtual.",
-          "Treat them like finals, not warm-ups, firms eliminate aggressively at this stage.",
+          "Treat them like finals, not warm-ups. Firms eliminate aggressively at this stage.",
           "Confirm platform (Zoom, Teams), time zone, and backup contact 48 hours ahead.",
-          "Run one full mock the day before; send brief thank-you notes where appropriate.",
+          "Prepare a few genuine questions for each interviewer. Run one full mock the day before.",
+          "Send a brief thank-you within 24 hours. Reference something specific from your conversation.",
         ],
       },
       {
         id: "final-round",
-        title: "Final-round interviews & office visits",
+        title: "Final-round interviews",
         body: [
           "Deeper cases and partner-level conversations. Often in-person at your target office.",
-          "This is where office fit gets tested, partners want to see you'd thrive in their office specifically.",
+          "This is where office fit gets tested. Partners want to see you'd thrive in their office specifically.",
           "Prepare thoughtful questions about staffing, development, and culture.",
-          "Plan travel and lodging early; finals can cluster in a short window.",
+          "Follow up with a thank-you that ties back to what you discussed, not a generic template.",
         ],
       },
     ],
@@ -555,21 +659,15 @@ export const recruitingPathSteps: RecruitingPathStep[] = [
     phase: "Offers",
     title: "Offers & decisions",
     summary:
-      "Decisions can come quickly after finals. Know your deadlines, backup processes, and how to communicate with firms if you need time.",
-    timing: "October (McKinsey 2026 cycle); varies by firm",
+      "Offers generally come in September and October after final interviews. Track deadlines, keep backup pipelines warm, and bring EQ to how you navigate outcomes with classmates.",
+    timing: "September–October offers and acceptances; varies by firm",
     actions: [
-      "Track offer deadlines in writing.",
+      "Track offer and acceptance deadlines in writing.",
       "Keep other firm pipelines warm until you have a signed offer.",
-      "Ask the club or trusted second-years if you need help thinking through timing.",
+      "Be mindful of classmates still in process or without offers. Share good news thoughtfully and support generously.",
+      "Ask the club or trusted second-years if you need help thinking through timing or negotiations.",
     ],
-    detailSections: [
-      {
-        id: "offer-timeline",
-        title: "Managing offer timelines",
-        body: [],
-        comingSoon: true,
-      },
-    ],
+    detailSections: [],
   },
 ];
 

@@ -461,17 +461,37 @@ export function FtPathStep({
                     </p>
                   ) : (
                     <ul className="space-y-2 text-sm leading-relaxed text-navy-700/90">
-                      {section.body.map((line) => (
-                        <li key={line.slice(0, 48)} className="flex gap-2">
-                          <span
-                            className="mt-2 h-1 w-1 shrink-0 rounded-full bg-gold-500"
-                            aria-hidden
-                          />
-                          <span className="text-pretty">{line}</span>
+                      {section.body.map((line, lineIndex) => {
+                        const text = typeof line === "string" ? line : line.text;
+                        const indent =
+                          typeof line === "string" ? false : line.indent;
+                        return (
+                          <li
+                            key={`${section.id}-${lineIndex}`}
+                            className={cn("flex gap-2", indent && "ml-5")}
+                          >
+                            <span
+                              className={cn(
+                                "mt-2 shrink-0 rounded-full bg-gold-500",
+                                indent ? "h-1 w-1" : "h-1 w-1",
+                              )}
+                              aria-hidden
+                            />
+                            <span className="text-pretty">{text}</span>
+                          </li>
+                        );
+                      })}
+                    </ul>
+                  )}
+                  {section.links?.length ? (
+                    <ul className="mt-4 space-y-2 border-t border-navy-900/[0.06] pt-4">
+                      {section.links.map((link) => (
+                        <li key={link.href}>
+                          <StepLink link={link} />
                         </li>
                       ))}
                     </ul>
-                  )}
+                  ) : null}
                   {section.image ? (
                     <a
                       href={section.image.src}
