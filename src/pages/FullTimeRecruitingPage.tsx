@@ -1,5 +1,4 @@
 import { FullTimeRecruitingHub } from "@/components/FullTimeRecruitingHub";
-import { FtRecruitingGate } from "@/components/ft-recruiting/FtRecruitingGate";
 import { SITE_IMAGES } from "@/data/siteImages";
 import { Container } from "@/components/ui/Container";
 
@@ -16,11 +15,9 @@ export function FullTimeRecruitingPage() {
         className="absolute inset-0 z-0 bg-gradient-to-b from-ivory-100 via-ivory-100/95 to-ivory-100"
       />
 
-      <FtRecruitingGate>
-        <Container className="relative z-10 pb-16 pt-8 sm:pb-20 sm:pt-10 lg:pb-24 lg:pt-12">
-          <FullTimeRecruitingHub />
-        </Container>
-      </FtRecruitingGate>
+      <Container className="relative z-10 pb-16 pt-8 sm:pb-20 sm:pt-10 lg:pb-24 lg:pt-12">
+        <FullTimeRecruitingHub />
+      </Container>
     </div>
   );
 }
