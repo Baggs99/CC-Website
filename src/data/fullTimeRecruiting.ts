@@ -65,7 +65,7 @@ export const ftRecruitingEyebrow = "Full-Time Recruiting Hub";
 export const ftRecruitingTitle =
   "Deadlines hit before fall semester. Start in July.";
 export const ftRecruitingDescription =
-  "Follow the path below, from understanding the process to submitting your application and prepping for interviews. Built for second-year MBAs targeting McKinsey, BCG, Bain, and similar firms.";
+  "Follow the path below, from understanding the process to submitting your application and prepping for interviews. Built for the Class of 2027 targeting McKinsey, BCG, Bain, and similar firms.";
 
 export const consultingOrientation = {
   eyebrow: "Start here",
