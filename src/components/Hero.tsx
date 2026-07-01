@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { ArrowRight, ArrowUpRight } from "lucide-react";
+import { Link } from "react-router-dom";
 import { SITE_IMAGES } from "@/data/siteImages";
 import { Container } from "./ui/Container";
 
@@ -101,15 +102,16 @@ export function Hero() {
             variants={fadeUp}
             className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center"
           >
-            <span
-              aria-disabled="true"
-              className="btn flex min-h-[48px] w-full cursor-not-allowed justify-center border border-ivory-50/15 bg-white/5 px-6 py-3 text-sm font-medium text-ivory-100/50 shadow-none backdrop-blur-sm sm:w-auto"
+            <Link
+              to="/full-time-recruiting"
+              className="btn flex min-h-[48px] w-full justify-center border border-ivory-50/30 bg-white/10 px-6 py-3 text-sm font-medium text-ivory-50 shadow-[0_4px_24px_rgba(5,14,28,0.35)] backdrop-blur-md transition-all duration-300 ease-out-expo hover:-translate-y-0.5 hover:border-ivory-50/50 hover:bg-white/15 hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-ivory-200/60 focus-visible:ring-offset-2 focus-visible:ring-offset-navy-950 sm:w-auto group"
             >
               Full-Time Recruiting
-              <span className="rounded-full bg-ivory-50/10 px-2 py-0.5 text-[0.65rem] font-semibold uppercase tracking-wider text-ivory-100/45">
-                Coming soon
-              </span>
-            </span>
+              <ArrowRight
+                size={16}
+                className="transition-transform duration-300 group-hover:translate-x-1"
+              />
+            </Link>
             <a
               href="#recruiting"
               className="btn flex min-h-[48px] w-full justify-center border border-ivory-50/30 bg-white/10 px-6 py-3 text-sm font-medium text-ivory-50 shadow-[0_4px_24px_rgba(5,14,28,0.35)] backdrop-blur-md transition-all duration-300 ease-out-expo hover:-translate-y-0.5 hover:border-ivory-50/50 hover:bg-white/15 hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-ivory-200/60 focus-visible:ring-offset-2 focus-visible:ring-offset-navy-950 sm:w-auto group"
