@@ -106,8 +106,6 @@ export const firmDeadlines: FirmDeadline[] = [
       "August 11, 2026 (MBA Associate; Dec 2026–Fall 2027 grads)",
     interviewWindow:
       "First rounds: September 2026 · Finals: late Sep–early Oct · Offers: October",
-    notes:
-      "APD and MBA deadlines are aligned this year. Choose offices where you want to live and build long-term networks, not just where you interned.",
     href: "https://www.mckinsey.com/careers/search-jobs/jobs/associate-15178",
     hrefLabel: "McKinsey Associate application",
   },
@@ -122,12 +120,14 @@ export const firmDeadlines: FirmDeadline[] = [
   },
   {
     firm: "Bain & Company",
-    portalOpens: "Check firm portal",
-    applicationDeadline: "MBA full-time dates TBD",
-    interviewWindow: "TBD, confirm on Bain careers site",
-    cmsReminder: true,
-    href: "https://www.bain.com/careers/find-a-role/position/?jobid=10409",
-    hrefLabel: "Bain Consultant application",
+    year: 2026,
+    portalOpens: "Open now",
+    applicationDeadline:
+      "September 8, 2026 (Consultant; 11:59pm PT)",
+    interviewWindow:
+      "Expected late Sep–early Oct; confirm on Bain careers site or with Bain Yale recruiting team.",
+    href: "https://www.bain.com/careers/work-with-us/students/yale-school-of-management/#:~:text=Consultant,connecting%20with%20you.",
+    hrefLabel: "Bain Yale SOM recruiting page",
   },
 ];
 
@@ -221,8 +221,8 @@ export const recruitingPathSteps: RecruitingPathStep[] = [
         href: "https://studenttalent.bcg.com/candidate/login",
       },
       {
-        label: "Bain Consultant application",
-        href: "https://www.bain.com/careers/find-a-role/position/?jobid=10409",
+        label: "Bain Yale SOM recruiting page",
+        href: "https://www.bain.com/careers/work-with-us/students/yale-school-of-management/#:~:text=Consultant,connecting%20with%20you.",
       },
     ],
     detailSections: [],
@@ -256,8 +256,8 @@ export const recruitingPathSteps: RecruitingPathStep[] = [
         href: "https://studenttalent.bcg.com/candidate/login",
       },
       {
-        label: "Bain careers portal",
-        href: "https://www.bain.com/careers/",
+        label: "Bain Yale SOM events",
+        href: "https://www.bain.com/careers/work-with-us/students/yale-school-of-management/#:~:text=Our%20Events,you%20virtually%20anywhere.",
       },
     ],
     detailSections: [
