@@ -86,12 +86,6 @@ export function FullTimeRecruitingHub() {
               <dl className="mt-5 space-y-3 text-sm">
                 <div>
                   <dt className="text-[0.65rem] font-medium uppercase tracking-[0.14em] text-navy-600/75">
-                    Portal opens
-                  </dt>
-                  <dd className="mt-1 text-navy-800">{firm.portalOpens}</dd>
-                </div>
-                <div>
-                  <dt className="text-[0.65rem] font-medium uppercase tracking-[0.14em] text-navy-600/75">
                     Application deadline
                   </dt>
                   <dd className="mt-1 text-navy-800 text-pretty">

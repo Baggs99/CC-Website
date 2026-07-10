@@ -1,7 +1,6 @@
 export type FirmDeadline = {
   firm: string;
   year?: number;
-  portalOpens: string;
   applicationDeadline: string;
   interviewWindow: string;
   notes?: string;
@@ -101,7 +100,6 @@ export const firmDeadlines: FirmDeadline[] = [
   {
     firm: "McKinsey & Company",
     year: 2026,
-    portalOpens: "July 1, 2026",
     applicationDeadline:
       "August 11, 2026 (MBA Associate; Dec 2026–Fall 2027 grads)",
     interviewWindow:
@@ -112,7 +110,6 @@ export const firmDeadlines: FirmDeadline[] = [
   {
     firm: "Boston Consulting Group",
     year: 2026,
-    portalOpens: "Open now",
     applicationDeadline:
       "August 13, 2026 (US Consultant, Full-Time MBA) · September 11, 2026 (international office roles)",
     interviewWindow: "TBD, confirm on BCG careers site",
@@ -122,7 +119,6 @@ export const firmDeadlines: FirmDeadline[] = [
   {
     firm: "Bain & Company",
     year: 2026,
-    portalOpens: "Open now",
     applicationDeadline:
       "September 8, 2026 (Consultant; 11:59pm PT)",
     interviewWindow:
