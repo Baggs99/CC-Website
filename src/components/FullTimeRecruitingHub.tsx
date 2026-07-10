@@ -108,24 +108,26 @@ export function FullTimeRecruitingHub() {
                 </div>
               </dl>
 
-              <p className="mt-4 flex-1 text-sm leading-relaxed text-navy-700/85 text-pretty">
-                {firm.cmsReminder ? (
-                  <>
-                    Confirm due dates in{" "}
-                    <a
-                      href={somCmsJobPortal.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="font-medium text-navy-900 underline-offset-4 hover:underline"
-                    >
-                      SOM CMS
-                    </a>
-                    , the source of truth.
-                  </>
-                ) : (
-                  firm.notes
-                )}
-              </p>
+              {(firm.cmsReminder || firm.notes) && (
+                <p className="mt-4 flex-1 text-sm leading-relaxed text-navy-700/85 text-pretty">
+                  {firm.cmsReminder ? (
+                    <>
+                      Confirm due dates in{" "}
+                      <a
+                        href={somCmsJobPortal.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="font-medium text-navy-900 underline-offset-4 hover:underline"
+                      >
+                        SOM CMS
+                      </a>
+                      , the source of truth.
+                    </>
+                  ) : (
+                    firm.notes
+                  )}
+                </p>
+              )}
 
               {firm.href ? (
                 <a

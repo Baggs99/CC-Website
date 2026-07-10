@@ -116,6 +116,7 @@ export const firmDeadlines: FirmDeadline[] = [
     applicationDeadline:
       "August 13, 2026 (US Consultant, Full-Time MBA) · September 11, 2026 (international office roles)",
     interviewWindow: "TBD, confirm on BCG careers site",
+    cmsReminder: true,
     href: "https://careers.bcg.com/global/en/job/58571/Consultant-Full-Time-MBA-United-States",
     hrefLabel: "BCG US application",
   },
