@@ -111,12 +111,13 @@ export const firmDeadlines: FirmDeadline[] = [
   },
   {
     firm: "Boston Consulting Group",
-    portalOpens: "Check firm portal",
-    applicationDeadline: "MBA full-time dates TBD",
+    year: 2026,
+    portalOpens: "Open now",
+    applicationDeadline:
+      "August 13, 2026 (US Consultant, Full-Time MBA) · September 11, 2026 (international office roles)",
     interviewWindow: "TBD, confirm on BCG careers site",
-    cmsReminder: true,
-    href: "https://studenttalent.bcg.com/candidate/login",
-    hrefLabel: "BCG job portal",
+    href: "https://careers.bcg.com/global/en/job/58571/Consultant-Full-Time-MBA-United-States",
+    hrefLabel: "BCG US application",
   },
   {
     firm: "Bain & Company",
@@ -217,8 +218,12 @@ export const recruitingPathSteps: RecruitingPathStep[] = [
         href: "https://www.mckinsey.com/careers/search-jobs/jobs/associate-15178",
       },
       {
-        label: "BCG job portal",
-        href: "https://studenttalent.bcg.com/candidate/login",
+        label: "BCG US application (Consultant, Full-Time MBA)",
+        href: "https://careers.bcg.com/global/en/job/58571/Consultant-Full-Time-MBA-United-States",
+      },
+      {
+        label: "BCG international office application",
+        href: "https://studenttalent.bcg.com/careerhub/explore/jobs/790316818401?profile_type=candidate",
       },
       {
         label: "Bain Yale SOM recruiting page",
