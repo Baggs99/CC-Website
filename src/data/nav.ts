@@ -18,7 +18,6 @@ export const navLinks: NavLinkItem[] = [
   { label: "Recruiting", href: "#recruiting", kind: "hash" },
   { label: "Programming", href: "#events", kind: "hash" },
   { label: "Leadership", href: "#leadership", kind: "hash" },
-  { label: "Partners", href: "#sponsors", kind: "hash" },
 ];
 
 export function navHref(link: NavLinkItem, _pathname: string): string {
