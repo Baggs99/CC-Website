@@ -61,6 +61,16 @@ export function Footer() {
             <Mail size={15} strokeWidth={1.8} />
           </SocialLink>
         </div>
+
+        <p className="mt-8 max-w-3xl text-[0.7rem] leading-relaxed text-ivory-200/45 text-pretty">
+          &ldquo;Yale&rdquo; and &ldquo;Yale University&rdquo; are registered
+          trademarks of Yale University. This website is a student run website
+          and is maintained, hosted, and operated independently of Yale
+          University. The activities on this website are not supervised or
+          endorsed by Yale and information contained on this website does not
+          necessarily reflect the opinions or official positions of the
+          University.
+        </p>
       </Container>
     </footer>
   );
