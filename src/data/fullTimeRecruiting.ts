@@ -120,7 +120,7 @@ export const firmDeadlines: FirmDeadline[] = [
     firm: "Bain & Company",
     year: 2026,
     applicationDeadline:
-      "September 8, 2026 (Consultant; 11:59pm PT)",
+      "August 11, 2026 (Americas Consultant; 11:59pm PT) · September 8, 2026 (APAC & EMEA; APAC rolling review begins August 11)",
     interviewWindow:
       "Expected late Sep–early Oct; confirm on Bain careers site or with Bain Yale recruiting team.",
     href: "https://www.bain.com/careers/work-with-us/students/yale-school-of-management/#:~:text=Consultant,connecting%20with%20you.",
