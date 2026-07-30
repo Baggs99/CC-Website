@@ -10,8 +10,10 @@ type SectionHeaderProps = {
   className?: string;
   /** Tighter spacing for dense pages (e.g. FT recruiting hub) */
   compact?: boolean;
-  /** Sets `id` on the `<h2>` for `aria-labelledby` / in-page links */
+  /** Sets `id` on the heading for `aria-labelledby` / in-page links */
   headingId?: string;
+  /** Use h1 for primary page titles (SEO); defaults to h2 for sections */
+  as?: "h1" | "h2";
 };
 
 export function SectionHeader({
@@ -23,6 +25,7 @@ export function SectionHeader({
   className,
   compact = false,
   headingId,
+  as: HeadingTag = "h2",
 }: SectionHeaderProps) {
   const alignClass = align === "center" ? "items-center text-center mx-auto" : "items-start";
   const textColor = variant === "dark" ? "text-ivory-50" : "text-navy-900";
@@ -43,7 +46,7 @@ export function SectionHeader({
       )}
     >
       <span className={eyebrowClass}>{eyebrow}</span>
-      <h2
+      <HeadingTag
         {...(headingId ? { id: headingId } : {})}
         className={cn(
           "font-serif font-medium text-balance",
@@ -52,7 +55,7 @@ export function SectionHeader({
         )}
       >
         {title}
-      </h2>
+      </HeadingTag>
       {description && (
         <p
           className={cn(

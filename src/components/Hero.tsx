@@ -92,9 +92,10 @@ export function Hero() {
             variants={fadeUp}
             className="max-w-2xl text-base leading-relaxed text-ivory-50 text-pretty sm:text-lg sm:leading-relaxed md:text-xl [text-shadow:0_2px_24px_rgba(5,14,28,0.88)]"
           >
-            We prepare students for consulting careers through structured
-            mentorship, rigorous case practice, end-to-end recruiting support,
-            and a community that learns and wins together.
+            Yale SOM&apos;s MBA consulting club. Mentorship, case practice, and
+            recruiting support built around how full-time hiring works at
+            McKinsey, BCG, Bain, and other firms, so members can compete and
+            land offers together.
           </motion.p>
 
           <motion.div

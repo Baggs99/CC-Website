@@ -60,19 +60,19 @@ export type RecruitingPathStep = {
 /** @deprecated Use RecruitingPathStep */
 export type RecruitingStep = Omit<RecruitingPathStep, "id" | "order" | "detailSections">;
 
-export const ftRecruitingEyebrow = "Full-Time Recruiting Hub";
+export const ftRecruitingEyebrow = "Yale SOM Consulting Club";
 export const ftRecruitingTitle =
-  "Deadlines hit before fall semester. Start in July.";
+  "Full-time consulting recruiting for Yale SOM MBAs";
 export const ftRecruitingDescription =
-  "Follow the path below, from understanding the process to submitting your application and prepping for interviews. Built for the Class of 2027 targeting McKinsey, BCG, Bain, and similar firms.";
+  "McKinsey, BCG, and Bain deadlines, application links, and a summer-to-interview path for the Class of 2027. Portals open in July; some apps are due in August, before fall semester starts.";
 
 export const consultingOrientation = {
   eyebrow: "Start here",
-  title: "What is consulting recruiting?",
+  title: "What is consulting recruiting at Yale SOM?",
   whatIsConsulting: [
-    "Management consulting firms hire MBAs into generalist roles, often called Associate or Consultant, where you solve business problems for clients across industries. McKinsey, BCG, and Bain (MBB) are the largest targets, but the same playbook applies to other strategy firms and boutiques.",
-    "Full-time MBA recruiting runs on a compressed summer timeline. MBB dates tend to come first: portals open in July, applications can be due as early as August, and interviews may start in September, before fall semester feels fully underway. You apply to specific offices (e.g. Boston, New York, Chicago, Darien), not just the firm as a whole.",
-    "Your office choice matters. It's where you'll live, build your network, and spend your weekends. You'll likely work across the U.S. and the world over your career, but your home office shapes day-to-day life. Firms expect you to have a thoughtful reason for each office on your application.",
+    "At Yale SOM, full-time consulting recruiting means competing for MBA Associate and Consultant roles at McKinsey, BCG, Bain, and other firms. You solve client problems across industries, apply to specific offices (not just the firm), and run a compressed summer timeline.",
+    "MBB dates tend to come first: portals open in July, applications can be due as early as August, and interviews may start in September. This hub is the club's playbook for that process: deadlines, office choice, resume review, casing, and interview prep.",
+    "Your office choice matters. It's where you'll live, build your network, and spend your weekends. Firms expect a clear reason for each office on your application, not a generic brand pitch.",
   ],
 } as const;
 

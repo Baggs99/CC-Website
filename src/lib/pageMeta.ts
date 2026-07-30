@@ -4,27 +4,28 @@ export type PageMeta = {
 };
 
 const homeMeta: PageMeta = {
-  title: "Yale SOM Consulting Club",
+  title: "Yale SOM Consulting Club | MBA Consulting at Yale",
   description:
-    "The Yale SOM Consulting Club prepares students for consulting careers through mentorship, casing, recruiting support, and a strong community.",
+    "Yale SOM's MBA consulting club for casing, mentorship, and full-time recruiting. Deadlines, prep, and community for students targeting McKinsey, BCG, Bain, and other firms.",
 };
 
 const pageMetaByPath: Record<string, PageMeta> = {
   "/": homeMeta,
   "/full-time-recruiting": {
-    title: "Full-Time Consulting Recruiting Hub | Yale SOM Consulting Club",
+    title:
+      "Yale SOM Full-Time Consulting Recruiting | Deadlines & MBB Prep",
     description:
-      "MBA full-time recruiting deadlines, MBB application links, and a step-by-step path for Yale SOM students targeting McKinsey, BCG, and Bain.",
+      "Full-time MBA consulting recruiting for Yale SOM: McKinsey, BCG, and Bain deadlines, application links, office map, and a step-by-step path from July prep through interviews.",
   },
   "/full-time-recruiting/office-map": {
-    title: "MBB Global Office Map | Yale SOM Consulting Club",
+    title: "MBB Office Map for Yale SOM Recruiting | McKinsey, BCG, Bain",
     description:
-      "Explore McKinsey, BCG, and Bain offices worldwide. Filter by firm or region to choose one target office per firm for full-time recruiting.",
+      "Map of McKinsey, BCG, and Bain offices worldwide for Yale SOM full-time recruiting. Filter by firm or region and pick one office per firm.",
   },
   "/resume-review": {
-    title: "Consulting Resume Review | Yale SOM Consulting Club",
+    title: "Yale SOM Consulting Resume Review | Consulting Club",
     description:
-      "Submit your resume for Yale SOM Consulting Club review before full-time MBA consulting applications.",
+      "Club resume review for Yale SOM MBAs applying to full-time consulting roles at McKinsey, BCG, Bain, and other firms.",
   },
 };
 
