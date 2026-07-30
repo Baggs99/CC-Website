@@ -1,7 +1,18 @@
 import { useEffect } from "react";
 import { Outlet, useLocation } from "react-router-dom";
+import { applyPageMeta, getPageMeta } from "@/lib/pageMeta";
 import { Footer } from "./Footer";
 import { Navbar } from "./Navbar";
+
+function DocumentMeta() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    applyPageMeta(getPageMeta(pathname));
+  }, [pathname]);
+
+  return null;
+}
 
 function ScrollToTop() {
   const { pathname, hash } = useLocation();
@@ -38,6 +49,7 @@ export function Layout() {
         <Outlet />
       </main>
       <Footer />
+      <DocumentMeta />
       <ScrollToTop />
     </div>
   );
