@@ -16,6 +16,15 @@ services:
       - type: redirect
         source: /current-students
         destination: /full-time-recruiting
+      - type: redirect
+        source: /home
+        destination: /
+      - type: redirect
+        source: /prospective-students
+        destination: /
+      - type: redirect
+        source: /read-me-bryant
+        destination: /
       - type: rewrite
         source: /*
         destination: /index.html

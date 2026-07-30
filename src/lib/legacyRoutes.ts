@@ -6,4 +6,7 @@ export const legacyRedirects: Record<string, string> = {
   "/club-leadership": "/#leadership",
   "/current-students": "/full-time-recruiting",
   "/admitted-students": "/#community",
+  "/prospective-students": "/",
+  "/home": "/",
+  "/read-me-bryant": "/",
 };
