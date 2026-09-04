@@ -24,3 +24,9 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
+
+# Local source material and exports
+.cursor/
+site_info/
+source_materials/
+scripts/scratch/
