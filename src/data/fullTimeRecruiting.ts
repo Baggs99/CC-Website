@@ -194,8 +194,29 @@ export const recruitingPathSteps: RecruitingPathStep[] = [
     ],
   },
   {
-    id: "firm-portals",
+    id: "digital-presence",
     order: 2,
+    phase: "Summer",
+    title: "Set up your digital presence",
+    summary:
+      "Same headshot and clean profiles on LinkedIn, Outlook, Zoom, and CMS before coffee chats and firm outreach. Recruiters and consultants will look you up.",
+    timing: "June–July, before outreach",
+    actions: [
+      "Get a professional headshot and use it everywhere.",
+      "Update LinkedIn (photo, Yale SOM education, headline, About).",
+      "Set your Outlook photo and email signature.",
+      "Add an SOM Zoom background and upload your headshot.",
+      "Complete your CMS profile and turn on job / coffee chat / event notifications.",
+    ],
+    clubResource: {
+      label: "Digital presence checklist",
+      href: "/digital-presence",
+    },
+    detailSections: [],
+  },
+  {
+    id: "firm-portals",
+    order: 3,
     phase: "Summer",
     title: "Sign up on firm portals & calendar deadlines",
     summary:
@@ -230,7 +251,7 @@ export const recruitingPathSteps: RecruitingPathStep[] = [
   },
   {
     id: "office-events",
-    order: 3,
+    order: 4,
     phase: "Summer",
     title: "Get familiar with offices (firm events & info sessions)",
     summary:
@@ -284,7 +305,7 @@ export const recruitingPathSteps: RecruitingPathStep[] = [
   },
   {
     id: "coffee-chats",
-    order: 4,
+    order: 5,
     phase: "Summer",
     title: "Coffee chats & firm research",
     summary:
@@ -367,7 +388,7 @@ export const recruitingPathSteps: RecruitingPathStep[] = [
   },
   {
     id: "resume-refinement",
-    order: 5,
+    order: 6,
     phase: "Applications",
     title: "Build & refine your resume",
     summary:
@@ -448,7 +469,7 @@ export const recruitingPathSteps: RecruitingPathStep[] = [
   },
   {
     id: "submit-application",
-    order: 6,
+    order: 7,
     phase: "Applications",
     title: "Submit before the deadline",
     summary:
@@ -463,7 +484,7 @@ export const recruitingPathSteps: RecruitingPathStep[] = [
   },
   {
     id: "case-prep",
-    order: 7,
+    order: 8,
     phase: "Interview prep",
     title: "Case prep",
     summary:
@@ -525,7 +546,7 @@ export const recruitingPathSteps: RecruitingPathStep[] = [
   },
   {
     id: "behavioral-prep",
-    order: 8,
+    order: 9,
     phase: "Interview prep",
     title: "Behavioral / PEI prep",
     summary:
@@ -614,7 +635,7 @@ export const recruitingPathSteps: RecruitingPathStep[] = [
   },
   {
     id: "interviews",
-    order: 9,
+    order: 10,
     phase: "Interviews",
     title: "First-round & final interviews",
     summary:
@@ -656,7 +677,7 @@ export const recruitingPathSteps: RecruitingPathStep[] = [
   },
   {
     id: "offers",
-    order: 10,
+    order: 11,
     phase: "Offers",
     title: "Offers & decisions",
     summary:

@@ -1,6 +1,7 @@
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import { Layout } from "./components/Layout";
 import { legacyRedirects } from "./lib/legacyRoutes";
+import { DigitalPresencePage } from "./pages/DigitalPresencePage";
 import { FullTimeRecruitingPage } from "./pages/FullTimeRecruitingPage";
 import { HomePage } from "./pages/HomePage";
 import { OfficeMapPage } from "./pages/OfficeMapPage";
@@ -29,6 +30,7 @@ export default function App() {
             element={<OfficeMapPage />}
           />
           <Route path="/resume-review" element={<ResumeReviewPage />} />
+          <Route path="/digital-presence" element={<DigitalPresencePage />} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Route>
       </Routes>

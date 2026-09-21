@@ -27,6 +27,11 @@ const pageMetaByPath: Record<string, PageMeta> = {
     description:
       "Club resume review for Yale SOM MBAs applying to full-time consulting roles at McKinsey, BCG, Bain, and other firms.",
   },
+  "/digital-presence": {
+    title: "Digital Presence Checklist | Yale SOM Consulting Club",
+    description:
+      "Set up your headshot, LinkedIn, Outlook signature, Zoom, and CMS profile before Yale SOM consulting coffee chats and recruiting outreach.",
+  },
 };
 
 export function getPageMeta(pathname: string): PageMeta {
