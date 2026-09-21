@@ -12,7 +12,6 @@ export const digitalPresenceHeadshotExamples = leadership
   .map((leader) => ({
     name: leader.name,
     src: `/leadership/${leader.photoFile}`,
-    employer: leader.employer,
   }));
 
 export const digitalPresenceSignature = {
@@ -81,6 +80,7 @@ export const digitalPresenceSections: DigitalPresenceSection[] = [
     actions: [
       "Create an SOM-approved virtual background with the generator linked below.",
       "Sign into Zoom and upload your headshot as your profile picture.",
+      "Update your Zoom Display Name to your first and last name (Profile → Display Name).",
     ],
     links: [
       {
@@ -129,6 +129,6 @@ export const digitalPresenceDoneChecklist = [
   "Same professional headshot on LinkedIn, Outlook, Zoom, and CMS.",
   "LinkedIn has Yale SOM under Education, plus an updated headline and About.",
   "Outlook profile photo set; signature matches the template.",
-  "Zoom has an SOM background and your headshot uploaded.",
+  "Zoom has an SOM background, your headshot, and your first and last name as Display Name.",
   "CMS profile complete; job / coffee chat / event notifications on.",
 ] as const;

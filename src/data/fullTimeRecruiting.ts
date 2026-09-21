@@ -205,7 +205,7 @@ export const recruitingPathSteps: RecruitingPathStep[] = [
       "Get a professional headshot and use it everywhere.",
       "Update LinkedIn (photo, Yale SOM education, headline, About).",
       "Set your Outlook photo and email signature.",
-      "Add an SOM Zoom background and upload your headshot.",
+      "Add an SOM Zoom background, upload your headshot, and set your Display Name.",
       "Complete your CMS profile and turn on job / coffee chat / event notifications.",
     ],
     clubResource: {

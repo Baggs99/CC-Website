@@ -101,9 +101,6 @@ export function DigitalPresencePage() {
                             <p className="mt-2 text-xs font-medium text-navy-900">
                               {example.name}
                             </p>
-                            <p className="text-[0.7rem] text-navy-600/85">
-                              {example.employer}
-                            </p>
                           </li>
                         ))}
                       </ul>
