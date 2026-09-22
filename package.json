@@ -6,7 +6,8 @@
   "description": "Website for the Yale SOM Consulting Club",
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build",
+    "build": "tsc -b && node scripts/build-zoom.mjs && vite build",
+    "build:zoom": "node scripts/build-zoom.mjs",
     "optimize-images": "node scripts/optimize-images.mjs",
     "favicon": "node scripts/generate-favicon.mjs",
     "preview": "vite preview",

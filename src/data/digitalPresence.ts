@@ -78,14 +78,14 @@ export const digitalPresenceSections: DigitalPresenceSection[] = [
     summary:
       "Firm info sessions and coffee chats often happen on Zoom. Look intentional on camera.",
     actions: [
-      "Create an SOM-approved virtual background with the generator linked below.",
+      "Create an SOM-approved virtual background with the club generator linked below.",
       "Sign into Zoom and upload your headshot as your profile picture.",
       "Update your Zoom Display Name to your first and last name (Profile → Display Name).",
     ],
     links: [
       {
         label: "SOM Zoom background generator",
-        href: "https://apps.som.yale.edu/zoombackgroundgenerator/",
+        href: "/zoom",
       },
     ],
   },

@@ -11,6 +11,7 @@ dist-ssr
 
 # Editor
 .vscode/*
+!.vscode/settings.json
 !.vscode/extensions.json
 .idea
 *.suo
@@ -30,3 +31,8 @@ pnpm-debug.log*
 site_info/
 source_materials/
 scripts/scratch/
+
+# Vendored SOM Zoom generator (built into public/zoom at deploy time)
+zoom-generator/node_modules
+zoom-generator/dist
+public/zoom
