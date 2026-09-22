@@ -85,7 +85,7 @@ export const digitalPresenceSections: DigitalPresenceSection[] = [
     links: [
       {
         label: "SOM Zoom background generator",
-        href: "/zoom",
+        href: "/zoom/",
       },
     ],
   },

@@ -6,6 +6,7 @@ import { FullTimeRecruitingPage } from "./pages/FullTimeRecruitingPage";
 import { HomePage } from "./pages/HomePage";
 import { OfficeMapPage } from "./pages/OfficeMapPage";
 import { ResumeReviewPage } from "./pages/ResumeReviewPage";
+import { ZoomRedirectPage } from "./pages/ZoomRedirectPage";
 
 export default function App() {
   return (
@@ -18,6 +19,8 @@ export default function App() {
             element={<Navigate to={to} replace />}
           />
         ))}
+
+        <Route path="/zoom" element={<ZoomRedirectPage />} />
 
         <Route element={<Layout />}>
           <Route path="/" element={<HomePage />} />

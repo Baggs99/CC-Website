@@ -25,9 +25,9 @@ services:
       - type: redirect
         source: /read-me-bryant
         destination: /
-      - type: rewrite
+      - type: redirect
         source: /zoom
-        destination: /zoom/index.html
+        destination: /zoom/
       - type: rewrite
         source: /zoom/
         destination: /zoom/index.html
