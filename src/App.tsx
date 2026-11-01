@@ -6,6 +6,7 @@ import { FullTimeRecruitingPage } from "./pages/FullTimeRecruitingPage";
 import { HomePage } from "./pages/HomePage";
 import { OfficeMapPage } from "./pages/OfficeMapPage";
 import { ResumeReviewPage } from "./pages/ResumeReviewPage";
+import { SorterRedirectPage } from "./pages/SorterRedirectPage";
 import { ZoomRedirectPage } from "./pages/ZoomRedirectPage";
 
 export default function App() {
@@ -21,6 +22,7 @@ export default function App() {
         ))}
 
         <Route path="/zoom" element={<ZoomRedirectPage />} />
+        <Route path="/sorter" element={<SorterRedirectPage />} />
 
         <Route element={<Layout />}>
           <Route path="/" element={<HomePage />} />

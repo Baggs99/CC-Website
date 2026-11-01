@@ -31,6 +31,12 @@ services:
       - type: rewrite
         source: /zoom/
         destination: /zoom/index.html
+      - type: redirect
+        source: /sorter
+        destination: /sorter/
+      - type: rewrite
+        source: /sorter/
+        destination: /sorter/index.html
       - type: rewrite
         source: /*
         destination: /index.html

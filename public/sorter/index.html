@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Breakout room chart</title>
+  <style>
+    :root {
+      --navy: #00356b;
+      --ink: #1c1c1c;
+      --line: #d5dde6;
+      --paper: #f3f6f8;
+      --card: #ffffff;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: Calibri, "Segoe UI", sans-serif;
+    }
+    header {
+      background: var(--navy);
+      color: white;
+      padding: 22px 28px 18px;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 28px;
+      font-weight: 700;
+      letter-spacing: 0;
+    }
+    header p {
+      margin: 6px 0 0;
+      max-width: 46rem;
+      color: #d6e4f2;
+      font-size: 16px;
+    }
+    main {
+      display: grid;
+      grid-template-columns: minmax(320px, 420px) 1fr;
+      gap: 22px;
+      padding: 22px;
+      align-items: start;
+    }
+    form, .preview {
+      background: var(--card);
+      border: 1px solid var(--line);
+      padding: 18px;
+    }
+    h2 {
+      margin: 0 0 10px;
+      font-size: 18px;
+    }
+    label.block {
+      display: block;
+      font-weight: 700;
+      margin: 14px 0 6px;
+    }
+    input[type="text"], input[type="file"] {
+      font: inherit;
+      color: inherit;
+    }
+    input[type="text"] {
+      width: 100%;
+      border: 1px solid #b7c3d0;
+      padding: 7px 8px;
+    }
+    input[type="text"]:focus {
+      outline: 2px solid var(--navy);
+      border-color: var(--navy);
+    }
+    .rooms { display: flex; flex-direction: column; gap: 8px; }
+    .room-row {
+      display: grid;
+      grid-template-columns: 88px minmax(0, 1fr);
+      gap: 6px;
+      align-items: center;
+    }
+    .row-actions { display: flex; gap: 6px; grid-column: 1 / -1; }
+    button {
+      font: inherit;
+      cursor: pointer;
+      border: 1px solid var(--navy);
+      background: white;
+      color: var(--navy);
+      padding: 7px 10px;
+    }
+    button:hover { background: #eef3f8; }
+    button.primary {
+      background: var(--navy);
+      color: white;
+      font-weight: 700;
+      margin-top: 14px;
+      padding: 10px 14px;
+    }
+    button.primary:hover { background: #00264d; }
+    button.tiny { padding: 7px 8px; }
+    .hint { color: #3c4654; font-size: 14px; margin: 0 0 8px; }
+    .status {
+      margin-top: 12px;
+      font-size: 15px;
+    }
+    .status:empty { display: none; }
+    .status.error { color: #8a1c1c; font-weight: 700; }
+    .preview { overflow: auto; }
+    canvas {
+      width: 100%;
+      height: auto;
+      background: white;
+      border: 1px solid var(--line);
+    }
+    .preview-actions {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      margin-top: 10px;
+    }
+    .toggle {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      width: fit-content;
+      margin: 0 0 10px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+    .toggle input {
+      width: 18px;
+      height: 18px;
+      margin: 0;
+      accent-color: var(--navy);
+    }
+    @media (max-width: 900px) {
+      main { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Breakout room chart</h1>
+    <p>Upload the Campus Groups check-in CSV, type the rooms in chart order, and download the PNG. Names stay in this browser.</p>
+  </header>
+  <main>
+    <form id="chart-form">
+      <h2>Check-in list</h2>
+      <p class="hint">Use the attendee export. It needs a First Name column and a Last Name column.</p>
+      <input id="csv-file" type="file" accept=".csv,text/csv">
+
+      <label class="block" for="note">Note under the chart</label>
+      <input id="note" type="text" placeholder="Optional. For example, Every room is booked 5:45–7:00 PM">
+
+      <h2 style="margin-top: 18px">Rooms</h2>
+      <p class="hint">Leave the leader blank to show the room as Open. Nobody is seated in an Open room.</p>
+      <div id="rooms" class="rooms"></div>
+      <button type="button" id="add-room">Add room</button>
+      <button class="primary" type="submit">Make the PNG</button>
+      <div id="status" class="status" role="status"></div>
+    </form>
+    <section class="preview">
+      <h2>Chart</h2>
+      <label class="toggle" for="hide-empty">
+        <input id="hide-empty" type="checkbox">
+        Hide all empty rooms
+      </label>
+      <canvas id="chart" width="2400" height="1350"></canvas>
+      <div class="preview-actions">
+        <button type="button" id="download" disabled>Download PNG</button>
+      </div>
+    </section>
+  </main>
+  <script>
+    const NAVY = "#00356b";
+    const INK = "#1c1c1c";
+    const BODY = "#eceef1";
+    const OPEN = "#e7eef5";
+    const WHITE = "#ffffff";
+    const SLIDE_W = 13.333333;
+    const SLIDE_H = 7.5;
+    const MARGIN_X = 0.36;
+    const COLS = 6;
+    const GAP_X = 0.09;
+    const GAP_Y = 0.1;
+    const GRID_TOP = 0.92;
+    const GRID_BOTTOM = 6.72;
+    const HEADER_H = 0.38;
+    const SCALE = 180;
+
+    const roomsEl = document.querySelector("#rooms");
+    const statusEl = document.querySelector("#status");
+    const canvas = document.querySelector("#chart");
+    const downloadBtn = document.querySelector("#download");
+    let csvText = "";
+
+    function addRoomRow(room = "", leader = "") {
+      const row = document.createElement("div");
+      row.className = "room-row";
+      row.innerHTML = `
+        <input class="room-number" type="text" placeholder="2260" aria-label="Room number" value="${escapeAttr(room)}">
+        <input class="leader-name" type="text" placeholder="Leader name" aria-label="Leader name" value="${escapeAttr(leader)}">
+        <span class="row-actions">
+          <button type="button" class="tiny move-up" aria-label="Move room up">Up</button>
+          <button type="button" class="tiny move-down" aria-label="Move room down">Down</button>
+          <button type="button" class="tiny remove-room" aria-label="Remove room">Remove</button>
+        </span>
+      `;
+      roomsEl.appendChild(row);
+    }
+
+    function escapeAttr(value) {
+      return String(value).replace(/&/g, "&amp;").replace(/"/g, "&quot;");
+    }
+
+    [
+      ["2260", "Siddhant Malhotra"],
+      ["2262", "Holly Briffa"],
+      ["2264", "Gurnoor Singh"],
+      ["2266", "Ethan Minter"],
+      ["2268", "Patrycja Pajdak"],
+      ["4260", ""],
+      ["4262", ""],
+      ["4264", ""],
+      ["4266", ""],
+      ["4268", ""],
+      ["4461", ""],
+      ["4463", ""],
+      ["4465", ""],
+      ["4467", ""],
+      ["4469", ""],
+    ].forEach(([room, leader]) => addRoomRow(room, leader));
+
+    roomsEl.addEventListener("click", (event) => {
+      const row = event.target.closest(".room-row");
+      if (!row) return;
+      if (event.target.classList.contains("remove-room")) {
+        if (roomsEl.children.length > 1) row.remove();
+        return;
+      }
+      if (event.target.classList.contains("move-up") && row.previousElementSibling) {
+        roomsEl.insertBefore(row, row.previousElementSibling);
+      }
+      if (event.target.classList.contains("move-down") && row.nextElementSibling) {
+        roomsEl.insertBefore(row.nextElementSibling, row);
+      }
+    });
+
+    document.querySelector("#add-room").addEventListener("click", () => addRoomRow());
+    document.querySelector("#csv-file").addEventListener("change", async (event) => {
+      const file = event.target.files[0];
+      csvText = file ? await file.text() : "";
+    });
+    document.querySelector("#chart-form").addEventListener("submit", (event) => {
+      event.preventDefault();
+      makeChart();
+    });
+    document.querySelector("#hide-empty").addEventListener("change", () => {
+      if (csvText) makeChart();
+    });
+    downloadBtn.addEventListener("click", () => {
+      const link = document.createElement("a");
+      link.href = canvas.toDataURL("image/png");
+      link.download = "Breakout rooms.png";
+      link.click();
+    });
+
+    function parseCsv(text) {
+      const rows = [];
+      let row = [];
+      let cell = "";
+      let quoted = false;
+      const source = text.replace(/^\uFEFF/, "");
+      for (let i = 0; i < source.length; i += 1) {
+        const char = source[i];
+        if (quoted) {
+          if (char === '"') {
+            if (source[i + 1] === '"') {
+              cell += '"';
+              i += 1;
+            } else {
+              quoted = false;
+            }
+          } else {
+            cell += char;
+          }
+        } else if (char === '"') {
+          quoted = true;
+        } else if (char === ",") {
+          row.push(cell);
+          cell = "";
+        } else if (char === "\n") {
+          row.push(cell);
+          rows.push(row);
+          row = [];
+          cell = "";
+        } else if (char !== "\r") {
+          cell += char;
+        }
+      }
+      if (cell.length || row.length) {
+        row.push(cell);
+        rows.push(row);
+      }
+      return rows.filter((entry) => entry.some((value) => value.trim()));
+    }
+
+    function readPeople(text) {
+      const rows = parseCsv(text);
+      if (!rows.length) throw new Error("That CSV is empty.");
+      const header = rows[0].map((value) => value.trim().toLowerCase());
+      const firstIndex = header.indexOf("first name");
+      const lastIndex = header.indexOf("last name");
+      if (firstIndex < 0 || lastIndex < 0) {
+        throw new Error("The CSV needs a First Name column and a Last Name column.");
+      }
+      const people = [];
+      const seen = new Set();
+      rows.slice(1).forEach((entry) => {
+        const name = `${(entry[firstIndex] || "").trim()} ${(entry[lastIndex] || "").trim()}`.trim();
+        const key = name.toLowerCase();
+        if (name && !seen.has(key)) {
+          seen.add(key);
+          people.push(name);
+        }
+      });
+      return people;
+    }
+
+    function readRooms() {
+      return [...roomsEl.querySelectorAll(".room-row")].map((row) => ({
+        room: row.querySelector(".room-number").value.trim(),
+        leader: row.querySelector(".leader-name").value.trim(),
+      })).filter((entry) => entry.room);
+    }
+
+    function assignStudents(rooms, people) {
+      const leaderKeys = new Set(rooms.filter((entry) => entry.leader).map((entry) => entry.leader.toLowerCase()));
+      const skipped = people.filter((name) => leaderKeys.has(name.toLowerCase()));
+      const roster = people
+        .filter((name) => !leaderKeys.has(name.toLowerCase()))
+        .sort((a, b) => a.localeCompare(b, undefined, { sensitivity: "accent" }));
+      const led = rooms.filter((entry) => entry.leader);
+      const buckets = Object.fromEntries(rooms.map((entry) => [entry.room, []]));
+      if (led.length) {
+        roster.forEach((name, index) => {
+          buckets[led[index % led.length].room].push(name);
+        });
+      }
+      Object.values(buckets).forEach((names) => {
+        names.sort((a, b) => a.localeCompare(b, undefined, { sensitivity: "accent" }));
+      });
+      return { buckets, skipped, seated: roster.length, ledCount: led.length };
+    }
+
+    function cardBox(index, count) {
+      const col = index % COLS;
+      const row = Math.floor(index / COLS);
+      const rows = Math.ceil(count / COLS);
+      const cardW = (SLIDE_W - 2 * MARGIN_X - (COLS - 1) * GAP_X) / COLS;
+      const cardH = (GRID_BOTTOM - GRID_TOP - (rows - 1) * GAP_Y) / rows;
+      const rowCount = Math.min(COLS, count - row * COLS);
+      const rowWidth = rowCount * cardW + (rowCount - 1) * GAP_X;
+      const fullWidth = COLS * cardW + (COLS - 1) * GAP_X;
+      const offset = (fullWidth - rowWidth) / 2;
+      return {
+        left: MARGIN_X + offset + col * (cardW + GAP_X),
+        top: GRID_TOP + row * (cardH + GAP_Y),
+        cardW,
+        cardH,
+      };
+    }
+
+    function fitSize(ctx, text, maxWidth, start, min, weight) {
+      let size = start;
+      while (size > min) {
+        ctx.font = `${weight} ${size}px Calibri`;
+        if (ctx.measureText(text).width <= maxWidth) return size;
+        size -= 1;
+      }
+      return min;
+    }
+
+    function drawChart(rooms, buckets, note) {
+      const ctx = canvas.getContext("2d");
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      ctx.fillStyle = WHITE;
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+      ctx.textBaseline = "top";
+
+      ctx.fillStyle = INK;
+      ctx.font = "bold 64px Calibri";
+      ctx.fillText("Breakout rooms", MARGIN_X * SCALE, 36);
+      const titleW = ctx.measureText("Breakout rooms").width;
+      ctx.fillStyle = NAVY;
+      ctx.fillRect(MARGIN_X * SCALE, 112, titleW, 10);
+
+      const brand = "YALE SOM";
+      ctx.font = "bold 28px Calibri";
+      const tracking = 3;
+      const brandW = [...brand].reduce((sum, char) => sum + ctx.measureText(char).width + tracking, -tracking);
+      let brandX = (SLIDE_W - MARGIN_X) * SCALE - brandW;
+      ctx.fillStyle = NAVY;
+      [...brand].forEach((char) => {
+        ctx.fillText(char, brandX, 48);
+        brandX += ctx.measureText(char).width + tracking;
+      });
+
+      rooms.forEach((entry, index) => {
+        const box = cardBox(index, rooms.length);
+        const x0 = box.left * SCALE;
+        const y0 = box.top * SCALE;
+        const x1 = (box.left + box.cardW) * SCALE;
+        const hy = (box.top + HEADER_H) * SCALE;
+        const y1 = (box.top + box.cardH) * SCALE;
+        const led = Boolean(entry.leader);
+        ctx.fillStyle = led ? BODY : OPEN;
+        ctx.fillRect(x0, hy, x1 - x0, y1 - hy);
+        ctx.fillStyle = led ? NAVY : OPEN;
+        ctx.fillRect(x0, y0, x1 - x0, hy - y0);
+
+        const ink = led ? WHITE : NAVY;
+        ctx.fillStyle = ink;
+        ctx.font = "bold 22px Calibri";
+        const roomWidth = ctx.measureText(entry.room).width;
+        const roomY = y0 + (HEADER_H * SCALE - textHeight(ctx)) / 2;
+        const textX = x0 + 12;
+        ctx.fillText(entry.room, textX, roomY);
+        const name = entry.leader || "Open";
+        const nameX = textX + roomWidth + 10;
+        const nameSize = fitSize(ctx, name, x1 - 8 - nameX, 26, 12, "bold");
+        ctx.font = `bold ${nameSize}px Calibri`;
+        const nameY = y0 + (HEADER_H * SCALE - textHeight(ctx)) / 2;
+        ctx.fillText(name, nameX, nameY);
+
+        const students = buckets[entry.room] || [];
+        const bodyH = y1 - hy - 8;
+        const bodyW = x1 - x0 - 20;
+        let studentSize = 26;
+        let lineH = 28;
+        while (studentSize > 11) {
+          ctx.font = `${studentSize}px Calibri`;
+          const wide = students.some((student) => ctx.measureText(student).width > bodyW);
+          if (!wide && students.length * lineH <= bodyH) break;
+          studentSize -= 1;
+          lineH = Math.max(13, Math.round(studentSize * 1.08));
+        }
+        ctx.fillStyle = INK;
+        ctx.font = `${studentSize}px Calibri`;
+        students.forEach((student, studentIndex) => {
+          ctx.fillText(student, x0 + 12, hy + 4 + studentIndex * lineH);
+        });
+      });
+
+      if (note) {
+        const maxWidth = (SLIDE_W - 2 * MARGIN_X) * SCALE;
+        const noteSize = fitSize(ctx, note, maxWidth, 28, 14, "bold");
+        ctx.font = `bold ${noteSize}px Calibri`;
+        ctx.fillStyle = NAVY;
+        ctx.fillText(note, MARGIN_X * SCALE, 6.95 * SCALE);
+      }
+    }
+
+    function textHeight(ctx) {
+      const metrics = ctx.measureText("Mg");
+      return metrics.actualBoundingBoxAscent + metrics.actualBoundingBoxDescent;
+    }
+
+    function makeChart() {
+      statusEl.classList.remove("error");
+      try {
+        if (!csvText) throw new Error("Choose a check-in CSV first.");
+        const rooms = readRooms();
+        if (!rooms.length) throw new Error("Type at least one room number.");
+        const roomKeys = rooms.map((entry) => entry.room.toLowerCase());
+        if (new Set(roomKeys).size !== roomKeys.length) {
+          throw new Error("Each room number can only be used once.");
+        }
+        const people = readPeople(csvText);
+        const result = assignStudents(rooms, people);
+        const note = document.querySelector("#note").value.trim();
+        const hideEmpty = document.querySelector("#hide-empty").checked;
+        const drawn = hideEmpty ? rooms.filter((entry) => entry.leader) : rooms;
+        if (!drawn.length) throw new Error("Every room is empty. Add a leader, or show the empty rooms.");
+        drawChart(drawn, result.buckets, note);
+        downloadBtn.disabled = false;
+        statusEl.textContent = "";
+      } catch (error) {
+        downloadBtn.disabled = true;
+        statusEl.classList.add("error");
+        statusEl.textContent = error.message;
+      }
+    }
+
+    window.breakoutChart = { addRoomRow, makeChart, setCsvText(text) { csvText = text; } };
+  </script>
+</body>
+</html>
