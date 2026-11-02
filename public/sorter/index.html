@@ -48,6 +48,10 @@
       border: 1px solid var(--line);
       padding: 18px;
     }
+    form {
+      position: sticky;
+      top: 12px;
+    }
     h2 {
       margin: 0 0 10px;
       font-size: 18px;
@@ -70,7 +74,24 @@
       outline: 2px solid var(--navy);
       border-color: var(--navy);
     }
-    .rooms { display: flex; flex-direction: column; gap: 8px; }
+    .rooms {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      max-height: 38vh;
+      overflow: auto;
+      padding-right: 4px;
+    }
+    .form-actions {
+      position: sticky;
+      top: 0;
+      z-index: 2;
+      display: flex;
+      gap: 8px;
+      margin: 0 0 12px;
+      padding: 10px 0;
+      background: var(--card);
+    }
     .room-row {
       display: grid;
       grid-template-columns: 88px minmax(0, 1fr);
@@ -88,11 +109,12 @@
     }
     button:hover { background: #eef3f8; }
     button.primary {
+      flex: 1;
       background: var(--navy);
       color: white;
       font-weight: 700;
-      margin-top: 14px;
-      padding: 10px 14px;
+      font-size: 18px;
+      padding: 14px 16px;
     }
     button.primary:hover { background: #00264d; }
     button.tiny { padding: 7px 8px; }
@@ -157,9 +179,11 @@
 
       <h2 style="margin-top: 18px">Rooms</h2>
       <p class="hint">Leave the leader blank to show the room as Open. Nobody is seated in an Open room.</p>
+      <div class="form-actions">
+        <button type="button" id="add-room">Add room</button>
+        <button class="primary" type="submit">Make the PNG</button>
+      </div>
       <div id="rooms" class="rooms"></div>
-      <button type="button" id="add-room">Add room</button>
-      <button class="primary" type="submit">Make the PNG</button>
       <div id="status" class="status" role="status"></div>
     </form>
     <section class="preview">
