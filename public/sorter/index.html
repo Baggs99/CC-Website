@@ -239,42 +239,41 @@
       if (!row) return;
       if (event.target.classList.contains("remove-room")) {
         if (roomsEl.children.length > 1) row.remove();
+      } else if (event.target.classList.contains("move-up") && row.previousElementSibling) {
+        roomsEl.insertBefore(row, row.previousElementSibling);
+      } else if (event.target.classList.contains("move-down") && row.nextElementSibling) {
+        roomsEl.insertBefore(row.nextElementSibling, row);
+      } else {
         return;
       }
-      if (event.target.classList.contains("move-up") && row.previousElementSibling) {
-        roomsEl.insertBefore(row, row.previousElementSibling);
-      }
-      if (event.target.classList.contains("move-down") && row.nextElementSibling) {
-        roomsEl.insertBefore(row.nextElementSibling, row);
-      }
+      makeChart();
     });
 
-    document.querySelector("#add-room").addEventListener("click", () => addRoomRow());
+    document.querySelector("#add-room").addEventListener("click", () => {
+      addRoomRow();
+      makeChart();
+    });
+    roomsEl.addEventListener("input", () => makeChart());
     const fileInput = document.querySelector("#csv-file");
     const clearFileBtn = document.querySelector("#clear-file");
     fileInput.addEventListener("change", async (event) => {
       const file = event.target.files[0];
       csvText = file ? await file.text() : "";
       clearFileBtn.hidden = !file;
+      makeChart();
     });
     clearFileBtn.addEventListener("click", () => {
       csvText = "";
       fileInput.value = "";
       clearFileBtn.hidden = true;
-      downloadBtn.disabled = true;
-      statusEl.classList.remove("error");
-      statusEl.textContent = "";
-      const ctx = canvas.getContext("2d");
-      ctx.fillStyle = WHITE;
-      ctx.fillRect(0, 0, canvas.width, canvas.height);
+      makeChart();
     });
     document.querySelector("#chart-form").addEventListener("submit", (event) => {
       event.preventDefault();
       makeChart();
     });
-    document.querySelector("#hide-empty").addEventListener("change", () => {
-      if (csvText) makeChart();
-    });
+    document.querySelector("#note").addEventListener("input", () => makeChart());
+    document.querySelector("#hide-empty").addEventListener("change", () => makeChart());
     downloadBtn.addEventListener("click", () => {
       const link = document.createElement("a");
       link.href = canvas.toDataURL("image/png");
@@ -486,20 +485,19 @@
     function makeChart() {
       statusEl.classList.remove("error");
       try {
-        if (!csvText) throw new Error("Choose a check-in CSV first.");
         const rooms = readRooms();
         if (!rooms.length) throw new Error("Type at least one room number.");
         const roomKeys = rooms.map((entry) => entry.room.toLowerCase());
         if (new Set(roomKeys).size !== roomKeys.length) {
           throw new Error("Each room number can only be used once.");
         }
-        const people = readPeople(csvText);
-        const result = assignStudents(rooms, people);
+        const buckets = Object.fromEntries(rooms.map((entry) => [entry.room, []]));
+        if (csvText) Object.assign(buckets, assignStudents(rooms, readPeople(csvText)).buckets);
         const note = document.querySelector("#note").value.trim();
         const hideEmpty = document.querySelector("#hide-empty").checked;
         const drawn = hideEmpty ? rooms.filter((entry) => entry.leader) : rooms;
         if (!drawn.length) throw new Error("Every room is empty. Add a leader, or show the empty rooms.");
-        drawChart(drawn, result.buckets, note);
+        drawChart(drawn, buckets, note);
         downloadBtn.disabled = false;
         statusEl.textContent = "";
       } catch (error) {
@@ -510,6 +508,7 @@
     }
 
     window.breakoutChart = { addRoomRow, makeChart, setCsvText(text) { csvText = text; } };
+    makeChart();
   </script>
 </body>
 </html>
