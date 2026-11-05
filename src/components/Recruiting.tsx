@@ -1,3 +1,4 @@
+import type { CSSProperties } from "react";
 import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -7,10 +8,12 @@ import { Container } from "./ui/Container";
 import { SectionHeader } from "./ui/SectionHeader";
 
 export function Recruiting() {
+  const cardCount = recruitingResources.length;
+
   return (
     <section
       id="recruiting"
-      className="relative overflow-hidden bg-ivory-100 py-16 sm:py-24 lg:py-32"
+      className="relative overflow-clip bg-ivory-100 py-16 sm:py-24 lg:py-32"
     >
       {/* Tasteful photo wash; keeps the section from feeling like a flat SaaS grid */}
       <div
@@ -38,13 +41,26 @@ export function Recruiting() {
 
           <ul
             role="list"
-            className="grid grid-cols-1 gap-7 sm:grid-cols-2 sm:gap-8"
+            className="recruiting-stack"
+            style={
+              {
+                "--stack-card-count": cardCount,
+              } as CSSProperties
+            }
           >
             {recruitingResources.map((res, i) => {
               const Icon = res.icon;
               const external = res.href.startsWith("http");
               const cardClassName =
-                "card card-hover relative flex h-full flex-col overflow-hidden border-navy-900/[0.07] bg-white/90 p-7 backdrop-blur-sm sm:p-8";
+                "card recruiting-stack__card relative flex min-h-[17rem] flex-col overflow-hidden border-navy-900/[0.07] bg-white/90 p-7 backdrop-blur-sm sm:min-h-[19rem] sm:p-8";
+              const cardStyle = {
+                "--stack-index": i + 1,
+                "--stack-offset": `${i * 0.78}rem`,
+                "--stack-start": `${(i / cardCount) * 100}%`,
+                "--stack-end": `${((i + 1) / cardCount) * 100}%`,
+                "--stack-scale": (1 - (cardCount - i - 1) * 0.045).toFixed(3),
+                "--stack-opacity": (1 - (cardCount - i - 1) * 0.08).toFixed(3),
+              } as CSSProperties;
               const cardBody = (
                 <>
                   <span className="absolute right-6 top-6 text-[0.65rem] font-medium tracking-[0.2em] text-navy-900/25">
@@ -88,7 +104,8 @@ export function Recruiting() {
                     delay: (i % 4) * 0.05,
                     ease: [0.16, 1, 0.3, 1],
                   }}
-                  className="group relative"
+                  className="group recruiting-stack__item"
+                  style={cardStyle}
                 >
                   {external ? (
                     <a

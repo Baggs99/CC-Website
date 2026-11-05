@@ -4,6 +4,7 @@ import { legacyRedirects } from "./lib/legacyRoutes";
 import { DigitalPresencePage } from "./pages/DigitalPresencePage";
 import { FullTimeRecruitingPage } from "./pages/FullTimeRecruitingPage";
 import { HomePage } from "./pages/HomePage";
+import { ItalyPage } from "./pages/ItalyPage";
 import { OfficeMapPage } from "./pages/OfficeMapPage";
 import { ResumeReviewPage } from "./pages/ResumeReviewPage";
 import { SorterRedirectPage } from "./pages/SorterRedirectPage";
@@ -36,6 +37,7 @@ export default function App() {
           />
           <Route path="/resume-review" element={<ResumeReviewPage />} />
           <Route path="/digital-presence" element={<DigitalPresencePage />} />
+          <Route path="/italy" element={<ItalyPage />} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Route>
       </Routes>

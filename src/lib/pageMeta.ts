@@ -32,6 +32,10 @@ const pageMetaByPath: Record<string, PageMeta> = {
     description:
       "Set up your headshot, LinkedIn, Outlook signature, Zoom, and CMS profile before Yale SOM consulting coffee chats and recruiting outreach.",
   },
+  "/italy": {
+    title: "Italy | Yale SOM Consulting Club",
+    description: "A simple Italy page with a massive waving Italian flag.",
+  },
 };
 
 export function getPageMeta(pathname: string): PageMeta {
