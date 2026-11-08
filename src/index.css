@@ -96,6 +96,66 @@
     @apply hover:-translate-y-1 hover:border-navy-900/[0.12] hover:shadow-elevated;
   }
 
+  .home-stack {
+    --home-stack-top: calc(4.25rem + env(safe-area-inset-top, 0px));
+    position: relative;
+    isolation: isolate;
+    background: rgb(var(--bg));
+  }
+
+  .home-stack-panel {
+    --panel-index: 1;
+    position: relative;
+    z-index: var(--panel-index);
+    transform: translateZ(0);
+  }
+
+  .home-stack-panel + .home-stack-panel {
+    margin-top: clamp(-2.5rem, -4vw, -1.25rem);
+  }
+
+  .home-stack-panel::before {
+    content: "";
+    position: absolute;
+    inset-inline: clamp(0.5rem, 2vw, 1.5rem);
+    top: clamp(-1.5rem, -2vw, -0.75rem);
+    z-index: -1;
+    height: clamp(1.5rem, 2vw, 2.25rem);
+    border-radius: clamp(1rem, 2vw, 1.75rem) clamp(1rem, 2vw, 1.75rem) 0 0;
+    background: rgb(var(--bg));
+    box-shadow: 0 -1rem 2.5rem -2rem rgb(5 14 28 / 0.4);
+    pointer-events: none;
+  }
+
+  .home-stack-panel:first-child::before {
+    content: none;
+  }
+
+  .home-stack-panel > section {
+    position: relative;
+    overflow: clip;
+    border-top-left-radius: clamp(1.1rem, 2vw, 2rem);
+    border-top-right-radius: clamp(1.1rem, 2vw, 2rem);
+    box-shadow:
+      0 -1px 0 rgb(255 255 255 / 0.34),
+      0 -2.5rem 5rem -3.6rem rgb(5 14 28 / 0.5);
+    outline: 1px solid rgb(10 26 47 / 0.045);
+    outline-offset: -1px;
+  }
+
+  .home-stack-panel:first-child > section {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    box-shadow: none;
+    outline: 0;
+  }
+
+  @media (min-width: 768px) {
+    .home-stack {
+      --home-stack-top: calc(5.25rem + env(safe-area-inset-top, 0px));
+    }
+  }
+
   .recruiting-stack {
     --stack-card-count: 1;
     --stack-top: calc(4.75rem + env(safe-area-inset-top, 0px));
