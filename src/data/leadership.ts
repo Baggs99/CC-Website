@@ -69,8 +69,8 @@ export const leadership: Leader[] = [
     title: "Executive committee",
     initials: "JC",
     linkedin: "https://www.linkedin.com/in/jacobgcoughlin/",
-    employer: "Redstone Strategy Group",
-    city: "Boulder, CO",
+    employer: "BCG",
+    city: "Summit, NJ",
     photoFile: "jacob-coughlin.jpg",
   },
   {
