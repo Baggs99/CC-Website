@@ -1,3 +1,5 @@
+export const SITE_ORIGIN = "https://yalesomconsultingclub.com";
+
 export type PageMeta = {
   title: string;
   description: string;
@@ -38,11 +40,40 @@ export function getPageMeta(pathname: string): PageMeta {
   return pageMetaByPath[pathname] ?? homeMeta;
 }
 
-export function applyPageMeta({ title, description }: PageMeta) {
-  document.title = title;
-
-  const meta = document.querySelector('meta[name="description"]');
-  if (meta) {
-    meta.setAttribute("content", description);
+function upsertMeta(
+  kind: "name" | "property",
+  key: string,
+  content: string,
+) {
+  const selector = `meta[${kind}="${key}"]`;
+  let el = document.querySelector(selector);
+  if (!el) {
+    el = document.createElement("meta");
+    el.setAttribute(kind, key);
+    document.head.appendChild(el);
   }
+  el.setAttribute("content", content);
+}
+
+export function applyPageMeta(
+  { title, description }: PageMeta,
+  pathname = "/",
+) {
+  const url = pathname === "/" ? `${SITE_ORIGIN}/` : `${SITE_ORIGIN}${pathname}`;
+
+  document.title = title;
+  upsertMeta("name", "description", description);
+  upsertMeta("property", "og:title", title);
+  upsertMeta("property", "og:description", description);
+  upsertMeta("property", "og:url", url);
+  upsertMeta("name", "twitter:title", title);
+  upsertMeta("name", "twitter:description", description);
+
+  let canonical = document.querySelector('link[rel="canonical"]');
+  if (!canonical) {
+    canonical = document.createElement("link");
+    canonical.setAttribute("rel", "canonical");
+    document.head.appendChild(canonical);
+  }
+  canonical.setAttribute("href", url);
 }

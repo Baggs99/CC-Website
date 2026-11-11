@@ -8,7 +8,7 @@ function DocumentMeta() {
   const { pathname } = useLocation();
 
   useEffect(() => {
-    applyPageMeta(getPageMeta(pathname));
+    applyPageMeta(getPageMeta(pathname), pathname);
   }, [pathname]);
 
   return null;
