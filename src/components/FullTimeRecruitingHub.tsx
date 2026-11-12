@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowUpRight, Calendar } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import { FtOrientation } from "@/components/ft-recruiting/FtOrientation";
 import { FtPathNav } from "@/components/ft-recruiting/FtPathNav";
 import { FtPathStep } from "@/components/ft-recruiting/FtPathStep";
@@ -30,14 +30,14 @@ export function FullTimeRecruitingHub() {
       <FtOrientation />
 
       <div className="mt-14">
-        <div className="flex items-center gap-3 pb-5">
+        <div className="flex items-center gap-3 pb-4">
           <span className="h-2 w-2 rounded-full bg-gold-500" />
           <h3 className="text-[0.7rem] font-medium uppercase tracking-[0.22em] text-navy-700/80">
             Firm deadlines
           </h3>
         </div>
 
-        <p className="mb-6 max-w-3xl text-sm leading-relaxed text-navy-700/90 text-pretty">
+        <p className="mb-4 max-w-3xl text-sm leading-relaxed text-navy-700/90 text-pretty">
           {firmDeadlinesNote}{" "}
           <a
             href={somCmsJobPortal.href}
@@ -52,7 +52,7 @@ export function FullTimeRecruitingHub() {
 
         <ul
           role="list"
-          className="grid grid-cols-1 gap-5 lg:grid-cols-3 lg:gap-6"
+          className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3"
         >
           {firmDeadlines.map((firm, i) => (
             <motion.li
@@ -62,49 +62,36 @@ export function FullTimeRecruitingHub() {
               viewport={{ once: true, margin: "-60px" }}
               transition={{
                 duration: 0.55,
-                delay: i * 0.05,
+                delay: i * 0.04,
                 ease: [0.16, 1, 0.3, 1],
               }}
-              className="card flex h-full flex-col p-6 sm:p-7"
+              className="card flex h-full flex-col p-4 sm:p-5"
             >
-              <div className="flex items-start justify-between gap-3">
-                <h4 className="font-serif text-lg font-medium text-navy-900">
-                  {firm.firm}
-                  {firm.year ? (
-                    <span className="ml-2 text-sm font-sans font-normal text-navy-600/80">
-                      {firm.year}
-                    </span>
-                  ) : null}
-                </h4>
-                <Calendar
-                  size={18}
-                  className="shrink-0 text-navy-400"
-                  strokeWidth={1.6}
-                  aria-hidden
-                />
-              </div>
+              <h4 className="font-serif text-base font-medium text-navy-900">
+                {firm.firm}
+              </h4>
 
-              <dl className="mt-5 space-y-3 text-sm">
+              <dl className="mt-2 space-y-2 text-sm">
                 <div>
-                  <dt className="text-[0.65rem] font-medium uppercase tracking-[0.14em] text-navy-600/75">
-                    Application deadline
-                  </dt>
-                  <dd className="mt-1 text-navy-800 text-pretty">
+                  <dt className="sr-only">Application deadline</dt>
+                  <dd className="text-navy-800 text-pretty">
                     {firm.applicationDeadline}
                   </dd>
                 </div>
-                <div>
-                  <dt className="text-[0.65rem] font-medium uppercase tracking-[0.14em] text-navy-600/75">
-                    Interviews
-                  </dt>
-                  <dd className="mt-1 text-navy-800 text-pretty">
-                    {firm.interviewWindow}
-                  </dd>
-                </div>
+                {firm.interviewWindow ? (
+                  <div>
+                    <dt className="text-[0.65rem] font-medium uppercase tracking-[0.14em] text-navy-600/75">
+                      Interviews
+                    </dt>
+                    <dd className="mt-0.5 text-navy-800 text-pretty">
+                      {firm.interviewWindow}
+                    </dd>
+                  </div>
+                ) : null}
               </dl>
 
               {(firm.cmsReminder || firm.notes) && (
-                <p className="mt-4 flex-1 text-sm leading-relaxed text-navy-700/85 text-pretty">
+                <p className="mt-2 text-sm leading-relaxed text-navy-700/85 text-pretty">
                   {firm.cmsReminder ? (
                     <>
                       Confirm due dates in{" "}
@@ -129,10 +116,10 @@ export function FullTimeRecruitingHub() {
                   href={firm.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="mt-5 inline-flex items-center gap-1.5 text-sm font-medium text-navy-900"
+                  className="mt-3 inline-flex items-center gap-1 text-sm font-medium text-navy-900"
                 >
                   {firm.hrefLabel ?? "Firm careers site"}
-                  <ArrowUpRight size={14} />
+                  <ArrowUpRight size={13} />
                 </a>
               ) : null}
             </motion.li>

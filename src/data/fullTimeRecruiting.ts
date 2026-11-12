@@ -2,7 +2,7 @@ export type FirmDeadline = {
   firm: string;
   year?: number;
   applicationDeadline: string;
-  interviewWindow: string;
+  interviewWindow?: string;
   notes?: string;
   cmsReminder?: boolean;
   href?: string;
@@ -64,7 +64,7 @@ export const ftRecruitingEyebrow = "Yale SOM Consulting Club";
 export const ftRecruitingTitle =
   "Full-time consulting recruiting for Yale SOM MBAs";
 export const ftRecruitingDescription =
-  "McKinsey, BCG, and Bain deadlines, application links, and a summer-to-interview path for the Class of 2027. Portals open in July; some apps are due in August, before fall semester starts.";
+  "Firm deadlines, application links, and a summer-to-interview path for the Class of 2027. Confirm current due dates below; this list is incomplete."
 
 export const consultingOrientation = {
   eyebrow: "Start here",
@@ -94,37 +94,71 @@ export const somCmsEvents: RecruitingStepLink = {
 };
 
 export const firmDeadlinesNote =
-  "Remember, this is a student-maintained guide. Confirm firm deadlines regularly on CMS:";
+  "Remember, this is a student-maintained guide and the list below is incomplete. Confirm firm deadlines regularly on CMS:";
 
 export const firmDeadlines: FirmDeadline[] = [
   {
-    firm: "McKinsey & Company",
+    firm: "Deloitte",
     year: 2026,
-    applicationDeadline:
-      "August 11, 2026 (MBA Associate; Dec 2026–Fall 2027 grads)",
-    interviewWindow:
-      "First rounds: September 2026 · Finals: late Sep–early Oct · Offers: October",
-    href: "https://www.mckinsey.com/careers/search-jobs/jobs/associate-15178",
-    hrefLabel: "McKinsey Associate application",
+    applicationDeadline: "November 8, 2026",
+    href: "https://www.deloitte.com/us/en/careers.html",
+    hrefLabel: "Deloitte careers",
   },
   {
     firm: "Boston Consulting Group",
     year: 2026,
-    applicationDeadline:
-      "August 13, 2026 (US Consultant, Full-Time MBA) · September 11, 2026 (international office roles)",
-    interviewWindow: "TBD, confirm on BCG careers site",
-    href: "https://careers.bcg.com/global/en/job/58571/Consultant-Full-Time-MBA-United-States",
-    hrefLabel: "BCG US application",
+    applicationDeadline: "November 10, 2026",
+    href: "https://careers.bcg.com/",
+    hrefLabel: "BCG careers",
   },
   {
     firm: "Bain & Company",
     year: 2026,
-    applicationDeadline:
-      "August 11, 2026 (Americas Consultant; 11:59pm PT) · September 8, 2026 (APAC & EMEA; APAC rolling review begins August 11)",
-    interviewWindow:
-      "Expected late Sep–early Oct; confirm on Bain careers site or with Bain Yale recruiting team.",
+    applicationDeadline: "November 11, 2026",
     href: "https://www.bain.com/careers/work-with-us/students/yale-school-of-management/#:~:text=Consultant,connecting%20with%20you.",
     hrefLabel: "Bain Yale SOM recruiting page",
+  },
+  {
+    firm: "AlixPartners",
+    year: 2026,
+    applicationDeadline: "November 12, 2026",
+    href: "https://www.alixpartners.com/careers/",
+    hrefLabel: "AlixPartners careers",
+  },
+  {
+    firm: "McKinsey & Company",
+    year: 2026,
+    applicationDeadline: "November 12, 2026",
+    href: "https://www.mckinsey.com/careers",
+    hrefLabel: "McKinsey careers",
+  },
+  {
+    firm: "Actionist Consulting",
+    year: 2026,
+    applicationDeadline: "November 23, 2026",
+    href: "https://actionistconsulting.com/careers/",
+    hrefLabel: "Actionist careers",
+  },
+  {
+    firm: "EY-Parthenon",
+    year: 2026,
+    applicationDeadline: "November 29, 2026",
+    href: "https://www.ey.com/en_us/careers",
+    hrefLabel: "EY careers",
+  },
+  {
+    firm: "L.E.K. Consulting",
+    year: 2026,
+    applicationDeadline: "November 30, 2026",
+    href: "https://www.lek.com/join-lek",
+    hrefLabel: "L.E.K. careers",
+  },
+  {
+    firm: "Kearney",
+    year: 2026,
+    applicationDeadline: "December 1, 2026",
+    href: "https://www.kearney.com/careers",
+    hrefLabel: "Kearney careers",
   },
 ];
 
