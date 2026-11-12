@@ -50,80 +50,62 @@ export function FullTimeRecruitingHub() {
           </a>
         </p>
 
-        <ul
-          role="list"
-          className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3"
-        >
-          {firmDeadlines.map((firm, i) => (
-            <motion.li
-              key={firm.firm}
-              initial={{ opacity: 0, y: 16 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-60px" }}
-              transition={{
-                duration: 0.55,
-                delay: i * 0.04,
-                ease: [0.16, 1, 0.3, 1],
-              }}
-              className="card flex h-full flex-col p-4 sm:p-5"
-            >
-              <h4 className="font-serif text-base font-medium text-navy-900">
-                {firm.firm}
-              </h4>
+        <ul role="list" className="grid grid-cols-1 gap-2 sm:grid-cols-2">
+          {firmDeadlines.map((firm, i) => {
+            const rowClass =
+              "card flex items-center justify-between gap-3 px-4 py-2.5";
+            const content = (
+              <>
+                <h4 className="min-w-0 font-serif text-sm font-medium text-navy-900">
+                  {firm.firm}
+                </h4>
+                <span className="flex shrink-0 items-center gap-1.5 text-sm tabular-nums text-navy-700">
+                  <span className="sr-only">Application deadline </span>
+                  {firm.applicationDeadline}
+                  {firm.href ? (
+                    <ArrowUpRight
+                      size={13}
+                      className="opacity-70"
+                      aria-hidden
+                    />
+                  ) : null}
+                </span>
+              </>
+            );
 
-              <dl className="mt-2 space-y-2 text-sm">
-                <div>
-                  <dt className="sr-only">Application deadline</dt>
-                  <dd className="text-navy-800 text-pretty">
-                    {firm.applicationDeadline}
-                  </dd>
-                </div>
+            return (
+              <motion.li
+                key={firm.firm}
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-60px" }}
+                transition={{
+                  duration: 0.4,
+                  delay: i * 0.03,
+                  ease: [0.16, 1, 0.3, 1],
+                }}
+              >
+                {firm.href ? (
+                  <a
+                    href={firm.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`${firm.firm}, deadline ${firm.applicationDeadline}. Open careers page.`}
+                    className={`${rowClass} card-hover no-underline`}
+                  >
+                    {content}
+                  </a>
+                ) : (
+                  <div className={rowClass}>{content}</div>
+                )}
                 {firm.interviewWindow ? (
-                  <div>
-                    <dt className="text-[0.65rem] font-medium uppercase tracking-[0.14em] text-navy-600/75">
-                      Interviews
-                    </dt>
-                    <dd className="mt-0.5 text-navy-800 text-pretty">
-                      {firm.interviewWindow}
-                    </dd>
-                  </div>
+                  <p className="px-4 pb-2 text-xs text-navy-700/85">
+                    Interviews: {firm.interviewWindow}
+                  </p>
                 ) : null}
-              </dl>
-
-              {(firm.cmsReminder || firm.notes) && (
-                <p className="mt-2 text-sm leading-relaxed text-navy-700/85 text-pretty">
-                  {firm.cmsReminder ? (
-                    <>
-                      Confirm due dates in{" "}
-                      <a
-                        href={somCmsJobPortal.href}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="font-medium text-navy-900 underline-offset-4 hover:underline"
-                      >
-                        SOM CMS
-                      </a>
-                      , the source of truth.
-                    </>
-                  ) : (
-                    firm.notes
-                  )}
-                </p>
-              )}
-
-              {firm.href ? (
-                <a
-                  href={firm.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="mt-3 inline-flex items-center gap-1 text-sm font-medium text-navy-900"
-                >
-                  {firm.hrefLabel ?? "Firm careers site"}
-                  <ArrowUpRight size={13} />
-                </a>
-              ) : null}
-            </motion.li>
-          ))}
+              </motion.li>
+            );
+          })}
         </ul>
       </div>
 
